@@ -1,0 +1,23 @@
+Mon Jan 26 02:25:23 2026
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr2 -force_affinity true -mem indirect -barrier none -detached false -thread std -launch changing -stride 31 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc dynamic -contiguous false -noalign all ./make_new_litmus/litmus_output/Wse_PodWW_Wse_PodWW.litmus -o ./make_new_litmus/litmus_output_bayes/Wse_PodWW_Wse_PodWW_1_5_0_0_0_0_3_1_0_1_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 31
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr2 */
+/* alloc: dynamic */
+/* memory: indirect */
+/* stride: 31 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_4b227929.exe -s 100000
+Mon Jan 26 02:25:23 2026

@@ -1,0 +1,3 @@
+two-tower : 0.6466602841680675
+Handcrafted Features: 0.3946325090982801
+Handcrafted Features + DNN: 0.25040446457871246

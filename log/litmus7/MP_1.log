@@ -1,0 +1,57 @@
+Mon Aug  4 09:13:58 2025
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/sipeed/riscv/MP_1/MP_4.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV MP
+{0:x5=1; 0:x6=x; 0:x7=y; 1:x6=y; 1:x8=x;}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x0,0(x6) ;
+ sw x5,0(x7) | lw x5,0(x6) ;
+             | lw x7,0(x8) ;
+
+exists (1:x5=1 /\ 1:x7=0)
+Generated assembler
+#START _litmus_P1
+	lw x0,0(a5)
+	lw a1,0(a5)
+	lw a0,0(a4)
+#START _litmus_P0
+	sw a6,0(a5)
+	sw a6,0(a4)
+Test MP Allowed
+Histogram (4 states)
+1271673:>1:x5=0; 1:x7=0;
+38309 *>1:x5=1; 1:x7=0;
+122756:>1:x5=0; 1:x7=1;
+567262:>1:x5=1; 1:x7=1;
+Ok
+
+Witnesses
+Positive: 38309, Negative: 1961691
+Condition exists (1:x5=1 /\ 1:x7=0) is validated
+Hash=2c9e1c2d4aaef86d0adab14b6e31a8b7
+Observation MP Sometimes 38309 1961691
+Time MP 20.43
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -mem direct -p 0,1 -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/sipeed/riscv/MP_1/MP_4.litmus -o /home/sipeed/riscv/MP_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: changing */
+/* affinity: none */
+/* procs: {0,1} */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/riscv/MP_1/run.exe -r 10000
+Mon Aug  4 09:14:18 2025

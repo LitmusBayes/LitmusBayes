@@ -1,0 +1,69 @@
+Mon Aug  4 09:17:20 2025
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/sipeed/riscv/ISA2_0/ISA2.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV ISA2
+"PodWW Rfe PodRW Rfe PodRR Fre"
+{uint64_t z=0; uint64_t y=0; uint64_t x=0; uint64_t 2:x7=0; uint64_t 2:x5=0; uint64_t 1:x5=0; 0:x5=1; 0:x6=x; 0:x7=y; 1:x6=y; 1:x7=1; 1:x8=z; 2:x6=z; 2:x8=x;}
+ P0          | P1          | P2          ;
+ sd x5,0(x6) | ld x5,0(x6) | ld x5,0(x6) ;
+ sd x5,0(x7) | sd x7,0(x8) | ld x7,0(x8) ;
+
+exists (1:x5=1 /\ 2:x5=1 /\ 2:x7=0)
+Generated assembler
+#START _litmus_P2
+	ld a0,0(a5)
+	ld s4,0(a2)
+#START _litmus_P0
+	sd t1,0(a5)
+	sd t1,0(a1)
+#START _litmus_P1
+	ld a0,0(a5)
+	sd t3,0(a1)
+Test ISA2 Allowed
+Histogram (8 states)
+239817:>1:x5=0; 2:x5=0; 2:x7=0;
+159920:>1:x5=1; 2:x5=0; 2:x7=0;
+130186:>1:x5=0; 2:x5=1; 2:x7=0;
+287   *>1:x5=1; 2:x5=1; 2:x7=0;
+8609  :>1:x5=0; 2:x5=0; 2:x7=1;
+162069:>1:x5=1; 2:x5=0; 2:x7=1;
+194820:>1:x5=0; 2:x5=1; 2:x7=1;
+104292:>1:x5=1; 2:x5=1; 2:x7=1;
+Ok
+
+Witnesses
+Positive: 287, Negative: 999713
+Condition exists (1:x5=1 /\ 2:x5=1 /\ 2:x7=0) is validated
+Hash=c973048dcbf29dac882bc0a3dab25b97
+Cycle=Rfe PodRW Rfe PodRR Fre PodWW
+Relax ISA2 Ok 
+Safe=Rfe Fre PodWW PodRW PodRR
+Generator=diy7 (version 7.55)
+Com=Rf Rf Fr
+Orig=PodWW Rfe PodRW Rfe PodRR Fre
+Observation ISA2 Sometimes 287 999713
+Time ISA2 35.64
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -mem direct -p 0,1 -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/sipeed/riscv/ISA2_0/ISA2.litmus -o /home/sipeed/riscv/ISA2_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: changing */
+/* affinity: none */
+/* procs: {0,1} */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/riscv/ISA2_0/run.exe -r 10000
+Mon Aug  4 09:17:55 2025

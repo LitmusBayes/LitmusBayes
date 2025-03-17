@@ -1,0 +1,151 @@
+2026-01-26 15:47:23 | INFO    | validation_run | ================================================================================
+2026-01-26 15:47:23 | INFO    | validation_run | Logger initialized
+2026-01-26 15:47:23 | INFO    | validation_run | log_file=./make_new_litmus/log_record_random.log.20260126-154723.run.log
+2026-01-26 15:47:23 | INFO    | validation_run | level=INFO
+2026-01-26 15:47:23 | INFO    | validation_run | ================================================================================
+2026-01-26 15:47:23 | INFO    | validation_run | Start Validation Run | JSON source: ./make_new_litmus/best_params_unseen_test_set.json
+2026-01-26 15:47:23 | INFO    | validation_run | Loading recommendations from ./make_new_litmus/best_params_unseen_test_set.json...
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.rw.rw+ctrl-wsi-rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W+fence.rw.w+po
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-pos-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-addr+data-rfi-ctrlfenceis
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-addr+addr-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-po+pos-po-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+porlrl+po+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+porlp+po+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-data+fence.r.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-data+ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-ctrl+fence.rw.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-data+ctrlfencei-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po-ctrlfenceis+pos-po-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+fence.rw.w+rfi-addr-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+ctrlfencei-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+rfi-data+rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W+fence.w.w+rfi-data
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+fence.rw.rw+po-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-ctrl+fence.r.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-addr+ctrlfencei-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+rfi-data+rfi-data-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-data+ctrlfencei-rfi-ctrlfenceis
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+fence.rw.rw+po-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+rfi-data+fence.rw.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-addr+ctrl-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+ctrlfencei-rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-rfi-addr+pos-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+po+fence.rw.w
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+fence.rw.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-ctrl+data-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-data+data-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+rfi-ctrlfencei+rfi-data-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po+pos-po-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-data+addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po+pos-po-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-ctrl+addr-rfi-ctrlfenceis
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-ctrl+ctrl-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-data+data
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-addr+addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+wsi-rfi-ctrls
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: LB+po+poaqp+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+wsi-rfi-addr+ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-ctrl+ctrlfencei-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po+po-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-ctrl+ctrl-rfi-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-addr+ctrlfencei-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-ctrlfencei+ctrl-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-ctrl+addr-rfi-data
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+po+addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+po+poprl+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-po-addr+pos-po-ctrlfenceis
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-data+data-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-addr+ctrlfencei-rfi-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+rfi-addr+pos-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-data+ctrl-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-rfi-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po-addrs+pos-po-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-data+ctrl-rfi-data
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+po+fence.rw.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+ctrl-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: LB+fri-rfi-data+fri-rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+fence.rw.rw+pos-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+fence.rw.w+po-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+pos-rfi-ctrl+rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+po+ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+porlrl+porlp+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+rfi-data-rfi+rfi-ctrl-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-data+addr-rfi-ctrlfenceis
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po+pos-po
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-ctrl+ctrl-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+data
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+porlps+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-ctrl+ctrl-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-po+pos-po-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+fence.r.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.rw.rw+ctrl-fri-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+wsi-rfi-ctrl+fence.rw.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+addr-rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+po+poaqaq+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.w.w+ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W+rfi-addr+rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-ctrl+ctrl-rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-addr+ctrlfencei-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.w.w+fri-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-data+ctrlfencei-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-data+addr-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+porlp+po+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.rw.w+ctrl-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-ctrl+addr-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W+po+porlrl+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+wsi-rfi-data+fence.rw.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-data+fence.r.rw
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+pos-rfi-ctrlfencei+rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+fence.rw.w+po
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-data+addr-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-addr+pos-pos-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-ctrlfencei+pos-pos-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-addr+addr-rfi-ctrlfenceis
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+fence.rw.rw+rfi-data-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W+po+poprl+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-ctrl+data-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po-ctrlfencei+pos-po-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-data+addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+pos-addr+pos-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: LB+fence.rw.rw+po
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+rfi-data+rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+addr-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W+po+porlp+NEW
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-ctrl+ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: C-Will02+HEAD
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+fence.rw.w+rfi-data-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+rfi-addr-rfi+rfi-data-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+rfi-ctrlfencei+rfi-addr-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-data+data-rfi-ctrlfencei
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+po-addrss
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.w.w+ctrl-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W+rfi-data+rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.rw.rw+data-wsi-rfi-ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+fence.rw.w+po-addrs
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+fence.rw.rw+po-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: LB+fence.r.rw+po
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+rfi-addr+ctrl-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+ctrlfencei-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+wsi-rfi-data+ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: 2+2W
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+fence.w.w+po
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+pos-rfi-ctrl+addr-rfi-addr
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: R+rfi-addr+rfi-data-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: SB+rfi-addr+rfi-ctrlfencei-rfi
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-data+addr-rfi-data
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: MP+fence.rw.rw+ctrl
+2026-01-26 15:47:23 | WARNING | validation_run | File not found on disk, skipping: S+rfi-addr+ctrl
+2026-01-26 15:47:23 | INFO    | validation_run | Total validation tasks loaded: 0
+2026-01-26 15:47:23 | INFO    | validation_run | Initializing Async Pipeline...
+2026-01-26 15:47:23 | INFO    | validation_run | [Pipeline] Cleaning remote directory: /home/sipeed/test ...
+2026-01-26 15:47:24 | INFO    | validation_run | [Pipeline] Remote environment ready.
+2026-01-26 15:47:24 | INFO    | validation_run | Starting 2 compiler threads...
+2026-01-26 15:47:24 | INFO    | validation_run | Starting 2 downloader threads...
+2026-01-26 15:47:24 | INFO    | validation_run | === Starting Validation Execution Loop ===
+2026-01-26 15:47:24 | INFO    | validation_run | Nothing to run (All cached or empty queue).
+2026-01-26 15:47:24 | INFO    | validation_run | All tasks completed.

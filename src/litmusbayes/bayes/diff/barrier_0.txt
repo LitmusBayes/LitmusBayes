@@ -1,0 +1,21 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_0/LB.c
+53d52
+<     mbar();
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_0/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier user -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_0");
+26c26
+<   fprintf(out,"%s\n","/* barrier: userfence */");
+---
+>   fprintf(out,"%s\n","/* barrier: user */");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

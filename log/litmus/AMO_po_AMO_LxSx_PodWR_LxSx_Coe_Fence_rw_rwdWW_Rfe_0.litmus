@@ -1,0 +1,11 @@
+RISCV AMO_po_AMO_LxSx_PodWR_LxSx_Coe_Fence_rw_rwdWW_Rfe
+ {0:x5=x; 0:x8=y; 1:x6=y; 1:x8=x; }
+           P0           |      P1       ;
+ori x7, x0, 2           | ori x5, x0, 2 ;
+amoswap.w x6, x7, (x5)  | sw x5, 0(x6)  ;
+ori x10, x0, 1          | fence rw, rw  ;
+amoswap.w x9, x10, (x8) | ori x7, x0, 1 ;
+fence rw, rw            | sw x7, 0(x8)  ;
+lw x11, 0(x8)           |               ;
+
+exists (0:x11=2 /\ 0:x6=1)

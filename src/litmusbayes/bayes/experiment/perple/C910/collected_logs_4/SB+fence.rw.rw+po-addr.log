@@ -1,0 +1,84 @@
+Sun Mar 15 00:29:30 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/SB+fence.rw.rw+po-addr.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV SB+fence.rw.rw+po-addr
+"Fence.rw.rwdWR Fre PodWR DpAddrdR Fre"
+{0:x5=1; 0:x6=x; 0:x8=y; 1:x5=1; 1:x6=y; 1:x8=z; 1:x11=x;}
+ P0          | P1             ;
+ sw x5,0(x6) | sw x5,0(x6)    ;
+ fence rw,rw | lw x7,0(x8)    ;
+ lw x7,0(x8) | xor x9,x7,x7   ;
+             | add x12,x11,x9 ;
+             | lw x10,0(x12)  ;
+
+exists (0:x7=0 /\ 1:x10=0)
+Generated assembler
+	#START _litmus_P1
+	sw a2,0(a5)
+	lw t6,0(a4)
+	xor t5,t6,t6
+	add t4,a3,t5
+	lw a7,0(t4)
+	#START _litmus_P0
+	sw a2,0(a5)
+	fence rw,rw
+	lw a6,0(a4)
+heuristic statistic: 96
+heuristic statistic: 81
+heuristic statistic: 130
+heuristic statistic: 102
+heuristic statistic: 134
+heuristic statistic: 101
+heuristic statistic: 112
+heuristic statistic: 99
+heuristic statistic: 143
+heuristic statistic: 97
+heuristic statistic: 154
+heuristic statistic: 263
+heuristic statistic: 213
+heuristic statistic: 392
+heuristic statistic: 197
+heuristic statistic: 363
+heuristic statistic: 214
+heuristic statistic: 364
+heuristic statistic: 204
+heuristic statistic: 63
+Test SB+fence.rw.rw+po-addr Allowed
+Histogram (0 states)
+No
+
+Witnesses
+Positive: 0, Negative: 2000000
+Condition exists (0:x7=0 /\ 1:x10=0) is NOT validated
+Hash=3f736966b5b66e3d15efade5ac829d38
+Cycle=Fre PodWR DpAddrdR Fre Fence.rw.rwdWR
+Relax SB+fence.rw.rw+po-addr No PodWR
+Safe=Fre Fence.rw.rwdWR DpAddrdR
+Generator=diy7 (version 7.51+4(dev))
+Com=Fr Fr
+Orig=Fence.rw.rwdWR Fre PodWR DpAddrdR Fre
+Observation SB+fence.rw.rw+po-addr Never 0 2000000
+Time SB+fence.rw.rw+po-addr 0.24
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier none -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -alloc dynamic -contiguous false -noalign none /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/SB+fence.rw.rw+po-addr.litmus -o /home/whq/Desktop/code_list/perple_test/bayes_banana_perple/SB+fence.rw.rw+po-addr_0_5_0_0_0_0_2_0_0_0_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/perple/SB+fence.rw.rw+po-addr_0_5_0_0_0_0_2_0_0_0_1/run.exe -s 100000
+Sun Mar 15 00:29:30 2026

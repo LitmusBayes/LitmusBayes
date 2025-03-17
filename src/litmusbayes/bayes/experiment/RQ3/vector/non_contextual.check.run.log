@@ -1,0 +1,490 @@
+2026-03-22 13:04:24 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:04:24 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:04:24 | INFO    | bayes_eval | log_file=./non_contextual.check.run.log
+2026-03-22 13:04:24 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:04:24 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:04:24 | INFO    | bayes_eval | === Start Evaluation Run | Seed=2025 ===
+2026-03-22 13:04:24 | INFO    | bayes_eval | Reading litmus file list...
+2026-03-22 13:04:24 | INFO    | bayes_eval | Loading data from ../../../log/cache_norm.jsonl ...
+2026-03-22 13:04:24 | INFO    | bayes_eval | Total records loaded: 27755
+2026-03-22 13:04:24 | INFO    | bayes_eval | Train size: 19428
+2026-03-22 13:04:24 | INFO    | bayes_eval | Test size:  8327
+2026-03-22 13:04:24 | INFO    | bayes_eval | Building training set...
+2026-03-22 13:04:24 | INFO    | bayes_eval | Start fitting 448 independent models...
+2026-03-22 13:06:48 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:48 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:06:48 | INFO    | bayes_eval | log_file=./non_contextual.check.run.log
+2026-03-22 13:06:48 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:06:48 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:48 | INFO    | bayes_eval | === Start Evaluation Run | Seed=2025 ===
+2026-03-22 13:06:48 | INFO    | bayes_eval | Reading litmus file list...
+2026-03-22 13:06:48 | INFO    | bayes_eval | Loading data from ../../../log/cache_norm.jsonl ...
+2026-03-22 13:06:48 | INFO    | bayes_eval | Total records loaded: 27755
+2026-03-22 13:06:48 | INFO    | bayes_eval | Train size: 19428
+2026-03-22 13:06:48 | INFO    | bayes_eval | Test size:  8327
+2026-03-22 13:06:48 | INFO    | bayes_eval | Building training set...
+2026-03-22 13:06:48 | INFO    | bayes_eval | Start fitting 448 independent models...
+2026-03-22 13:08:23 | INFO    | bayes_eval | Successfully fitted 448 models.
+2026-03-22 13:08:23 | INFO    | bayes_eval | Evaluating on test set (Batch Mode)...
+2026-03-22 13:08:37 | INFO    | bayes_eval | Prediction finished in 14.2825s. Valid samples: 8327/8327
+2026-03-22 13:08:37 | INFO    | bayes_eval | ============================================================
+2026-03-22 13:08:37 | INFO    | bayes_eval | LITMUS NAME                    | SAMPLES | TOP-1 MATCH? | ACTUAL BEST | MODEL PICK
+2026-03-22 13:08:37 | INFO    | bayes_eval | ------------------------------------------------------------
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrlfencei-rfi-ctrl | 14    | YES          | 9.38       | 9.38      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S                              | 13    | YES          | 13.22      | 13.22     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+fence.rw.w          | 18    | YES          | 56.51      | 56.51     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+ctrl-rfi-ctrlf | 23    | NO           | 178.85     | 134.21    
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addr+pos-po-addr         | 20    | YES          | 2.92       | 2.92      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+po-addr            | 14    | NO           | 1.32       | 0.80      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+data-rfi-ctrlfencei | 20    | NO           | 3.83       | 0.76      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+rfi-addr        | 18    | NO           | 4.97       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+rfi-addr           | 14    | YES          | 3.63       | 3.63      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+po-addrs           | 24    | YES          | 2.53       | 2.53      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrl-rfi-ctrlfence | 16    | NO           | 333.49     | 11.14     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrl-rfi-ctrl       | 20    | NO           | 2.59       | 2.10      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+rfi-data-rfi    | 22    | NO           | 8.51       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrlfencei-rfi-add | 24    | NO           | 1.08       | 0.99      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+rfi-ctrl-rfi    | 20    | NO           | 7.85       | 3.88      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+data-rfi-addr      | 14    | NO           | 1.21       | 0.72      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+addr               | 16    | NO           | 0.84       | 0.56      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP                             | 17    | NO           | 1.27       | 0.99      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+pos-po-ctrlfenceis       | 19    | NO           | 12.24      | 10.60     
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+po+poaqp+NEW                | 17    | NO           | 1.15       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-datas                 | 17    | NO           | 5.92       | 0.08      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+data-rfi-ctrlfence | 26    | NO           | 1663.15    | 59.98     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+fence.rw.rw+po               | 23    | NO           | 16.09      | 0.66      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+po-ctrlfencei        | 18    | NO           | 31.08      | 3.66      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+wsi-rfi-ctrls               | 23    | NO           | 1.77       | 0.88      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+data                | 24    | NO           | 6.87       | 1.63      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.rw+rfi-data      | 21    | NO           | 2.09       | 1.04      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+addr-rfi-ctrlfencei | 21    | NO           | 2.17       | 0.86      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+ctrl-cleaninit  | 22    | NO           | 8.67       | 1.19      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+addr-rfi-ctrlf | 18    | YES          | 218.55     | 218.55    
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-data+rfi-ctrl-rfi        | 15    | NO           | 1.48       | 0.77      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-data+rfi-ctrlfencei      | 18    | NO           | 104.26     | 91.37     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+data-wsi-rfi-ad | 19    | NO           | 19.45      | 11.30     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+data-rfi-addr       | 15    | NO           | 4.56       | 1.56      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+addr-rfi-addr  | 30    | YES          | 3.39       | 3.39      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+fence.r.rw     | 23    | NO           | 1.54       | 1.19      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-addr+pos-pos-ctrlfencei | 14    | NO           | 32.48      | 8.74      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-ctrl+rfi-ctrlfencei   | 24    | NO           | 13.11      | 0.90      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+porlrl+po+NEW                | 18    | NO           | 2.48       | 1.78      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+addr           | 17    | NO           | 3.10       | 1.40      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB                             | 17    | YES          | 2.48       | 2.48      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+po-addr           | 16    | YES          | 3.81       | 3.81      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrl+rfi-ctrlfencei      | 22    | NO           | 131.72     | 0.65      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+data-rfi           | 25    | YES          | 9.72       | 9.72      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addr+pos-po-ctrlfenceis  | 14    | NO           | 2.29       | 0.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrlfencei-rfi-ctr | 19    | YES          | 412.25     | 412.25    
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+po-addr              | 12    | NO           | 0.98       | 0.19      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+po-addr                  | 25    | NO           | 2.44       | 0.95      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+pos-po-addr          | 27    | NO           | 4.19       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+fence.rw.rw    | 27    | NO           | 1.71       | 0.62      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-data-rfi+rfi-ctrlfencei | 26    | NO           | 2.64       | 1.70      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+data-rfi-ctrl       | 21    | NO           | 1.62       | 0.41      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+data                | 25    | NO           | 31.27      | 13.22     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+fence.rw.rw         | 20    | NO           | 21.50      | 12.21     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+addr           | 17    | YES          | 6.07       | 6.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrl-rfi-ctrlfence | 28    | NO           | 49.34      | 4.28      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+po+porlrl+NEW             | 17    | YES          | 0.92       | 0.92      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+ctrlfencei-rfi | 20    | NO           | 280.99     | 260.50    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrl-rfi-addr      | 17    | YES          | 1.41       | 1.41      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrl-rfi-ctrlfencei | 22    | NO           | 1.17       | 0.73      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-data+rfi-ctrl         | 19    | NO           | 28.36      | 0.19      
+2026-03-22 13:08:37 | INFO    | bayes_eval | ISA12                          | 12    | YES          | 2.09       | 2.09      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+po+poaqp+NEW                | 20    | NO           | 4.07       | 1.47      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+pos-po-ctrlfenceis   | 22    | NO           | 0.83       | 0.18      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+pos-addr         | 23    | YES          | 5.66       | 5.66      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+ctrl-rfi-ctrlf | 24    | NO           | 173.77     | 116.31    
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+addr-rfi-ctrl       | 21    | NO           | 1.93       | 0.41      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+addr-rfi           | 19    | NO           | 2.55       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrlfencei+rfi-ctrl-rfi  | 18    | NO           | 2.17       | 1.73      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-ctrlfencei+pos-rfi-addr | 18    | NO           | 9.45       | 1.58      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr-rfis               | 19    | NO           | 3.79       | 2.32      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+po-ctrlfencei            | 18    | NO           | 21.90      | 9.30      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+fence.r.rw          | 18    | YES          | 69.42      | 69.42     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+ctrl-rfi-addr   | 13    | NO           | 1.09       | 0.02      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr+pos-rfi-addr       | 15    | NO           | 5.22       | 1.61      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrl+rfi-ctrl-rfi        | 22    | NO           | 7.26       | 1.56      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+fence.r.rw+po               | 22    | NO           | 9.44       | 1.04      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+fence.w.w        | 26    | YES          | 11.49      | 11.49     
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+porlp+NEW                | 23    | YES          | 4.53       | 4.53      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+wsi-rfi-data+fence.rw.rw     | 28    | YES          | 3.12       | 3.12      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrlfencei-rfi-data | 16    | NO           | 1.09       | 0.96      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+addr-rfi-ctrlf | 17    | YES          | 68.74      | 68.74     
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W                           | 26    | NO           | 20.45      | 9.21      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-addr+rfi-ctrlfencei-rfi  | 22    | NO           | 2.87       | 0.93      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.w.w+ctrl              | 20    | NO           | 5.29       | 1.03      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-addrs                   | 19    | NO           | 4.39       | 4.17      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+fence.r.rw                | 20    | YES          | 11.11      | 11.11     
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+wsi-rfi-ctrl+fence.rw.rw     | 21    | YES          | 3.14       | 3.14      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+ctrl-fri-rfi-ad | 15    | NO           | 1.08       | 0.95      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.w+rfi-ctrl       | 20    | NO           | 0.97       | 0.15      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrlfencei+rfi-addr      | 16    | NO           | 7.45       | 2.71      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+addr               | 17    | NO           | 2.54       | 0.70      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+data                | 22    | NO           | 10.56      | 0.06      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+poprl+po+NEW                 | 15    | NO           | 33.29      | 2.24      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po-addrs+pos-po-ctrlfen | 16    | NO           | 16.49      | 5.86      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs+pos-po-addr        | 24    | NO           | 0.96       | 0.59      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+fence.rw.rw               | 18    | YES          | 14.65      | 14.65     
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-data+rfi-data-rfi        | 23    | YES          | 3.64       | 3.64      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+addr-rfi-ctrl       | 17    | NO           | 0.92       | 0.61      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+ctrl-rfi-addr  | 25    | NO           | 1.88       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrlfencei-rfi-addr | 21    | NO           | 5.77       | 0.97      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+pos-po-addrs    | 18    | YES          | 3.69       | 3.69      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+data-rfi-addr       | 19    | NO           | 8.76       | 0.65      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+addr                | 19    | YES          | 6.93       | 6.93      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrlfencei-rfi-add | 16    | NO           | 3248.15    | 596.21    
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po-addrss               | 16    | YES          | 3.41       | 3.41      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs+po-ctrlfenceis     | 18    | NO           | 1.24       | 0.52      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+data-rfi-ctrlfencei | 16    | NO           | 2.64       | 1.01      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+rfi-addr-rfi       | 18    | YES          | 5.49       | 5.49      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+rfi-addr         | 23    | YES          | 2.64       | 2.64      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+rfi-ctrl-rfi     | 21    | YES          | 1.81       | 1.81      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po-addr+pos-po-ctrlfenc | 20    | NO           | 7.38       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrlfencei-rfi-ctr | 22    | NO           | 1.63       | 0.22      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-addr+rfi-ctrlfencei      | 17    | NO           | 761.95     | 31.19     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+data-rfi-ctrlf | 21    | NO           | 110.33     | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+ctrlfencei-rfi | 14    | NO           | 135.29     | 121.31    
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+fence.rw.w+po               | 13    | NO           | 8.58       | 0.85      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-pos-addrs               | 12    | NO           | 4.97       | 3.46      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-addrs                    | 11    | YES          | 1.82       | 1.82      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrl-rfi-ctrlfence | 19    | NO           | 11.49      | 3.34      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+ctrlfencei     | 24    | YES          | 104.27     | 104.27    
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+rfi-ctrl-rfi       | 14    | NO           | 3.30       | 0.64      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrlfencei+ctrl-rfi-add | 16    | NO           | 132.11     | 34.79     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+fence.r.rw         | 19    | YES          | 5.28       | 5.28      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+po+ctrlfencei               | 25    | NO           | 11144.44   | 3941.07   
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+addr-rfi-ctrlf | 19    | YES          | 209.99     | 209.99    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+data-rfi-ctrlfence | 25    | NO           | 1120.70    | 50.35     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrlfencei         | 23    | YES          | 1336.25    | 1336.25   
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr-rfi+rfi-data-rfi   | 13    | NO           | 2.92       | 1.59      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+pos-po-ctrlfencei        | 19    | YES          | 130.15     | 130.15    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.w.w+fri-rfi-addr      | 21    | NO           | 2.37       | 0.88      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrl+fence.rw.rw         | 20    | YES          | 5.82       | 5.82      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrl-rfi-ctrl       | 21    | NO           | 3.45       | 0.44      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+po-addrs        | 15    | NO           | 4.68       | 1.86      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+porlps+NEW                   | 13    | YES          | 2.30       | 2.30      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrlfencei-rfi-ctrl | 21    | NO           | 0.95       | 0.81      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+pos-po                   | 18    | NO           | 3.46       | 0.94      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+fence.rw.rw        | 23    | NO           | 3.70       | 0.93      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrlfencei          | 24    | NO           | 4.25       | 0.81      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.w.ws                  | 18    | NO           | 4.22       | 1.05      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrl-rfi-addrs     | 23    | YES          | 5.31       | 5.31      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrlfencei-rfi-ctrl | 20    | NO           | 3.55       | 2.25      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+po+fence.rw.rw              | 24    | NO           | 2.86       | 0.84      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+pos-po-ctrlfencei    | 17    | NO           | 7.89       | 7.87      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+addr-rfi-addrs     | 14    | NO           | 3.05       | 0.01      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr+rfi-ctrl-rfi       | 13    | YES          | 3.87       | 3.87      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrl-rfi-addrs     | 33    | NO           | 7.48       | 0.04      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addr+po-ctrlfencei       | 18    | NO           | 10.99      | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-addrs                 | 16    | NO           | 16.18      | 1.73      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+fence.r.rw         | 16    | NO           | 5.00       | 0.38      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrlfencei-rfi-add | 21    | NO           | 2.78       | 0.36      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+po-addrs             | 15    | NO           | 2.11       | 1.11      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-pos-addr+pos-pos-ctrlfe | 15    | NO           | 10.46      | 7.71      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addr+pos-po-addrs        | 18    | YES          | 1.14       | 1.14      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrl-rfi-ctrlfence | 21    | NO           | 3.36       | 2.79      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+porlp+po+NEW                 | 11    | NO           | 8.92       | 5.19      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrl-rfi-data       | 23    | NO           | 4.53       | 0.35      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+addr-wsi-rfi-ct | 20    | NO           | 60.57      | 26.02     
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.w+po             | 23    | NO           | 1.23       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.w.w+data-wsi-rfi-addr | 25    | NO           | 19.60      | 12.22     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+addr-rfi-addr  | 21    | YES          | 7.08       | 7.08      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-ctrlfencei+pos-po-addrs  | 20    | YES          | 4.60       | 4.60      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrl-rfi           | 18    | YES          | 2.39       | 2.39      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrlfencei-rfi-data | 21    | NO           | 5.13       | 0.85      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrl+rfi-addr            | 19    | NO           | 2.53       | 1.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.w.w+rfi-data        | 24    | NO           | 2.95       | 1.14      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+porlp+po+NEW                | 15    | NO           | 9.21       | 1.38      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-addr+rfi-data-rfi        | 20    | YES          | 2.85       | 2.85      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrl-rfi-data       | 18    | YES          | 6.71       | 6.71      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr-rfi+rfi-ctrlfencei | 13    | YES          | 3.28       | 3.28      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+ctrl-wsi-rfi-ct | 19    | NO           | 1.06       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+fence.rw.rw        | 19    | NO           | 3.67       | 1.10      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+addr-rfi-addr       | 13    | NO           | 2.38       | 0.60      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+po                | 19    | YES          | 3.42       | 3.42      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs                    | 18    | NO           | 4.55       | 1.12      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.w.w+po                | 12    | NO           | 5.49       | 3.22      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+addr-rfi-addr      | 14    | NO           | 10.73      | 8.24      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+po+poprl+NEW              | 18    | NO           | 4.98       | 0.05      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+data-rfi           | 19    | NO           | 1.61       | 0.89      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-ctrl-rfis               | 18    | NO           | 8.93       | 1.21      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po-addr+pos-po-ctrlfenc | 19    | NO           | 1.09       | 0.79      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+fence.rw.rw         | 19    | NO           | 10.53      | 1.73      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-rfi-addrs               | 19    | NO           | 3.91       | 0.86      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+ctrl-rfi-addr  | 24    | NO           | 1.75       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrlfencei+rfi-addr-rfi  | 16    | NO           | 4.80       | 0.99      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+addr-fri-rfi-ct | 13    | NO           | 69.82      | 4.25      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+data-rfi-addrs     | 24    | NO           | 10.93      | 0.02      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+data                      | 20    | NO           | 3.39       | 1.70      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr-rfi+rfi-ctrl-rfi   | 22    | YES          | 2.49       | 2.49      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+addr                      | 23    | NO           | 1.72       | 0.25      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+ctrl            | 17    | YES          | 5.63       | 5.63      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrl+rfi-data-rfi        | 18    | NO           | 3.68       | 3.26      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+data-rfi-ctrl       | 21    | YES          | 1.98       | 1.98      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrlfencei         | 18    | NO           | 1821.93    | 261.93    
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addr+pos-po-ctrlfencei   | 23    | NO           | 11.33      | 7.01      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+pos-pos-addr    | 21    | NO           | 20.51      | 4.91      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+ctrl-wsi-rfi-ad | 17    | NO           | 1.35       | 0.42      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+ctrl-rfi-ctrlf | 19    | YES          | 112.70     | 112.70    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+addr-rfi-addr  | 24    | YES          | 1.95       | 1.95      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+addr-rfi-ctrlfencei | 21    | NO           | 1.08       | 0.91      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.w.w+fence.rw.rw       | 14    | NO           | 3.70       | 0.06      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+porlrl+po+NEW               | 16    | NO           | 3.29       | 0.12      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+fence.w.w       | 22    | NO           | 15.68      | 2.64      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-ctrlfencei+pos-po-addr   | 17    | NO           | 20.50      | 1.74      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+addr-rfi-ctrlfencei | 23    | NO           | 4.47       | 3.05      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrlfencei-rfi-ctr | 22    | NO           | 2498.90    | 55.56     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+ctrlfencei     | 22    | YES          | 159.36     | 159.36    
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+rfi-addr-rfi    | 22    | NO           | 13.23      | 4.14      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-data-rfi+rfi-ctrl-rfi   | 21    | YES          | 5.03       | 5.03      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+addr                | 20    | NO           | 8.40       | 1.15      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+fence.rw.rw    | 17    | NO           | 2.15       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+fri-rfi-ctrl    | 14    | NO           | 0.88       | 0.72      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.w.w+ctrl-rfi-addr     | 18    | NO           | 2.29       | 0.91      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-ctrl+fence.rw.rw    | 21    | NO           | 2.15       | 1.62      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.w.ws                  | 24    | NO           | 2.93       | 2.48      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+rfi-data-rfi       | 19    | NO           | 4.73       | 4.65      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-ctrl+addr           | 16    | NO           | 1.34       | 0.04      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+data-rfi-ctrlfence | 19    | NO           | 4.13       | 1.10      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+porlrl+porlp+NEW             | 14    | NO           | 8.52       | 2.02      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrl                | 14    | NO           | 18.51      | 2.54      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrlfencei         | 13    | NO           | 1203.64    | 444.63    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-addr+fence.rw.rw    | 17    | NO           | 1.82       | 1.70      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrl-rfi           | 22    | NO           | 7.64       | 1.81      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-addr+rfi-ctrl         | 23    | NO           | 41.61      | 2.77      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrss                   | 16    | NO           | 3.07       | 1.09      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+addr-rfi-addr       | 15    | NO           | 5.79       | 0.40      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-ctrlfencei+rfi-ctrl-rfi | 21    | NO           | 108.68     | 96.98     
+2026-03-22 13:08:37 | INFO    | bayes_eval | C-Will02+HEAD                  | 14    | NO           | 1.25       | 0.39      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+data-rfi-ctrlfence | 21    | NO           | 57.16      | 5.75      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-ctrl+ctrl           | 22    | NO           | 1.31       | 0.94      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-ctrlfenceis+pos-po-addr  | 26    | NO           | 1.62       | 0.86      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+po-ctrlfenceis       | 30    | NO           | 13.37      | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po-addrs+pos-po-ctrlfen | 25    | NO           | 2.57       | 0.42      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+data-rfi-ctrlfencei | 19    | NO           | 1.42       | 0.87      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+fence.rw.rw    | 21    | YES          | 1.48       | 1.48      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+po-addrs                 | 17    | NO           | 2.38       | 0.89      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrl-rfi-addr      | 20    | NO           | 1.74       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrl-rfi-ctrlfence | 16    | NO           | 531.75     | 71.03     
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-pos                     | 20    | NO           | 3.56       | 2.82      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-data+addr           | 21    | YES          | 1.39       | 1.39      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-data+fence.rw.rw         | 25    | NO           | 7.49       | 3.23      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+ctrlfencei-rfi | 18    | NO           | 61.17      | 36.89     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrl-rfi-ctrl       | 21    | NO           | 4.73       | 0.38      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po-addrs+pos-po-addr    | 16    | YES          | 3.53       | 3.53      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB                             | 17    | NO           | 2.27       | 1.34      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+addr-rfi-addrs     | 17    | NO           | 1.87       | 0.67      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrl+rfi-addr-rfi        | 22    | NO           | 2.39       | 0.78      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+pos-po-addrs             | 15    | YES          | 1.25       | 1.25      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrlfencei+rfi-data-rfi  | 14    | NO           | 3.26       | 2.12      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-data+fence.rw.rw    | 20    | YES          | 3.07       | 3.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-ctrlfencei+rfi-addr  | 22    | YES          | 6.94       | 6.94      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+pos-po-addr     | 15    | NO           | 1.13       | 0.41      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-addr+ctrl           | 21    | NO           | 1.34       | 0.78      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrlfencei-rfi-data | 18    | NO           | 1.02       | 0.42      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+po+fence.r.rw               | 13    | NO           | 1.29       | 0.95      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrl-rfi           | 19    | NO           | 13.96      | 0.40      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs+po-addr            | 18    | NO           | 2.94       | 0.02      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po-addrs                | 21    | NO           | 5.22       | 3.36      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrl-rfi-addr       | 26    | NO           | 1.54       | 0.63      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+data-rfi           | 20    | YES          | 6.52       | 6.52      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-pos                     | 24    | YES          | 1.47       | 1.47      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.w+fence.w.w        | 12    | YES          | 6.65       | 6.65      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+poaqp+NEW                 | 13    | NO           | 11.03      | 0.37      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-ctrl+rfi-addr        | 22    | YES          | 2.47       | 2.47      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+wsi-rfi-addr    | 20    | NO           | 15.59      | 1.60      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.w+rfi-addr       | 16    | NO           | 1.17       | 0.53      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-addr+rfi-addr-rfi        | 16    | NO           | 3.62       | 0.31      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-addr+pos-ctrlfencei     | 18    | YES          | 67.37      | 67.37     
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addr+po-ctrlfenceis      | 26    | NO           | 3.50       | 0.03      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+data-rfi-addr       | 16    | NO           | 6.59       | 5.90      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrl                | 22    | NO           | 23.50      | 7.10      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrlfencei-rfi-ctrl | 15    | NO           | 5.87       | 0.01      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-addr+rfi-data         | 21    | NO           | 7.79       | 0.09      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+po-addr          | 23    | YES          | 3.61       | 3.61      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs+pos-po-ctrlfencei  | 15    | NO           | 10.51      | 5.56      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-ctrlfenceis+pos-po-addrs | 14    | NO           | 3.98       | 0.65      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.w.w+rfi-addr        | 17    | NO           | 7.49       | 1.52      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs+pos-po-addrs       | 20    | NO           | 3.42       | 3.19      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+data-rfi-data       | 16    | NO           | 1.94       | 0.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-data+rfi-addr-rfi        | 12    | NO           | 2.99       | 0.49      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr+rfi-ctrlfencei     | 15    | YES          | 23.28      | 23.28     
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+po              | 17    | YES          | 6.97       | 6.97      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+addr-rfi-ctrlfence | 18    | YES          | 3.09       | 3.09      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-addr+rfi-ctrlfencei  | 14    | YES          | 32.25      | 32.25     
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+rfi-data-rfi     | 19    | NO           | 3.91       | 1.73      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+po              | 14    | NO           | 11.49      | 0.35      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrlfencei-rfi     | 19    | YES          | 3.96       | 3.96      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrlfencei-rfi-ctrl | 21    | NO           | 1.24       | 0.31      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+data-rfi-addr  | 19    | YES          | 1.07       | 1.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-data-rfis               | 17    | YES          | 4.08       | 4.08      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+data+po                     | 14    | YES          | 12.79      | 12.79     
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr+rfi-addr-rfi       | 25    | YES          | 2.78       | 2.78      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.rw+po            | 18    | NO           | 1.25       | 0.02      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+addr-rfi-ctrlfence | 19    | NO           | 15.81      | 1.93      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+ctrlfencei                | 23    | NO           | 1.21       | 1.17      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+wsi-rfi-addrs               | 13    | NO           | 2.23       | 1.30      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrlfencei-rfi-ctr | 21    | YES          | 1.24       | 1.24      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrlfencei          | 14    | NO           | 1.76       | 0.22      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+addr-rfi-addr      | 22    | YES          | 8.57       | 8.57      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+fence.w.w         | 22    | NO           | 13.51      | 4.46      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+poprl+NEW                 | 16    | NO           | 4.30       | 0.97      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+ctrlfencei+po               | 22    | NO           | 1.22       | 0.23      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+data-rfi-addr  | 18    | YES          | 1.00       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+fri-rfi-data+fri-rfi-ctrl   | 19    | NO           | 10.23      | 2.25      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-data+rfi-addr        | 17    | NO           | 0.99       | 0.82      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr+rfi-data-rfi       | 17    | NO           | 3.31       | 2.72      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+addr-rfi-ctrlfence | 22    | NO           | 1.43       | 0.01      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrlfencei-rfi-addr | 19    | NO           | 2.10       | 0.57      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+wsi-rfi-addr+fence.rw.rw     | 18    | YES          | 3.01       | 3.01      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+po+ctrl                     | 23    | NO           | 1.02       | 0.38      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.w.w+rfi-ctrl        | 16    | NO           | 1.45       | 0.37      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addrs                   | 18    | NO           | 3.85       | 0.93      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr+pos-rfi-ctrlfencei | 19    | NO           | 7.13       | 0.70      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+ctrlfencei-rfi | 17    | YES          | 50.81      | 50.81     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+ctrl-rfi-ctrlfencei | 24    | NO           | 2.75       | 0.82      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+data-rfi-data       | 19    | NO           | 15.91      | 0.02      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+porlps+NEW                  | 19    | YES          | 1.77       | 1.77      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+addr-rfi-data       | 16    | NO           | 9.61       | 4.11      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.w+po               | 14    | NO           | 4.38       | 1.21      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+data-rfi-addrs     | 17    | NO           | 3.95       | 3.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-addr+rfi-ctrlfencei-rfi | 24    | YES          | 3.42       | 3.42      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+data-rfi-ctrlf | 15    | YES          | 78.24      | 78.24     
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-rfi-addr+pos-rfi-ctrlfe | 21    | NO           | 4.55       | 1.71      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrlfencei-rfi     | 20    | NO           | 5.97       | 0.78      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-po+pos-po-addrs         | 22    | YES          | 2.44       | 2.44      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-data+rfi-ctrlfencei  | 20    | NO           | 99.14      | 62.76     
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+pos-rfi-addr    | 17    | NO           | 2.18       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+addr-rfi           | 20    | NO           | 1.62       | 0.13      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+fri-rfi-addrs               | 17    | NO           | 0.99       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+fence.rw.w+po                | 15    | NO           | 1.78       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+rfi-addr          | 16    | YES          | 4.34       | 4.34      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-addr+pos-pos-addr       | 20    | NO           | 5.13       | 4.46      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+rfi-addr-rfi      | 20    | NO           | 5.75       | 0.11      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.rw+data-wsi-rfi-ct | 16    | YES          | 1.94       | 1.94      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+po-addrs         | 19    | YES          | 6.45       | 6.45      
+2026-03-22 13:08:37 | INFO    | bayes_eval | ISA09                          | 16    | NO           | 0.89       | 0.87      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.w+ctrl-rfi-addr    | 18    | NO           | 1.08       | 0.84      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+pos-addr           | 18    | NO           | 8.15       | 0.77      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+ctrlfencei-rfi | 22    | NO           | 52.38      | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrlfencei-rfi     | 21    | NO           | 6.19       | 2.20      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+pos-addr        | 14    | YES          | 10.35      | 10.35     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrlfencei-rfi-addr | 21    | NO           | 0.98       | 0.85      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+addr-rfi-ctrl       | 13    | NO           | 3.20       | 0.86      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+data-rfi-ctrlfence | 19    | NO           | 1283.49    | 34.52     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+addr           | 20    | NO           | 2.58       | 0.64      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+addr-rfi-data       | 23    | NO           | 14.92      | 4.72      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+po+porlp+NEW              | 18    | NO           | 4.21       | 3.55      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-data+rfi-ctrlfencei-rfi  | 16    | NO           | 3.91       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+ctrlfencei-rfi | 13    | YES          | 218.51     | 218.51    
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-addr+rfi-addr        | 20    | YES          | 1.13       | 1.13      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-ctrlfencei+rfi-addr-rfi | 19    | NO           | 95.92      | 3.44      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.rw+rfi-addr      | 16    | YES          | 4.97       | 4.97      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrl-rfi-ctrlfence | 23    | NO           | 1922.63    | 353.24    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+fence.r.rw     | 16    | YES          | 2.48       | 2.48      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrl                | 17    | NO           | 12.57      | 4.03      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+fence.rw.rw         | 11    | NO           | 55.08      | 4.05      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+addr-rfi-ctrlfence | 16    | YES          | 495.59     | 495.59    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+ctrlfencei-rfi-ctr | 25    | NO           | 2.31       | 0.37      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-data+rfi-addr            | 20    | YES          | 3.08       | 3.08      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+fence.r.rw         | 17    | NO           | 1.44       | 1.14      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+fence.rw.rw+po              | 23    | NO           | 8.50       | 4.18      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+rfi-data-rfi      | 13    | NO           | 2.77       | 2.66      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+fence.rw.w          | 19    | NO           | 17.11      | 4.37      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+fence.r.rw          | 18    | NO           | 19.33      | 6.55      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+data-rfi-addr      | 14    | NO           | 1.00       | 0.45      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R                              | 18    | YES          | 1.51       | 1.51      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+poprl+po+NEW                | 15    | NO           | 11.19      | 6.16      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+pos-addr          | 24    | YES          | 8.78       | 8.78      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-ctrlfencei+rfi-data-rfi | 14    | NO           | 123.28     | 15.15     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+fence.r.rw     | 10    | YES          | 1.67       | 1.67      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrlfencei-rfi-add | 20    | NO           | 571.01     | 414.57    
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+fence.rw.w+ctrl             | 16    | NO           | 8.76       | 1.78      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+po-addr         | 25    | NO           | 6.06       | 0.87      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-addr+fence.rw.rw     | 20    | NO           | 2.40       | 0.21      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+data-rfi-addr      | 16    | NO           | 2.31       | 0.71      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+po+poaqaq+NEW               | 9     | NO           | 1.67       | 0.75      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+data-rfi-ctrlf | 19    | YES          | 114.43     | 114.43    
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrl-rfi-addr       | 15    | YES          | 3.41       | 3.41      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-data+fence.rw.rw     | 15    | NO           | 3.26       | 0.20      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+ctrlfencei          | 17    | NO           | 1.16       | 0.79      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-addr+rfi-ctrl-rfi        | 14    | YES          | 1.36       | 1.36      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+fence.w.w+po                 | 18    | NO           | 16.00      | 0.73      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+addr               | 22    | YES          | 4.82       | 4.82      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrlfencei-rfi-ctr | 18    | NO           | 2790.21    | 673.59    
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+po+popaq+NEW                 | 14    | YES          | 6.44       | 6.44      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+po               | 21    | NO           | 4.59       | 3.96      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.ws                   | 20    | NO           | 1.36       | 0.02      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-ctrl+ctrlfencei     | 23    | YES          | 126.02     | 126.02    
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-ctrl+rfi-ctrlfencei  | 18    | NO           | 50.79      | 45.65     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+addr-rfi-addr      | 15    | YES          | 17.07      | 17.07     
+2026-03-22 13:08:37 | INFO    | bayes_eval | ISA15                          | 19    | YES          | 14.99      | 14.99     
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.w+rfi-data       | 28    | NO           | 3.53       | 0.46      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+addr-rfi           | 19    | NO           | 2.95       | 0.10      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+poprl+porlp+NEW              | 14    | NO           | 3.66       | 1.51      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.w.w+po              | 23    | NO           | 3.15       | 1.61      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-data+rfi-ctrlfencei   | 19    | NO           | 6.77       | 0.96      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrl-rfi-addr      | 15    | NO           | 1.43       | 0.33      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+data-rfi-ctrl       | 11    | NO           | 1.32       | 0.04      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+porlp+po+NEW                 | 9     | NO           | 5.81       | 3.71      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-addr+ctrl-rfi-addr  | 19    | NO           | 1.50       | 0.82      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+addr-rfi-ctrlfence | 19    | NO           | 567.02     | 16.12     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-ctrl+addr                | 15    | YES          | 3.07       | 3.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs+pos-po-ctrlfenceis | 23    | NO           | 1.56       | 0.67      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-ctrl+rfi-ctrlfencei-rfi  | 16    | NO           | 2.02       | 0.95      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+po+fence.rw.w                | 11    | YES          | 12.42      | 12.42     
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+rfi-addr+fence.rw.rw         | 17    | YES          | 22.19      | 22.19     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+fence.rw.w          | 17    | YES          | 12.10      | 12.10     
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+rfi-addr+rfi-ctrlfencei   | 18    | NO           | 15.01      | 1.70      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po-addrs+po-ctrlfencei      | 23    | NO           | 7.92       | 2.74      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.rw+rfi-addr-rfi     | 24    | YES          | 6.19       | 6.19      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrl-rfi-addr       | 15    | NO           | 5.89       | 2.93      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+addr-rfi-ctrlfence | 17    | NO           | 1111.34    | 37.26     
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+data-rfi-data       | 15    | NO           | 4.41       | 1.29      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-addr+fence.r.rw          | 16    | NO           | 22.60      | 0.06      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-addr+addr           | 18    | YES          | 4.40       | 4.40      
+2026-03-22 13:08:37 | INFO    | bayes_eval | LB+ctrl+po                     | 17    | YES          | 10.79      | 10.79     
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+addr-rfi-addrs     | 20    | NO           | 1.77       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | 2+2W+fence.rw.rw+rfi-ctrl      | 18    | NO           | 1.05       | 0.09      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-data+ctrl-rfi-addrs     | 18    | YES          | 9.26       | 9.26      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+po+porlp+NEW                 | 14    | NO           | 5.12       | 1.96      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+ctrlfencei-rfi-add | 13    | NO           | 0.83       | 0.31      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+pos-ctrlfencei+pos-pos-addr | 13    | NO           | 8.07       | 1.39      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+rfi-ctrl-rfi+rfi-ctrlfencei | 19    | YES          | 1.49       | 1.49      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.w.w+po                 | 10    | NO           | 1.02       | 1.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+pos-rfi-data+data-rfi-addr  | 15    | YES          | 3.43       | 3.43      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+po-ctrlfenceis           | 17    | NO           | 4.01       | 0.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+pos-rfi-ctrl+fence.rw.rw     | 19    | YES          | 4.33       | 4.33      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+ctrl-rfi-data       | 16    | YES          | 8.87       | 8.87      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+fence.rw.rw        | 18    | YES          | 2.68       | 2.68      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+po+fence.rw.rw               | 20    | YES          | 5.52       | 5.52      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+popaq+NEW                | 14    | NO           | 13.76      | 1.31      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-addr+data-rfi-ctrlfence | 13    | NO           | 46.83      | 2.63      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+wsi-rfi-addr+wsi-rfi-ctrl   | 8     | YES          | 2.52       | 2.52      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+wsi-rfi-data+ctrl           | 12    | NO           | 1.65       | 0.93      
+2026-03-22 13:08:37 | INFO    | bayes_eval | R+fence.rw.w+po-addrs          | 19    | NO           | 6.03       | 4.71      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+po+pos-po-addr              | 15    | YES          | 2.64       | 2.64      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+addr-rfi-addr       | 13    | NO           | 22.10      | 3.07      
+2026-03-22 13:08:37 | INFO    | bayes_eval | MP+rfi-ctrl+data-rfi-addrs     | 13    | YES          | 7.28       | 7.28      
+2026-03-22 13:08:37 | INFO    | bayes_eval | SB+fence.rw.rw+pos-po          | 17    | NO           | 7.61       | 0.00      
+2026-03-22 13:08:37 | INFO    | bayes_eval | S+rfi-data+addr-rfi-data       | 16    | NO           | 5.43       | 0.57      
+2026-03-22 13:08:37 | INFO    | bayes_eval | ============================================================
+2026-03-22 13:08:37 | INFO    | bayes_eval |        PER-LITMUS RANKING RESULTS       
+2026-03-22 13:08:37 | INFO    | bayes_eval | ============================================================
+2026-03-22 13:08:37 | INFO    | bayes_eval | Total Unique Litmus Tests: 440
+2026-03-22 13:08:37 | INFO    | bayes_eval | Top-1 Accuracy:          28.41% (125/440)
+2026-03-22 13:08:37 | INFO    | bayes_eval | Top-3 Recall:            55.00% (242/440)
+2026-03-22 13:08:37 | INFO    | bayes_eval | ------------------------------------------------------------
+2026-03-22 13:08:37 | INFO    | bayes_eval | Global Spearman Rho:     0.6005
+2026-03-22 13:08:37 | INFO    | bayes_eval | Global R^2 Score:        0.1478
+2026-03-22 13:08:37 | INFO    | bayes_eval | Global MAE:              12.4465
+2026-03-22 13:08:37 | INFO    | bayes_eval | ============================================================
+2026-03-22 13:08:37 | INFO    | bayes_eval | ------------------------------------------------------------
+2026-03-22 13:08:37 | INFO    | bayes_eval | Calculating Per-Litmus Spearman Correlation...
+2026-03-22 13:08:37 | INFO    | bayes_eval | Mean Per-Litmus Rho:   0.5931
+2026-03-22 13:08:37 | INFO    | bayes_eval | Median Per-Litmus Rho: 0.6232
+2026-03-22 13:08:37 | INFO    | bayes_eval | ============================================================
+2026-03-22 13:08:38 | INFO    | bayes_eval | Starting Deep Error Analysis...
+2026-03-22 13:08:38 | INFO    | bayes_eval | Calculating Top-K Recall Curve...

@@ -1,0 +1,73 @@
+Mon Jan 26 02:22:56 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for ./make_new_litmus/litmus_output/Rfe_PodRR_Fre_PodWW_Rfe_DpCtrldW.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV A
+"Rfe PodRR Fre PodWW Rfe DpCtrldW"
+{0:x6=x; 0:x8=y; 1:x6=y; 1:x8=z; 2:x6=z; 2:x8=x;}
+ P0          | P1          | P2             ;
+ lw x5,0(x6) | ori x5,x0,1 | lw x5,0(x6)    ;
+ lw x7,0(x8) | sw x5,0(x6) | bne x5,x0,LC00 ;
+             | ori x7,x0,1 | LC00:          ;
+             | sw x7,0(x8) | ori x7,x0,1    ;
+             |             | sw x7,0(x8)    ;
+
+exists (0:x5=1 /\ 0:x7=0 /\ 2:x5=1)
+Generated assembler
+#START _litmus_P2
+	lw a3,0(a5)
+	bne a3,x0,0f
+0:
+	ori s1,x0,1
+	sw s1,0(a4)
+#START _litmus_P1
+	ori t2,x0,1
+	sw t2,0(a5)
+	ori a3,x0,1
+	sw a3,0(a4)
+#START _litmus_P0
+	lw a3,0(a5)
+	lw s2,0(a4)
+Test A Allowed
+Histogram (8 states)
+256189:>0:x5=0; 0:x7=0; 2:x5=0;
+140791:>0:x5=1; 0:x7=0; 2:x5=0;
+8845  :>0:x5=0; 0:x7=1; 2:x5=0;
+191339:>0:x5=1; 0:x7=1; 2:x5=0;
+85059 :>0:x5=0; 0:x7=0; 2:x5=1;
+154   *>0:x5=1; 0:x7=0; 2:x5=1;
+302023:>0:x5=0; 0:x7=1; 2:x5=1;
+15600 :>0:x5=1; 0:x7=1; 2:x5=1;
+Ok
+
+Witnesses
+Positive: 154, Negative: 999846
+Condition exists (0:x5=1 /\ 0:x7=0 /\ 2:x5=1) is validated
+Hash=1620fb1a7e1ba21cb9cf06b120e77406
+Generator=diyone7 (version 7.56)
+Com=Fr Rf Rf
+Orig=Rfe PodRR Fre PodWW Rfe DpCtrldW
+Observation A Sometimes 154 999846
+Time A 0.65
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier user2 -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc dynamic -contiguous false -noalign none ./make_new_litmus/litmus_output/Rfe_PodRR_Fre_PodWW_Rfe_DpCtrldW.litmus -o ./make_new_litmus/litmus_output_bayes/Rfe_PodRR_Fre_PodWW_Rfe_DpCtrldW_0_2_0_0_0_0_2_0_0_0_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: user2 */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_0a72ac75.exe -s 100000
+Mon Jan 26 02:22:57 2026

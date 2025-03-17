@@ -1,0 +1,71 @@
+Mon Jan 26 01:50:02 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for ./make_new_litmus/litmus_output/Rfe_PodRW_Rfe_DpDatadW_Rfe_PodRW.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV A
+"Rfe PodRW Rfe DpDatadW Rfe PodRW"
+{0:x6=x; 0:x8=y; 1:x6=y; 1:x8=z; 2:x6=z; 2:x8=x;}
+ P0          | P1           | P2          ;
+ lw x5,0(x6) | lw x5,0(x6)  | lw x5,0(x6) ;
+ ori x7,x0,1 | xor x7,x5,x5 | ori x7,x0,1 ;
+ sw x7,0(x8) | ori x7,x7,1  | sw x7,0(x8) ;
+             | sw x7,0(x8)  |             ;
+
+exists (0:x5=1 /\ 1:x5=1 /\ 2:x5=1)
+Generated assembler
+#START _litmus_P1
+	lw a1,0(a5)
+	xor s1,a1,a1
+	ori s1,s1,1
+	sw s1,0(a4)
+#START _litmus_P2
+	lw a1,0(a5)
+	ori s1,x0,1
+	sw s1,0(a4)
+#START _litmus_P0
+	lw a1,0(a5)
+	ori s1,x0,1
+	sw s1,0(a4)
+Test A Allowed
+Histogram (8 states)
+89306 :>0:x5=0; 1:x5=0; 2:x5=0;
+270673:>0:x5=1; 1:x5=0; 2:x5=0;
+270539:>0:x5=0; 1:x5=1; 2:x5=0;
+44276 :>0:x5=1; 1:x5=1; 2:x5=0;
+267204:>0:x5=0; 1:x5=0; 2:x5=1;
+24995 :>0:x5=1; 1:x5=0; 2:x5=1;
+32389 :>0:x5=0; 1:x5=1; 2:x5=1;
+618   *>0:x5=1; 1:x5=1; 2:x5=1;
+Ok
+
+Witnesses
+Positive: 618, Negative: 999382
+Condition exists (0:x5=1 /\ 1:x5=1 /\ 2:x5=1) is validated
+Hash=655565e3ba7a8be556421ba1f08b1082
+Generator=diyone7 (version 7.56)
+Com=Rf Rf Rf
+Orig=Rfe PodRW Rfe DpDatadW Rfe PodRW
+Observation A Sometimes 618 999382
+Time A 0.59
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr2 -force_affinity true -mem direct -barrier userfence -detached true -thread std -launch fixed -stride 2 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc before -contiguous false -noalign all ./make_new_litmus/litmus_output/Rfe_PodRW_Rfe_DpDatadW_Rfe_PodRW.litmus -o ./make_new_litmus/litmus_output_bayes/Rfe_PodRW_Rfe_DpDatadW_Rfe_PodRW_0_1_1_1_0_1_3_2_0_1_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 2
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: fixed */
+/* affinity: incr2 */
+/* alloc: Before */
+/* memory: direct */
+/* stride: 2 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_6c5d949d.exe -s 100000
+Mon Jan 26 01:50:03 2026

@@ -1,0 +1,92 @@
+Sun Mar 15 13:07:41 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+fence.rw.rw+addr-fri-rfi-addr.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV MP+fence.rw.rw+addr-fri-rfi-addr
+"Fence.rw.rwdWW Rfe DpAddrdR Fri Rfi DpAddrdR Fre"
+{0:x5=1; 0:x6=x; 0:x7=y; 1:x6=y; 1:x9=z; 1:x11=1; 1:x15=x;}
+ P0          | P1              ;
+ sw x5,0(x6) | lw x5,0(x6)     ;
+ fence rw,rw | xor x7,x5,x5    ;
+ sw x5,0(x7) | add x10,x9,x7   ;
+             | lw x8,0(x10)    ;
+             | sw x11,0(x9)    ;
+             | lw x12,0(x9)    ;
+             | xor x13,x12,x12 ;
+             | add x16,x15,x13 ;
+             | lw x14,0(x16)   ;
+
+exists (1:x5=1 /\ 1:x8=0 /\ 1:x12=1 /\ 1:x14=0)
+Generated assembler
+	#START _litmus_P1
+	lw a7,0(a5)
+	xor s9,a7,a7
+	add s8,a4,s9
+	lw t1,0(s8)
+	sw a2,0(a4)
+	lw t3,0(a4)
+	xor s7,t3,t3
+	add s6,a3,s7
+	lw s5,0(s6)
+	#START _litmus_P0
+	sw a2,0(a5)
+	fence rw,rw
+	sw a2,0(a4)
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+Test MP+fence.rw.rw+addr-fri-rfi-addr Allowed
+Histogram (0 states)
+No
+
+Witnesses
+Positive: 0, Negative: 2000000
+Condition exists (1:x5=1 /\ 1:x8=0 /\ 1:x12=1 /\ 1:x14=0) is NOT validated
+Hash=5fd2871d0658de4a60b65c5568ecb369
+Cycle=Rfi DpAddrdR Fre Fence.rw.rwdWW Rfe DpAddrdR Fri
+Relax MP+fence.rw.rw+addr-fri-rfi-addr No [Fri,Rfi]
+Safe=Rfe Fre Fence.rw.rwdWW DpAddrdR
+Generator=diy7 (version 7.51+4(dev))
+Com=Rf Fr
+Orig=Fence.rw.rwdWW Rfe DpAddrdR Fri Rfi DpAddrdR Fre
+Observation MP+fence.rw.rw+addr-fri-rfi-addr Never 0 2000000
+Time MP+fence.rw.rw+addr-fri-rfi-addr 0.37
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier none -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -alloc dynamic -contiguous false -noalign none /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+fence.rw.rw+addr-fri-rfi-addr.litmus -o /home/whq/Desktop/code_list/perple_test/bayes_banana_perple/MP+fence.rw.rw+addr-fri-rfi-addr_0_5_0_0_0_0_2_0_0_0_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /root/perple/MP+fence.rw.rw+addr-fri-rfi-addr_0_5_0_0_0_0_2_0_0_0_1/run.exe -s 100000
+Sun Mar 15 13:07:42 2026

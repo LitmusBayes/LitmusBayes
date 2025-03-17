@@ -1,0 +1,30 @@
+2026-03-22 12:39:10 | INFO    | bayes_eval | ================================================================================
+2026-03-22 12:39:10 | INFO    | bayes_eval | Logger initialized
+2026-03-22 12:39:10 | INFO    | bayes_eval | log_file=./dnn.check.run.log
+2026-03-22 12:39:10 | INFO    | bayes_eval | level=INFO
+2026-03-22 12:39:10 | INFO    | bayes_eval | ================================================================================
+2026-03-22 12:39:10 | INFO    | bayes_eval | === Start Manual-Feature Evaluation (Split) | Seed=2025 ===
+2026-03-22 12:39:10 | INFO    | bayes_eval | Loading performance data...
+2026-03-22 12:39:10 | INFO    | bayes_eval | Total Programs: 448
+2026-03-22 12:39:10 | INFO    | bayes_eval | Train Set: 358 | Test Set: 90
+2026-03-22 12:39:10 | INFO    | bayes_eval | Loaded 891 vectors from file.
+2026-03-22 13:03:52 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:03:52 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:03:52 | INFO    | bayes_eval | log_file=./dnn.check.run.log
+2026-03-22 13:03:52 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:03:52 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:03:52 | INFO    | bayes_eval | === Start Manual-Feature Evaluation (Split) | Seed=2025 ===
+2026-03-22 13:03:52 | INFO    | bayes_eval | Loading performance data...
+2026-03-22 13:03:52 | INFO    | bayes_eval | Total Programs: 448
+2026-03-22 13:03:52 | INFO    | bayes_eval | Train Set: 358 | Test Set: 90
+2026-03-22 13:03:52 | INFO    | bayes_eval | Loaded 891 vectors from file.
+2026-03-22 13:06:14 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:14 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:06:14 | INFO    | bayes_eval | log_file=./dnn.check.run.log
+2026-03-22 13:06:14 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:06:14 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:14 | INFO    | bayes_eval | === Start Manual-Feature Evaluation (Split) | Seed=2025 ===
+2026-03-22 13:06:14 | INFO    | bayes_eval | Loading performance data...
+2026-03-22 13:06:14 | INFO    | bayes_eval | Total Programs: 448
+2026-03-22 13:06:14 | INFO    | bayes_eval | Train Set: 358 | Test Set: 90
+2026-03-22 13:06:14 | INFO    | bayes_eval | Loaded 891 vectors from file.

@@ -1,0 +1,77 @@
+Sun Mar 15 00:30:15 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/ISA02.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV ISA02
+{0:x8=x; 0:x9=y; 1:x8=x; 1:x9=y;}
+ P0           | P1           ;
+ ori x6,x0,1  | ori x6,x0,1  ;
+ sw x6,0(x8)  | sw x6,0(x9)  ;
+ lw x10,0(x8) | lw x12,0(x9) ;
+ fence r,r    | fence r,r    ;
+ lw x11,0(x9) | lw x13,0(x8) ;
+
+exists (0:x10=1 /\ 0:x11=0 /\ 1:x12=1 /\ 1:x13=0)
+Generated assembler
+	#START _litmus_P1
+	#_litmus_P1_1
+	lw t1,0(a4)
+	fence r,r
+	lw t3,0(a5)
+	#START _litmus_P0
+	#_litmus_P0_1
+	lw t1,0(a5)
+	fence r,r
+	lw t3,0(a4)
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+heuristic statistic: 0
+Test ISA02 Allowed
+Histogram (0 states)
+No
+
+Witnesses
+Positive: 0, Negative: 2000000
+Condition exists (0:x10=1 /\ 0:x11=0 /\ 1:x12=1 /\ 1:x13=0) is NOT validated
+Hash=7ae69cc5a3ccf9c5bde7c1b639db18b0
+Observation ISA02 Never 0 2000000
+Time ISA02 0.24
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier none -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -alloc dynamic -contiguous false -noalign none /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/ISA02.litmus -o /home/whq/Desktop/code_list/perple_test/bayes_banana_perple/ISA02_0_5_0_0_0_0_2_0_0_0_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/perple/ISA02_0_5_0_0_0_0_2_0_0_0_1/run.exe -s 100000
+Sun Mar 15 00:30:16 2026

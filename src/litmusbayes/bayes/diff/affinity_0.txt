@@ -1,0 +1,231 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.c
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBaffinity_0/LB.c
+18c18
+< #define AFF_INCR (1)
+---
+> #define AFF_INCR (-1)
+29d28
+< #include "affinity.h"
+36,37d34
+<   aff_mode_t aff_mode;
+<   int ncpus, ncpus_used;
+39d35
+<   cpus_t *cm;
+59,79d54
+< /*
+<  Topology: {{{0, 1}, {2, 3}}}
+< */
+< 
+< static int cpu_scan[] = {
+< // [[0],[1]]
+< 2, 0, 3, 1,
+< // [[0,1]]
+< 2, 3, 0, 1,
+< };
+< 
+< static char *group[] = {
+< "[[0],[1]]",
+< "[[0,1]]",
+< };
+< 
+< #define SCANSZ 2
+< #define SCANLINE 4
+< 
+< static count_t ngroups[SCANSZ];
+< 
+187d161
+<   int *cpu; /* On this cpu */
+195,196d168
+<   int _ecpu = _b->cpu[_b->th_id];
+<   force_one_affinity(_ecpu,AVAIL,_a->_p->verbose,"LB");
+228,229d199
+<   int _ecpu = _b->cpu[_b->th_id];
+<   force_one_affinity(_ecpu,AVAIL,_a->_p->verbose,"LB");
+296,297d265
+<   int z_id;
+<   int *cpus;
+316d283
+<     parg[_p].cpu = &(_a->cpus[0]);
+320,332d286
+<     if (_b->aff_mode == aff_random) {
+<       pb_wait(_a->p_barrier);
+<       if (_a->z_id == 0) perm_prefix_ints(&ctx.seed,_a->cpus,_b->ncpus_used,_b->ncpus);
+<       pb_wait(_a->p_barrier);
+<     } else if (_b->aff_mode == aff_scan) {
+<       pb_wait(_a->p_barrier);
+<       int idx_scan = n_run % SCANSZ;
+<       int *from =  &cpu_scan[SCANLINE*idx_scan];
+<       from += N*_a->z_id;
+<       for (int k = 0 ; k < N ; k++) _a->cpus[k] = from[k];
+<       pb_wait(_a->p_barrier);
+<     } else {
+<     }
+354,362d307
+<       if (_b->aff_mode == aff_scan && _a->cpus[0] >= 0 && cond) {
+<         pm_lock(_a->p_mutex);
+<         ngroups[n_run % SCANSZ]++;
+<         pm_unlock(_a->p_mutex);
+<       } else if (_b->aff_mode == aff_topo && _a->cpus[0] >= 0 && cond) {
+<         pm_lock(_a->p_mutex);
+<         ngroups[0]++;
+<         pm_unlock(_a->p_mutex);
+<       }
+393,396d337
+< static int color_0[] = {1, 0, -1};
+< static int *color[] = {color_0, NULL};
+< static int diff[] = {-1};
+< 
+415,417d355
+<   if (cmd->aff_mode == aff_custom) {
+<     fprintf(out,"Affinity=[1, 0] ; \n");
+<   }
+422,429d359
+<     if (cmd->aff_mode == aff_scan) {
+<       for (int k = 0 ; k < SCANSZ ; k++) {
+<         count_t c = ngroups[k];
+<         if ((c*100)/p_true > ENOUGH) { printf("Topology %-6" PCTR":> %s\n",c,group[k]); }
+<       }
+<     } else if (cmd->aff_mode == aff_topo) {
+<       printf("Topology %-6" PCTR ":> %s\n",ngroups[0],cmd->aff_topo);
+<     }
+444,452c374
+<   int ntopo = -1;
+<   if (cmd->aff_mode == aff_topo) {
+<     ntopo = find_string(group,SCANSZ,cmd->aff_topo);
+<     if (ntopo < 0) {
+<       log_error("Bad topology %s, reverting to scan affinity\n",cmd->aff_topo);
+<       cmd->aff_mode = aff_scan; cmd->aff_topo = NULL;
+<     }
+<   }
+<   prm.do_change = cmd->aff_mode != aff_custom && cmd->aff_mode != aff_scan && cmd->aff_mode != aff_topo;
+---
+>   prm.do_change = 1;
+454d375
+<   prm.cm = coremap_seq(def_all_cpus->sz,2);
+456,457c377
+<   int n_avail = cmd->avail > 0 ? cmd->avail : cmd->aff_cpus->sz;
+<   if (n_avail >  cmd->aff_cpus->sz) log_error("Warning: avail=%i, available=%i\n",n_avail, cmd->aff_cpus->sz);
+---
+>   int n_avail = cmd->avail;
+464,470d383
+< /* Set affinity parameters */
+<   cpus_t *all_cpus = cmd->aff_cpus;
+<   int aff_cpus_sz = cmd->aff_mode == aff_random ? max(all_cpus->sz,N*n_exe) : N*n_exe;
+<   int aff_cpus[aff_cpus_sz];
+<   prm.aff_mode = cmd->aff_mode;
+<   prm.ncpus = aff_cpus_sz;
+<   prm.ncpus_used = N*n_exe;
+475,486d387
+<     if (cmd->aff_mode == aff_incr) {
+<       log_error( ", i=%i",cmd->aff_incr);
+<     } else if (cmd->aff_mode == aff_random) {
+<       log_error(", +ra");
+<     } else if (cmd->aff_mode == aff_custom) {
+<       log_error(", +ca");
+<     } else if (cmd->aff_mode == aff_scan) {
+<       log_error(", +sa");
+<     }
+<     log_error(", p='");
+<     cpus_dump(stderr,cmd->aff_cpus);
+<     log_error("'");
+488,509d388
+<     if (prm.verbose > 1 && prm.cm) {
+<       log_error("logical proc -> core: ");
+<       cpus_dump(stderr,prm.cm);
+<       log_error("\n");
+<     }
+<   }
+<   if (cmd->aff_mode == aff_random) {
+<     for (int k = 0 ; k < aff_cpus_sz ; k++) {
+<       aff_cpus[k] = all_cpus->cpu[k % all_cpus->sz];
+<     }
+<   } else if (cmd->aff_mode == aff_custom) {
+<     st_t seed = 0;
+<     custom_affinity(&seed,prm.cm,color,diff,all_cpus,n_exe,aff_cpus);
+<     if (prm.verbose) {
+<       log_error("thread allocation: \n");
+<       cpus_dump_test(stderr,aff_cpus,aff_cpus_sz,prm.cm,N);
+<     }
+<   } else if (cmd->aff_mode == aff_topo) {
+<     int *from = &cpu_scan[ntopo * SCANLINE];
+<     for (int k = 0 ; k < aff_cpus_sz ; k++) {
+<       aff_cpus[k] = *from++;
+<     }
+517,526d395
+<   int next_cpu = 0;
+<   int delta = cmd->aff_incr;
+<   if (delta <= 0) {
+<     for (int k=0 ; k < all_cpus->sz ; k++) all_cpus->cpu[k] = -1;
+<     delta = 1;
+<   } else {
+<     delta %= all_cpus->sz;
+<   }
+<   int start_scan=0, max_start=gcd(delta,all_cpus->sz);
+<   int *aff_p = aff_cpus;
+531,544d399
+<     p->z_id = k;
+<     p->cpus = aff_p;
+<     if (cmd->aff_mode != aff_incr) {
+<       aff_p += N;
+<     } else {
+<       for (int i=0 ; i < N ; i++) {
+<         *aff_p = all_cpus->cpu[next_cpu]; aff_p++;
+<         next_cpu += delta; next_cpu %= all_cpus->sz;
+<         if (next_cpu == start_scan) {
+<           start_scan++ ; start_scan %= max_start;
+<           next_cpu = start_scan;
+<         }
+<       }
+<     }
+561d415
+<   cpus_free(all_cpus);
+573d426
+<   cpus_free(prm.cm);
+578,583c431,432
+<   cpus_t *def_all_cpus = read_force_affinity(AVAIL,0);
+<   if (def_all_cpus->sz < N) {
+<     cpus_free(def_all_cpus);
+<     return EXIT_SUCCESS;
+<   }
+<   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_incr, 1, 1, AFF_INCR, def_all_cpus, NULL, -1, MAX_LOOP, NULL, NULL, -1, -1, -1, 0, 1};
+---
+>   cpus_t *def_all_cpus = NULL;
+>   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_none, 0, 0, AFF_INCR, def_all_cpus, NULL, -1, MAX_LOOP, NULL, NULL, -1, -1, -1, 0, 1};
+587d435
+<   if (def_all_cpus != cmd.aff_cpus) cpus_free(def_all_cpus);
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/Makefile /home/whq/Desktop/code_list/perple_test/stride/LBaffinity_0/Makefile
+2c2
+< GCCOPTS=-D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread
+---
+> GCCOPTS=-Wall -std=gnu99 -O2 -pthread
+18,20d17
+< affinity.o: affinity.c
+< 	$(GCC) $(GCCOPTS) -O2 -c affinity.c
+< 
+30c27
+< UTILS=affinity.o outs.o utils.o litmus_rand.o
+---
+> UTILS=outs.o utils.o litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBaffinity_0/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity none -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBaffinity_0");
+24c24
+<   fprintf(out,"%s\n","/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */");
+---
+>   fprintf(out,"%s\n","/* gcc options: -Wall -std=gnu99 -O2 -pthread */");
+28c28
+<   fprintf(out,"%s\n","/* affinity: incr1 */");
+---
+>   fprintf(out,"%s\n","/* affinity: none */");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

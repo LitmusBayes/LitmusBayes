@@ -1,0 +1,11 @@
+RISCV ISA02
+ {0:x8=x; 0:x9=y; 1:x8=x; 1:x9=y; }
+      P0      |      P1       ;
+lw x0, 0(x8)  | lw x0, 0(x9)  ;
+li x6, 1      | li x6, 1      ;
+sw x6, 0(x8)  | sw x6, 0(x9)  ;
+lw x10, 0(x8) | lw x12, 0(x9) ;
+fence r, r    | fence r, r    ;
+lw x11, 0(x9) | lw x13, 0(x8) ;
+
+exists 0:a0=1 /\ 0:a1=0 /\ 1:a2=1 /\ 1:a3=0

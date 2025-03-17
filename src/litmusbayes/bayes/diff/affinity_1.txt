@@ -1,0 +1,27 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBaffinity_1/LB.c
+18c18
+< #define AFF_INCR (1)
+---
+(0> #define AFF_INCR )
+583c583
+<   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_incr, 1, 1, AFF_INCR, def_all_cpus, NULL, -1, MAX_LOOP, NULL, NULL, -1, -1, -1, 0, 1};
+---
+>   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_random, 1, 1, AFF_INCR, def_all_cpus, NULL, -1, MAX_LOOP, NULL, NULL, -1, -1, -1, 0, 1};
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBaffinity_1/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity random -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBaffinity_1");
+28c28
+<   fprintf(out,"%s\n","/* affinity: incr1 */");
+---
+>   fprintf(out,"%s\n","/* affinity: random */");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

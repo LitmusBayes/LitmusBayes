@@ -1,0 +1,56 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_2/LB.c
+49c49
+< /* Barriers macros */
+---
+> /* Barriers macros, compact version */
+51,53c51,55
+<   if ((k % N) == id) {
+<     *b = 1 ;
+<     mbar();
+---
+>   unsigned int x = k % (2*N);
+>   int free = x < N;
+>   unsigned idx =  k % N;
+>   if (idx == id) {
+>     b[idx] = free;
+55c57
+<     while (*b == 0) ;
+---
+>     while (b[idx] != free);
+205c207
+<       barrier_wait(_th_id,_i,&barrier[_i]);
+---
+>       barrier_wait(_th_id,_i,barrier);
+238c240
+<       barrier_wait(_th_id,_i,&barrier[_i]);
+---
+>       barrier_wait(_th_id,_i,barrier);
+270c272
+<   _a->barrier = malloc_check(size_of_test*sizeof(*(_a->barrier)));
+---
+>   _a->barrier = malloc_check(N*sizeof(*(_a->barrier)));
+288c290,293
+<     _a->barrier[_i] = 0;
+---
+>   }
+> /* Initialisation is a bit complex, due to decreasing index in litmus loop */
+>   for (int _i = 0 ; _i < N ; _i++) {
+>     _a->barrier[_i] = !(((_a->_p->size_of_test -_i -1) % (2*N)) < N);
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_2/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier user2 -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_2");
+26c26
+<   fprintf(out,"%s\n","/* barrier: userfence */");
+---
+>   fprintf(out,"%s\n","/* barrier: user2 */");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

@@ -1,0 +1,40 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBlaunch_1/LB.c
+38d37
+<   int do_change;
+335d333
+<     if (_b->do_change) perm_funs(&ctx.seed,fun,N);
+339d336
+<     if (_b->do_change) perm_threads(&ctx.seed,thread,NT);
+444,453d440
+<   int ntopo = -1;
+<   if (cmd->aff_mode == aff_topo) {
+<     ntopo = find_string(group,SCANSZ,cmd->aff_topo);
+<     if (ntopo < 0) {
+<       log_error("Bad topology %s, reverting to scan affinity\n",cmd->aff_topo);
+<       cmd->aff_mode = aff_scan; cmd->aff_topo = NULL;
+<     }
+<   }
+<   prm.do_change = cmd->aff_mode != aff_custom && cmd->aff_mode != aff_scan && cmd->aff_mode != aff_topo;
+<   if (cmd->fix) prm.do_change = 0;
+583c570
+<   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_incr, 1, 1, AFF_INCR, def_all_cpus, NULL, -1, MAX_LOOP, NULL, NULL, -1, -1, -1, 0, 1};
+---
+>   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_incr, 1, 1, AFF_INCR, def_all_cpus, NULL, -1, MAX_LOOP, NULL, NULL, -1, -1, -1, 1, 1};
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBlaunch_1/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -launch fixed -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBlaunch_1");
+27c27
+<   fprintf(out,"%s\n","/* launch: changing */");
+---
+>   fprintf(out,"%s\n","/* launch: fixed */");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

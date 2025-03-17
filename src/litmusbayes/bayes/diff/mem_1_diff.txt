@@ -1,0 +1,100 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBmem_1/LB.c
+37a38
+>   int do_shuffle;
+87,88c88,92
+<   int *y;
+<   int *x;
+---
+>   int* *y;
+>   int* *x;
+>   int *mem_x;
+>   int *mem_y;
+>   int *_idx;
+172,173c176,177
+<   int *y = _a->y;
+<   int *x = _a->x;
+---
+>   int *mem_y = _a->mem_y;
+>   int *mem_x = _a->mem_x;
+175,176c179,180
+<     if (rand_bit(&(_a->seed)) && y[_i] != 0) fatal("LB, check_globals failed");
+<     if (rand_bit(&(_a->seed)) && x[_i] != 0) fatal("LB, check_globals failed");
+---
+>     if (rand_bit(&(_a->seed)) && mem_y[_i] != 0) fatal("LB, check_globals failed");
+>     if (rand_bit(&(_a->seed)) && mem_x[_i] != 0) fatal("LB, check_globals failed");
+215c219
+< :[x6] "r" (&_a->x[_i]),[x7] "r" (1),[x8] "r" (&_a->y[_i])
+---
+> :[x6] "r" (_a->x[_i]),[x7] "r" (1),[x8] "r" (_a->y[_i])
+248c252
+< :[x6] "r" (&_a->y[_i]),[x7] "r" (1),[x8] "r" (&_a->x[_i])
+---
+> :[x6] "r" (_a->y[_i]),[x7] "r" (1),[x8] "r" (_a->x[_i])
+260a265,277
+> static void shuffle(ctx_t *_a) {
+>   int size_of_test = _a->_p->size_of_test;
+> 
+>   perm_ints(&(_a->seed),_a->_idx,size_of_test);
+>   for (int _i = size_of_test-1 ; _i >= 0 ; _i--) {
+>     _a->y[_i] = &(_a->mem_y[_a->_idx[_i]]);
+>   }
+>   perm_ints(&(_a->seed),_a->_idx,size_of_test);
+>   for (int _i = size_of_test-1 ; _i >= 0 ; _i--) {
+>     _a->x[_i] = &(_a->mem_x[_a->_idx[_i]]);
+>   }
+> }
+> 
+268a286,297
+>   _a->mem_y = malloc_check(size_of_test*sizeof(*(_a->mem_y)));
+>   _a->mem_x = malloc_check(size_of_test*sizeof(*(_a->mem_x)));
+>   if (_a->_p->do_shuffle) {
+>     _a->_idx = malloc_check(size_of_test*sizeof(*(_a->_idx)));
+>     for (int _i = size_of_test-1 ; _i >= 0 ; _i--) {
+>       _a->_idx[_i] = _i;
+>     }
+>   }
+>   for (int _i = size_of_test-1 ; _i >= 0 ; _i--) {
+>     _a->y[_i] = &(_a->mem_y[_i]);
+>     _a->x[_i] = &(_a->mem_x[_i]);
+>   }
+273a303,304
+>   free((void *)_a->mem_y);
+>   free((void *)_a->mem_x);
+275a307,309
+>   if (_a->_p->do_shuffle) {
+>     free((void *)_a->_idx);
+>   }
+282a317
+>   if (_a->_p->do_shuffle) shuffle(_a);
+284,285c319,320
+<     _a->y[_i] = 0;
+<     _a->x[_i] = 0;
+---
+>     *(_a->y[_i]) = 0;
+>     *(_a->x[_i]) = 0;
+443a479
+>   prm.do_shuffle = cmd->shuffle;
+474a511
+>     log_error(", %crm",prm.do_shuffle?'+':'-');
+583c620
+<   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_incr, 1, 1, AFF_INCR, def_all_cpus, NULL, -1, MAX_LOOP, NULL, NULL, -1, -1, -1, 0, 1};
+---
+>   cmd_t def = { 0, NUMBER_OF_RUN, SIZE_OF_TEST, STRIDE, AVAIL, 0, 0, aff_incr, 1, 1, AFF_INCR, def_all_cpus, NULL, 1, MAX_LOOP, NULL, NULL, -1, -1, -1, 0, 1};
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBmem_1/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem indirect -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBmem_1");
+30c30
+<   fprintf(out,"%s\n","/* memory: direct */");
+---
+>   fprintf(out,"%s\n","/* memory: indirect */");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

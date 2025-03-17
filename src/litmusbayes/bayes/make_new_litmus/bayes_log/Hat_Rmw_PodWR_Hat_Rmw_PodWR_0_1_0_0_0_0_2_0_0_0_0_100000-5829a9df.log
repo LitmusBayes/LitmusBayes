@@ -1,0 +1,60 @@
+Sun Jan 25 22:43:18 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for ./make_new_litmus/litmus_output/Hat_Rmw_PodWR_Hat_Rmw_PodWR.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV A
+"Hat LxSx PodWR Hat LxSx PodWR"
+{0:x5=x; 0:x9=y; 1:x5=y; 1:x9=x;}
+ P0                   | P1                   ;
+ ori x7,x0,1          | ori x7,x0,1          ;
+ amoswap.w x6,x7,(x5) | amoswap.w x6,x7,(x5) ;
+ lw x8,0(x9)          | lw x8,0(x9)          ;
+
+exists (0:x6=0 /\ 0:x8=0 /\ 1:x6=0 /\ 1:x8=0)
+Generated assembler
+#START _litmus_P0
+	ori t5,x0,1
+	amoswap.w a1,t5,(a5)
+	lw a0,0(a4)
+#START _litmus_P1
+	ori t5,x0,1
+	amoswap.w a1,t5,(a5)
+	lw a0,0(a4)
+Test A Allowed
+Histogram (4 states)
+694524*>0:x6=0; 0:x8=0; 1:x6=0; 1:x8=0;
+645473:>0:x6=0; 0:x8=1; 1:x6=0; 1:x8=0;
+656914:>0:x6=0; 0:x8=0; 1:x6=0; 1:x8=1;
+3089  :>0:x6=0; 0:x8=1; 1:x6=0; 1:x8=1;
+Ok
+
+Witnesses
+Positive: 694524, Negative: 1305476
+Condition exists (0:x6=0 /\ 0:x8=0 /\ 1:x6=0 /\ 1:x8=0) is validated
+Hash=aa39de434298613deb076d447c651c9f
+Generator=diyone7 (version 7.56)
+Com=Fr Fr
+Orig=Hat LxSx PodWR Hat LxSx PodWR
+Observation A Sometimes 694524 1305476
+Time A 0.47
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -detached false -thread std -launch changing -stride 0 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc dynamic -contiguous false -noalign none ./make_new_litmus/litmus_output/Hat_Rmw_PodWR_Hat_Rmw_PodWR.litmus -o ./make_new_litmus/litmus_output_bayes/Hat_Rmw_PodWR_Hat_Rmw_PodWR_0_1_0_0_0_0_2_0_0_0_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE (-1)
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_5829a9df.exe -s 100000
+Sun Jan 25 22:43:19 2026

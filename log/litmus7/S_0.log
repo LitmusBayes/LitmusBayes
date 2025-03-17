@@ -1,0 +1,62 @@
+Mon Aug  4 09:16:10 2025
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/sipeed/riscv/S_0/S.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV S
+"PodWW Rfe PodRW Wse"
+{0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y; 1:x6=y; 1:x7=1; 1:x8=x;}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+
+exists (x=2 /\ 1:x5=1)
+Generated assembler
+#START _litmus_P1
+	lw a1,0(a5)
+	sw a7,0(a4)
+#START _litmus_P0
+	sw a7,0(a5)
+	sw a6,0(a4)
+Test S Allowed
+Histogram (4 states)
+114529:>1:x5=0; x=1;
+878882:>1:x5=1; x=1;
+1004349:>1:x5=0; x=2;
+2240  *>1:x5=1; x=2;
+Ok
+
+Witnesses
+Positive: 2240, Negative: 1997760
+Condition exists (x=2 /\ 1:x5=1) is validated
+Hash=52418bca0e15fd5f9d464d05f12ef649
+Cycle=Rfe PodRW Wse PodWW
+Relax S Ok 
+Safe=Rfe Wse PodWW PodRW
+Generator=diy7 (version 7.51+4(dev))
+Com=Rf Ws
+Orig=PodWW Rfe PodRW Wse
+Observation S Sometimes 2240 1997760
+Time S 27.44
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -mem direct -p 0,1 -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/sipeed/riscv/S_0/S.litmus -o /home/sipeed/riscv/S_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: changing */
+/* affinity: none */
+/* procs: {0,1} */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/riscv/S_0/run.exe -r 10000
+Mon Aug  4 09:16:38 2025

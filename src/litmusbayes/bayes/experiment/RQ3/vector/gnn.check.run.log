@@ -1,0 +1,6 @@
+2026-03-22 13:05:35 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:05:35 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:05:35 | INFO    | bayes_eval | log_file=./gnn.check.run.log
+2026-03-22 13:05:35 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:05:35 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:05:35 | INFO    | bayes_eval | Split data: Train=358, Test=90

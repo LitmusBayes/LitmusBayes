@@ -1,0 +1,1709 @@
+CoWR
+[0:x7=1; [x]=1; , 0:x7=1; [x]=2; , 0:x7=2; [x]=2; ]
+[1:x7=1; [x]=1; , 1:x7=2; [x]=1; , 1:x7=2; [x]=2; ]
+RISCV CoWR
+{
+uint64_t x; uint64_t 0:x7;
+0:x5=1; 0:x6=x;
+1:x5=2; 1:x6=x;
+}
+ P0          | P1          ;
+ sd x5,0(x6) | sd x5,0(x6) ;
+ ld x7,0(x6) |             ;
+~exists (x=1 /\ 0:x7=2)
+
+MP+fence.r.rw+fence.rw.rw
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=0; , 1:x5=1; 1:x7=1; ]
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=1; ]
+RISCV MP+fence.r.rw+fence.rw.rw
+"Fence.r.rwdWW Rfe Fence.rw.rwdRR Fre"
+Cycle=Rfe Fence.rw.rwdRR Fre Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Fre Fence.rw.rwdRR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Rf Fr
+Orig=Fence.r.rwdWW Rfe Fence.rw.rwdRR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence r,rw  | fence rw,rw ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(1:x5=1 /\ 1:x7=0)
+
+MP+fence.rw.rw+fence.rw.w
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=0; , 1:x5=1; 1:x7=1; ]
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=1; ]
+RISCV MP+fence.rw.rw+fence.rw.w
+"Fence.rw.rwdWW Rfe Fence.rw.wdRR Fre"
+Cycle=Rfe Fence.rw.wdRR Fre Fence.rw.rwdWW
+Relax=Fence.rw.wdRR
+Safe=Rfe Fre Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Rf Fr
+Orig=Fence.rw.rwdWW Rfe Fence.rw.wdRR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence rw,rw | fence rw,w  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(1:x5=1 /\ 1:x7=0)
+
+S+fence.r.rw+fence.rw.rw
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.r.rw+fence.rw.rw
+"Fence.r.rwdWW Rfe Fence.rw.rwdRW Wse"
+Cycle=Rfe Fence.rw.rwdRW Wse Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Wse Fence.rw.rwdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.r.rwdWW Rfe Fence.rw.rwdRW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence r,rw  | fence rw,rw ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ 1:x5=1)
+
+MP+fence.rw.ws
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=0; , 1:x5=1; 1:x7=1; ]
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=1; ]
+RISCV MP+fence.rw.ws
+"Fence.rw.wdWW Rfe Fence.rw.wdRR Fre"
+Cycle=Rfe Fence.rw.wdRR Fre Fence.rw.wdWW
+Relax=Fence.rw.wdRR
+Safe=Rfe Fre Fence.rw.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Rf Fr
+Orig=Fence.rw.wdWW Rfe Fence.rw.wdRR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence rw,w  | fence rw,w  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(1:x5=1 /\ 1:x7=0)
+
+S+fence.rw.w+fence.w.w
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.rw.w+fence.w.w
+"Fence.rw.wdWW Rfe Fence.w.wdRW Wse"
+Cycle=Rfe Fence.w.wdRW Wse Fence.rw.wdWW
+Relax=Fence.w.wdRW
+Safe=Rfe Wse Fence.rw.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.rw.wdWW Rfe Fence.w.wdRW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence rw,w  | fence w,w   ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ 1:x5=1)
+
+SB+fence.rw.w+fence.rw.rw
+[0:x7=0; 1:x7=0; , 0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+[0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+RISCV SB+fence.rw.w+fence.rw.rw
+"Fence.rw.wdWR Fre Fence.rw.rwdWR Fre"
+Cycle=Fre Fence.rw.wdWR Fre Fence.rw.rwdWR
+Relax=Fence.rw.wdWR
+Safe=Fre Fence.rw.rwdWR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.rw.wdWR Fre Fence.rw.rwdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=1; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence rw,w  | fence rw,rw ;
+ lw x7,0(x8) | lw x7,0(x8) ;
+exists
+(0:x7=0 /\ 1:x7=0)
+
+S+fence.w.ws
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.w.ws
+"Fence.w.wdWW Rfe Fence.w.wdRW Wse"
+Cycle=Rfe Fence.w.wdRW Wse Fence.w.wdWW
+Relax=Fence.w.wdRW
+Safe=Rfe Wse Fence.w.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.w.wdWW Rfe Fence.w.wdRW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence w,w   | fence w,w   ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ 1:x5=1)
+
+MP+fence.r.rws
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=0; , 1:x5=1; 1:x7=1; ]
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=1; ]
+RISCV MP+fence.r.rws
+"Fence.r.rwdWW Rfe Fence.r.rwdRR Fre"
+Cycle=Rfe Fence.r.rwdRR Fre Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Fre Fence.r.rwdRR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Rf Fr
+Orig=Fence.r.rwdWW Rfe Fence.r.rwdRR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence r,rw  | fence r,rw  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(1:x5=1 /\ 1:x7=0)
+
+R+fence.r.rw+fence.rw.rw
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.r.rw+fence.rw.rw
+"Fence.r.rwdWW Wse Fence.rw.rwdWR Fre"
+Cycle=Fre Fence.r.rwdWW Wse Fence.rw.rwdWR
+Relax=Fence.r.rwdWW
+Safe=Fre Wse Fence.rw.rwdWR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.r.rwdWW Wse Fence.rw.rwdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence r,rw  | fence rw,rw ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+R+fence.rw.w+fence.r.rw
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.rw.w+fence.r.rw
+"Fence.rw.wdWW Wse Fence.r.rwdWR Fre"
+Cycle=Fre Fence.rw.wdWW Wse Fence.r.rwdWR
+Relax=Fence.r.rwdWR
+Safe=Fre Wse Fence.rw.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.rw.wdWW Wse Fence.r.rwdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence rw,w  | fence r,rw  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+R+fence.rw.rw+fence.r.rw
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.rw.rw+fence.r.rw
+"Fence.rw.rwdWW Wse Fence.r.rwdWR Fre"
+Cycle=Fre Fence.rw.rwdWW Wse Fence.r.rwdWR
+Relax=Fence.r.rwdWR
+Safe=Fre Wse Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.rw.rwdWW Wse Fence.r.rwdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence rw,rw | fence r,rw  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+R+fence.rw.rw+fence.rw.w
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.rw.rw+fence.rw.w
+"Fence.rw.rwdWW Wse Fence.rw.wdWR Fre"
+Cycle=Fre Fence.rw.rwdWW Wse Fence.rw.wdWR
+Relax=Fence.rw.wdWR
+Safe=Fre Wse Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.rw.rwdWW Wse Fence.rw.wdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence rw,rw | fence rw,w  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+LB+fence.r.rw+fence.w.w
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.r.rw+fence.w.w
+"Fence.r.rwdRW Rfe Fence.w.wdRW Rfe"
+Cycle=Rfe Fence.r.rwdRW Rfe Fence.w.wdRW
+Relax=Fence.w.wdRW
+Safe=Rfe Fence.r.rwdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.r.rwdRW Rfe Fence.w.wdRW Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ lw x5,0(x6) | lw x5,0(x6) ;
+ fence r,rw  | fence w,w   ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+S+fence.r.rws
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.r.rws
+"Fence.r.rwdWW Rfe Fence.r.rwdRW Wse"
+Cycle=Rfe Fence.r.rwdRW Wse Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Wse Fence.r.rwdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.r.rwdWW Rfe Fence.r.rwdRW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence r,rw  | fence r,rw  ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ 1:x5=1)
+
+MP+fence.w.w+fence.rw.w
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=0; , 1:x5=1; 1:x7=1; ]
+[1:x5=0; 1:x7=0; , 1:x5=0; 1:x7=1; , 1:x5=1; 1:x7=1; ]
+RISCV MP+fence.w.w+fence.rw.w
+"Fence.w.wdWW Rfe Fence.rw.wdRR Fre"
+Cycle=Rfe Fence.rw.wdRR Fre Fence.w.wdWW
+Relax=Fence.rw.wdRR
+Safe=Rfe Fre Fence.w.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Rf Fr
+Orig=Fence.w.wdWW Rfe Fence.rw.wdRR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence w,w   | fence rw,w  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(1:x5=1 /\ 1:x7=0)
+
+2+2W+fence.r.rw+fence.w.w
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; , [x]=2; [y]=2; ]
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; ]
+RISCV 2+2W+fence.r.rw+fence.w.w
+"Fence.r.rwdWW Wse Fence.w.wdWW Wse"
+Cycle=Wse Fence.r.rwdWW Wse Fence.w.wdWW
+Relax=Fence.r.rwdWW
+Safe=Wse Fence.w.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=Fence.r.rwdWW Wse Fence.w.wdWW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence r,rw  | fence w,w   ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ y=2)
+
+S+fence.rw.rw+fence.w.w
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.rw.rw+fence.w.w
+"Fence.rw.rwdWW Rfe Fence.w.wdRW Wse"
+Cycle=Rfe Fence.w.wdRW Wse Fence.rw.rwdWW
+Relax=Fence.w.wdRW
+Safe=Rfe Wse Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.rw.rwdWW Rfe Fence.w.wdRW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence rw,rw | fence w,w   ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ 1:x5=1)
+
+2+2W+fence.r.rw+fence.rw.w
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; , [x]=2; [y]=2; ]
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; ]
+RISCV 2+2W+fence.r.rw+fence.rw.w
+"Fence.r.rwdWW Wse Fence.rw.wdWW Wse"
+Cycle=Wse Fence.r.rwdWW Wse Fence.rw.wdWW
+Relax=Fence.r.rwdWW
+Safe=Wse Fence.rw.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=Fence.r.rwdWW Wse Fence.rw.wdWW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence r,rw  | fence rw,w  ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ y=2)
+
+MP+fence.rw.rw+ctrlfence.w.r
+[1:x5=0; 1:x9=0; , 1:x5=0; 1:x9=1; , 1:x5=1; 1:x9=0; , 1:x5=1; 1:x9=1; ]
+[1:x5=0; 1:x9=0; , 1:x5=0; 1:x9=1; , 1:x5=1; 1:x9=1; ]
+RISCV MP+fence.rw.rw+ctrlfence.w.r
+"based on: Fence.rw.rwdWW Rfe DpCtrldR Fence.w.rdRR Fre"
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Rf Fr
+{
+0:x6=x; 0:x8=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1             ;
+ ori x5,x0,1 | lw x5,0(x6)    ;
+ sw x5,0(x6) | bne x5,x0,LC00 ;
+ fence rw,rw | LC00:          ;
+ ori x7,x0,1 | fence w,r      ;
+ sw x7,0(x8) | lw x9,0(x8)    ;
+exists
+(1:x5=1 /\ 1:x9=0)
+
+LB+fence.w.w+fence.rw.w
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.w.w+fence.rw.w
+"Fence.w.wdRW Rfe Fence.rw.wdRW Rfe"
+Cycle=Rfe Fence.w.wdRW Rfe Fence.rw.wdRW
+Relax=Fence.w.wdRW
+Safe=Rfe Fence.rw.wdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.w.wdRW Rfe Fence.rw.wdRW Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ lw x5,0(x6) | lw x5,0(x6) ;
+ fence w,w   | fence rw,w  ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+2+2W+fence.r.rw+fence.rw.rw
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; , [x]=2; [y]=2; ]
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; ]
+RISCV 2+2W+fence.r.rw+fence.rw.rw
+"Fence.r.rwdWW Wse Fence.rw.rwdWW Wse"
+Cycle=Wse Fence.r.rwdWW Wse Fence.rw.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Wse Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=Fence.r.rwdWW Wse Fence.rw.rwdWW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence r,rw  | fence rw,rw ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ y=2)
+
+R+fence.w.w+fence.r.rw
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.w.w+fence.r.rw
+"Fence.w.wdWW Wse Fence.r.rwdWR Fre"
+Cycle=Fre Fence.w.wdWW Wse Fence.r.rwdWR
+Relax=Fence.r.rwdWR
+Safe=Fre Wse Fence.w.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.w.wdWW Wse Fence.r.rwdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence w,w   | fence r,rw  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+R+fence.rw.ws
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.rw.ws
+"Fence.rw.wdWW Wse Fence.rw.wdWR Fre"
+Cycle=Fre Fence.rw.wdWW Wse Fence.rw.wdWR
+Relax=Fence.rw.wdWR
+Safe=Fre Wse Fence.rw.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.rw.wdWW Wse Fence.rw.wdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence rw,w  | fence rw,w  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+SB+fence.r.rws
+[0:x7=0; 1:x7=0; , 0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+[0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+RISCV SB+fence.r.rws
+"Fence.r.rwdWR Fre Fence.r.rwdWR Fre"
+Cycle=Fre Fence.r.rwdWR Fre Fence.r.rwdWR
+Relax=Fence.r.rwdWR
+Safe=Fre
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.r.rwdWR Fre Fence.r.rwdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=1; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence r,rw  | fence r,rw  ;
+ lw x7,0(x8) | lw x7,0(x8) ;
+exists
+(0:x7=0 /\ 1:x7=0)
+
+S+fence.r.rw+fence.rw.w
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.r.rw+fence.rw.w
+"Fence.r.rwdWW Rfe Fence.rw.wdRW Wse"
+Cycle=Rfe Fence.rw.wdRW Wse Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Wse Fence.rw.wdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.r.rwdWW Rfe Fence.rw.wdRW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence r,rw  | fence rw,w  ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ 1:x5=1)
+
+SB+fence.rw.ws
+[0:x7=0; 1:x7=0; , 0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+[0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+RISCV SB+fence.rw.ws
+"Fence.rw.wdWR Fre Fence.rw.wdWR Fre"
+Cycle=Fre Fence.rw.wdWR Fre Fence.rw.wdWR
+Relax=Fence.rw.wdWR
+Safe=Fre
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.rw.wdWR Fre Fence.rw.wdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=1; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence rw,w  | fence rw,w  ;
+ lw x7,0(x8) | lw x7,0(x8) ;
+exists
+(0:x7=0 /\ 1:x7=0)
+
+R+fence.w.w+fence.rw.w
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.w.w+fence.rw.w
+"Fence.w.wdWW Wse Fence.rw.wdWR Fre"
+Cycle=Fre Fence.w.wdWW Wse Fence.rw.wdWR
+Relax=Fence.rw.wdWR
+Safe=Fre Wse Fence.w.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.w.wdWW Wse Fence.rw.wdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence w,w   | fence rw,w  ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+2+2W+fence.r.rws
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; , [x]=2; [y]=2; ]
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; ]
+RISCV 2+2W+fence.r.rws
+"Fence.r.rwdWW Wse Fence.r.rwdWW Wse"
+Cycle=Wse Fence.r.rwdWW Wse Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Wse
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=Fence.r.rwdWW Wse Fence.r.rwdWW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence r,rw  | fence r,rw  ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(x=2 /\ y=2)
+
+SB+fence.r.rw+fence.rw.rw
+[0:x7=0; 1:x7=0; , 0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+[0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+RISCV SB+fence.r.rw+fence.rw.rw
+"Fence.r.rwdWR Fre Fence.rw.rwdWR Fre"
+Cycle=Fre Fence.r.rwdWR Fre Fence.rw.rwdWR
+Relax=Fence.r.rwdWR
+Safe=Fre Fence.rw.rwdWR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.r.rwdWR Fre Fence.rw.rwdWR Fre
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=1; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence r,rw  | fence rw,rw ;
+ lw x7,0(x8) | lw x7,0(x8) ;
+exists
+(0:x7=0 /\ 1:x7=0)
+
+LB+fence.w.ws
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.w.ws
+"Fence.w.wdRW Rfe Fence.w.wdRW Rfe"
+Cycle=Rfe Fence.w.wdRW Rfe Fence.w.wdRW
+Relax=Fence.w.wdRW
+Safe=Rfe
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.w.wdRW Rfe Fence.w.wdRW Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ lw x5,0(x6) | lw x5,0(x6) ;
+ fence w,w   | fence w,w   ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+LB+fence.w.w+fence.rw.rw
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.w.w+fence.rw.rw
+"Fence.w.wdRW Rfe Fence.rw.rwdRW Rfe"
+Cycle=Rfe Fence.w.wdRW Rfe Fence.rw.rwdRW
+Relax=Fence.w.wdRW
+Safe=Rfe Fence.rw.rwdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.w.wdRW Rfe Fence.rw.rwdRW Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1          ;
+ lw x5,0(x6) | lw x5,0(x6) ;
+ fence w,w   | fence rw,rw ;
+ sw x7,0(x8) | sw x7,0(x8) ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+LB+fence.w.w+data
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.w.w+data
+"Fence.w.wdRW Rfe DpDatadW Rfe"
+Cycle=Rfe Fence.w.wdRW Rfe DpDatadW
+Relax=Fence.w.wdRW
+Safe=Rfe DpDatadW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.w.wdRW Rfe DpDatadW Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1           ;
+ lw x5,0(x6) | lw x5,0(x6)  ;
+ fence w,w   | xor x7,x5,x5 ;
+ sw x7,0(x8) | ori x7,x7,1  ;
+             | sw x7,0(x8)  ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+MP+fence.r.rw+addr
+[1:x5=0; 1:x8=0; , 1:x5=0; 1:x8=1; , 1:x5=1; 1:x8=0; , 1:x5=1; 1:x8=1; ]
+[1:x5=0; 1:x8=0; , 1:x5=0; 1:x8=1; , 1:x5=1; 1:x8=1; ]
+RISCV MP+fence.r.rw+addr
+"Fence.r.rwdWW Rfe DpAddrdR Fre"
+Cycle=Rfe DpAddrdR Fre Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Fre DpAddrdR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Rf Fr
+Orig=Fence.r.rwdWW Rfe DpAddrdR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x6=y; 1:x9=x;
+}
+ P0          | P1            ;
+ sw x5,0(x6) | lw x5,0(x6)   ;
+ fence r,rw  | xor x7,x5,x5  ;
+ sw x5,0(x7) | add x10,x9,x7 ;
+             | lw x8,0(x10)  ;
+exists
+(1:x5=1 /\ 1:x8=0)
+
+S+fence.r.rw+addr
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.r.rw+addr
+"Fence.r.rwdWW Rfe DpAddrdW Wse"
+Cycle=Rfe DpAddrdW Wse Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Wse DpAddrdW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.r.rwdWW Rfe DpAddrdW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x8=1; 1:x9=x;
+}
+ P0          | P1            ;
+ sw x5,0(x6) | lw x5,0(x6)   ;
+ fence r,rw  | xor x7,x5,x5  ;
+ sw x7,0(x8) | add x10,x9,x7 ;
+             | sw x8,0(x10)  ;
+exists
+(x=2 /\ 1:x5=1)
+
+S+fence.r.rw+data
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.r.rw+data
+"Fence.r.rwdWW Rfe DpDatadW Wse"
+Cycle=Rfe DpDatadW Wse Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Wse DpDatadW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.r.rwdWW Rfe DpDatadW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1           ;
+ sw x5,0(x6) | lw x5,0(x6)  ;
+ fence r,rw  | xor x7,x5,x5 ;
+ sw x7,0(x8) | ori x7,x7,1  ;
+             | sw x7,0(x8)  ;
+exists
+(x=2 /\ 1:x5=1)
+
+R+fence.w.w+fence.tso
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.w.w+fence.tso
+"based on: Fence.w.wdWW Wse Fence.rw.rwdWR Fre"
+{
+0:x6=x; 0:x8=y;
+1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ ori x5,x0,1 | ori x5,x0,2 ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence w,w   | fence.tso   ;
+ ori x7,x0,1 | lw x7,0(x8) ;
+ sw x7,0(x8) |             ;
+exists
+(y=2 /\ 1:x7=0)
+
+S+fence.r.rw+ctrl
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+fence.r.rw+ctrl
+"Fence.r.rwdWW Rfe DpCtrldW Wse"
+Cycle=Rfe DpCtrldW Wse Fence.r.rwdWW
+Relax=Fence.r.rwdWW
+Safe=Rfe Wse DpCtrldW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.r.rwdWW Rfe DpCtrldW Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1             ;
+ sw x5,0(x6) | lw x5,0(x6)    ;
+ fence r,rw  | bne x5,x0,LC00 ;
+ sw x7,0(x8) | LC00:          ;
+             | sw x7,0(x8)    ;
+exists
+(x=2 /\ 1:x5=1)
+
+LB+fence.w.w+addr
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.w.w+addr
+"Fence.w.wdRW Rfe DpAddrdW Rfe"
+Cycle=Rfe Fence.w.wdRW Rfe DpAddrdW
+Relax=Fence.w.wdRW
+Safe=Rfe DpAddrdW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.w.wdRW Rfe DpAddrdW Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x8=1; 1:x9=x;
+}
+ P0          | P1            ;
+ lw x5,0(x6) | lw x5,0(x6)   ;
+ fence w,w   | xor x7,x5,x5  ;
+ sw x7,0(x8) | add x10,x9,x7 ;
+             | sw x8,0(x10)  ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+LB+fence.w.w+ctrl
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.w.w+ctrl
+"Fence.w.wdRW Rfe DpCtrldW Rfe"
+Cycle=Rfe Fence.w.wdRW Rfe DpCtrldW
+Relax=Fence.w.wdRW
+Safe=Rfe DpCtrldW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.w.wdRW Rfe DpCtrldW Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0          | P1             ;
+ lw x5,0(x6) | lw x5,0(x6)    ;
+ fence w,w   | bne x5,x0,LC00 ;
+ sw x7,0(x8) | LC00:          ;
+             | sw x7,0(x8)    ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+SB+fence.tsos
+[0:x7=0; 1:x7=0; , 0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+[0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+RISCV SB+fence.tsos
+"Fence.tsodWR Fre Fence.tsodWR Fre"
+Cycle=Fre Fence.tsodWR Fre Fence.tsodWR
+Relax=
+Safe=Fre Fence.tsodWR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.tsodWR Fre Fence.tsodWR Fre
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=1; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence.tso   | fence.tso   ;
+ lw x7,0(x8) | lw x7,0(x8) ;
+exists
+(0:x7=0 /\ 1:x7=0)
+
+R+fence.tsos
+[1:x7=0; [y]=1; , 1:x7=0; [y]=2; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+[1:x7=0; [y]=1; , 1:x7=1; [y]=1; , 1:x7=1; [y]=2; ]
+RISCV R+fence.tsos
+"Fence.tsodWW Wse Fence.tsodWR Fre"
+Cycle=Fre Fence.tsodWW Wse Fence.tsodWR
+Relax=
+Safe=Fre Wse Fence.tsodWW Fence.tsodWR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.tsodWW Wse Fence.tsodWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0          | P1          ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ fence.tso   | fence.tso   ;
+ sw x5,0(x7) | lw x7,0(x8) ;
+exists
+(y=2 /\ 1:x7=0)
+
+LB+fence.r.rw+data-po
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; , 0:x5=1; 1:x5=1; ]
+[0:x5=0; 1:x5=0; , 0:x5=0; 1:x5=1; , 0:x5=1; 1:x5=0; ]
+RISCV LB+fence.r.rw+data-po
+"Fence.r.rwdRW Rfe DpDatadW PodWW Rfe"
+Generator=diyone7 (version 7.47+6(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.r.rwdRW Rfe DpDatadW PodWW Rfe
+{
+0:x6=x; 0:x8=y;
+1:x6=y; 1:x8=z; 1:x10=x;
+}
+ P0          | P1           ;
+ lw x5,0(x6) | lw x5,0(x6)  ;
+ fence r,rw  | xor x7,x5,x5 ;
+ ori x7,x0,1 | ori x7,x7,1  ;
+ sw x7,0(x8) | sw x7,0(x8)  ;
+             | ori x9,x0,1  ;
+             | sw x9,0(x10) ;
+exists
+(0:x5=1 /\ 1:x5=1)
+
+ISA02
+[0:x10=1; 0:x11=0; 1:x12=1; 1:x13=0; , 0:x10=1; 0:x11=0; 1:x12=1; 1:x13=1; , 0:x10=1; 0:x11=1; 1:x12=1; 1:x13=0; , 0:x10=1; 0:x11=1; 1:x12=1; 1:x13=1; ]
+[0:x10=1; 0:x11=0; 1:x12=1; 1:x13=1; , 0:x10=1; 0:x11=1; 1:x12=1; 1:x13=0; , 0:x10=1; 0:x11=1; 1:x12=1; 1:x13=1; ]
+RISCV ISA02
+
+(* RISCV V2.3, Fig 1.2 *)
+{
+0:s0=x; 0:s1=y;
+1:s0=x; 1:s1=y;
+}
+
+P0           | P1          ;
+li t1,1      | li t1,1     ;
+sw t1,0(s0)  | sw t1,0(s1) ;
+lw a0,0(s0)  | lw a2,0(s1) ;
+fence r,r    | fence r,r   ;
+lw a1,0(s1)  | lw a3,0(s0) ;
+
+exists 0:a0=1 /\ 0:a1=0 /\ 1:a2=1 /\ 1:a3=0
+
+SB+rfi-fence.r.rs
+[0:x7=1; 0:x8=0; 1:x7=1; 1:x8=0; , 0:x7=1; 0:x8=0; 1:x7=1; 1:x8=1; , 0:x7=1; 0:x8=1; 1:x7=1; 1:x8=0; , 0:x7=1; 0:x8=1; 1:x7=1; 1:x8=1; ]
+[0:x7=1; 0:x8=0; 1:x7=1; 1:x8=1; , 0:x7=1; 0:x8=1; 1:x7=1; 1:x8=0; , 0:x7=1; 0:x8=1; 1:x7=1; 1:x8=1; ]
+RISCV SB+rfi-fence.r.rs
+"Rfi Fence.r.rdRR Fre Rfi Fence.r.rdRR Fre"
+Generator=diyone7 (version 7.47+3)
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Rfi Fence.r.rdRR Fre Rfi Fence.r.rdRR Fre
+{
+0:x6=x; 0:x9=y;
+1:x6=y; 1:x9=x;
+}
+ P0          | P1          ;
+ ori x5,x0,1 | ori x5,x0,1 ;
+ sw x5,0(x6) | sw x5,0(x6) ;
+ lw x7,0(x6) | lw x7,0(x6) ;
+ fence r,r   | fence r,r   ;
+ lw x8,0(x9) | lw x8,0(x9) ;
+exists
+(0:x7=1 /\ 0:x8=0 /\ 1:x7=1 /\ 1:x8=0)
+
+LB+addr+addrpx-poxp+VAR
+[0:x5=0; 1:x5=0; 1:x11=1; , 0:x5=0; 1:x5=1; 1:x11=1; , 0:x5=1; 1:x5=0; 1:x11=1; , 0:x5=1; 1:x5=1; 1:x11=1; ]
+[0:x5=0; 1:x5=0; 1:x11=1; , 0:x5=0; 1:x5=1; 1:x11=1; , 0:x5=1; 1:x5=0; 1:x11=1; ]
+RISCV LB+addr+addrpx-poxp+VAR
+(*
+   Test by Shaked Flur. On P1, assuming sc fails.
+     The existence of an address dependency from initial read
+     to "write conditional" and thus of ppo from initial read
+     to last write depends on the existence of a specific
+     "write -conditional-failed" event.
+     At the moment Allow.
+*)   
+{
+0:x6=x; 0:x9=y;
+1:x6=y; 1:x8=z; 1:x13=x;
+}
+ P0            | P1                 ;
+ lw x5,0(x6)   | lw x5,0(x6)        ;
+ xor x7,x5,x5  | xor x7,x5,x5       ;
+ ori x8,x0,1   | add x9,x8,x7       ;
+ add x10,x9,x7 | ori x10,x0,1       ;
+ sw x8,0(x10)  | sc.w x11,x10,0(x9) ;
+               | ori x12,x0,1       ;
+               | sw x12,0(x13)      ;
+
+locations [1:x11;]
+exists
+(0:x5=1 /\ 1:x5=1)
+
+LB+fri-rfi-addr+fri-rfi-ctrl
+[0:x5=0; 0:x8=1; 1:x5=0; 1:x8=2; [x]=1; [y]=1; , 0:x5=0; 0:x8=1; 1:x5=0; 1:x8=2; [x]=1; [y]=2; , 0:x5=0; 0:x8=1; 1:x5=1; 1:x8=2; [x]=1; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=1; [x]=1; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=1; [x]=2; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=1; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=1; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=1; 1:x8=2; [x]=1; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=1; 1:x8=2; [x]=2; [y]=2; , 0:x5=1; 0:x8=2; 1:x5=0; 1:x8=1; [x]=2; [y]=1; , 0:x5=1; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=1; , 0:x5=1; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=2; , 0:x5=1; 0:x8=2; 1:x5=1; 1:x8=2; [x]=2; [y]=2; ]
+[0:x5=0; 0:x8=1; 1:x5=0; 1:x8=2; [x]=1; [y]=1; , 0:x5=0; 0:x8=1; 1:x5=0; 1:x8=2; [x]=1; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=1; [x]=1; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=1; [x]=2; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=1; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=1; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=1; , 0:x5=0; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=1; 1:x8=2; [x]=1; [y]=2; , 0:x5=0; 0:x8=2; 1:x5=1; 1:x8=2; [x]=2; [y]=2; , 0:x5=1; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=1; , 0:x5=1; 0:x8=2; 1:x5=0; 1:x8=2; [x]=2; [y]=2; , 0:x5=1; 0:x8=2; 1:x5=1; 1:x8=2; [x]=2; [y]=2; , 0:x5=1; 0:x8=2; 1:x5=0; 1:x8=1; [x]=2; [y]=1; ]
+RISCV LB+fri-rfi-addr+fri-rfi-ctrl
+"Fri Rfi DpAddrdW Rfe Fri Rfi DpCtrldW Rfe"
+Cycle=Rfi DpAddrdW Rfe Fri Rfi DpCtrldW Rfe Fri
+Relax=[Fri,Rfi]
+Safe=Rfe DpAddrdW DpCtrldW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fri Rfi DpAddrdW Rfe Fri Rfi DpCtrldW Rfe
+{
+0:x6=x; 0:x7=2; 0:x10=1; 0:x11=y;
+1:x6=y; 1:x7=2; 1:x9=1; 1:x10=x;
+}
+ P0             | P1             ;
+ lw x5,0(x6)    | lw x5,0(x6)    ;
+ sw x7,0(x6)    | sw x7,0(x6)    ;
+ lw x8,0(x6)    | lw x8,0(x6)    ;
+ xor x9,x8,x8   | bne x8,x0,LC00 ;
+ add x12,x11,x9 | LC00:          ;
+ sw x10,0(x12)  | sw x9,0(x10)   ;
+exists
+(x=2 /\ y=2 /\ 0:x5=1 /\ 0:x8=2 /\ 1:x5=1 /\ 1:x8=2)
+
+SB+fence.rw.rw+ctrlfence.r.r
+[0:x7=0; 1:x7=0; 1:x8=0; 1:x12=0; [y]=1; , 0:x7=0; 1:x7=0; 1:x8=0; 1:x12=1; [y]=1; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x12=0; [y]=0; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x12=1; [y]=0; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x12=0; [y]=1; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x12=1; [y]=1; ]
+[0:x7=0; 1:x7=0; 1:x8=0; 1:x12=1; [y]=1; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x12=0; [y]=0; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x12=1; [y]=0; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x12=0; [y]=1; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x12=1; [y]=1; ]
+RISCV SB+fence.rw.rw+ctrlfence.r.r
+"based on: Fence.rw.rwdWR FrePX RfiXP DpCtrldR Fence.r.rdRR Fre"
+Generator=diyone7 (version 7.47+6(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.rw.rwdWR FrePX RfiXP DpCtrldR Fence.r.rdRR Fre
+{
+0:x6=x; 0:x8=y;
+1:x5=y; 1:x13=x;
+}
+ P0          | P1               ;
+ ori x5,x0,1 | ori x6,x0,1      ;
+ sw x5,0(x6) | lr.w x7,0(x5)    ;
+ fence rw,rw | sc.w x8,x6,0(x5) ;
+ lw x7,0(x8) | bne x8,x0,LC00   ;
+             | LC00:            ;
+             | fence r,r        ;
+             | lw x12,0(x13)    ;
+exists
+(y=1 /\ 0:x7=0 /\ 1:x8=0 /\ 1:x7=0 /\ 1:x12=0)
+
+S+fence.rw.rw+popx
+[1:x5=0; 1:x9=0; 1:x10=0; [x]=2; , 1:x5=0; 1:x9=0; 1:x10=1; [x]=2; , 1:x5=0; 1:x9=2; 1:x10=0; [x]=1; , 1:x5=0; 1:x9=2; 1:x10=1; [x]=2; , 1:x5=1; 1:x9=0; 1:x10=0; [x]=2; , 1:x5=1; 1:x9=0; 1:x10=1; [x]=2; , 1:x5=1; 1:x9=2; 1:x10=0; [x]=1; , 1:x5=1; 1:x9=2; 1:x10=1; [x]=2; ]
+[1:x5=0; 1:x9=0; 1:x10=0; [x]=2; , 1:x5=0; 1:x9=0; 1:x10=1; [x]=2; , 1:x5=0; 1:x9=2; 1:x10=0; [x]=1; , 1:x5=0; 1:x9=2; 1:x10=1; [x]=2; , 1:x5=1; 1:x9=2; 1:x10=0; [x]=1; , 1:x5=1; 1:x9=2; 1:x10=1; [x]=2; ]
+RISCV S+fence.rw.rw+popx
+"Fence.rw.rwdWW Rfe PodRWPX WseXP"
+Cycle=Rfe PodRWPX WseXP Fence.rw.rwdWW
+Relax=PodRWPX
+Safe=Rfe Wse Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.rw.rwdWW Rfe PodRWPX WseXP
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=x; 1:x8=1;
+}
+ P0          | P1                ;
+ sw x5,0(x6) | lw x5,0(x6)       ;
+ fence rw,rw | lr.w x9,0(x7)     ;
+ sw x7,0(x8) | sc.w x10,x8,0(x7) ;
+exists
+(x=2 /\ 1:x10=0 /\ 1:x5=1 /\ 1:x9=0)
+
+LB+fence.rw.rw+popx
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=1; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; ]
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; ]
+RISCV LB+fence.rw.rw+popx
+"Fence.rw.rwdRW Rfe PodRWPX RfeXP"
+Cycle=Rfe PodRWPX RfeXP Fence.rw.rwdRW
+Relax=PodRWPX
+Safe=Rfe Fence.rw.rwdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.rw.rwdRW Rfe PodRWPX RfeXP
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=x; 1:x8=1;
+}
+ P0          | P1                ;
+ lw x5,0(x6) | lw x5,0(x6)       ;
+ fence rw,rw | lr.w x9,0(x7)     ;
+ sw x7,0(x8) | sc.w x10,x8,0(x7) ;
+exists
+(x=1 /\ 0:x5=1 /\ 1:x10=0 /\ 1:x5=1 /\ 1:x9=0)
+
+LB+fence.rw.rw+poxp
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=1; [y]=1; ]
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; ]
+RISCV LB+fence.rw.rw+poxp
+"Fence.rw.rwdRW RfePX PodRWXP Rfe"
+Cycle=Rfe Fence.rw.rwdRW RfePX PodRWXP
+Relax=PodRWXP
+Safe=Rfe Fence.rw.rwdRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=Fence.rw.rwdRW RfePX PodRWXP Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=y; 1:x8=1; 1:x9=x;
+}
+ P0          | P1               ;
+ lw x5,0(x6) | lr.w x6,0(x5)    ;
+ fence rw,rw | sc.w x7,x6,0(x5) ;
+ sw x7,0(x8) | sw x8,0(x9)      ;
+exists
+(y=1 /\ 0:x5=1 /\ 1:x7=0 /\ 1:x6=1)
+
+S+fence.rw.rw+poxp
+[1:x6=0; 1:x7=0; [x]=1; [y]=1; , 1:x6=0; 1:x7=0; [x]=2; [y]=1; , 1:x6=0; 1:x7=1; [x]=1; [y]=1; , 1:x6=0; 1:x7=1; [x]=2; [y]=1; , 1:x6=1; 1:x7=0; [x]=1; [y]=1; , 1:x6=1; 1:x7=0; [x]=2; [y]=1; , 1:x6=1; 1:x7=1; [x]=1; [y]=1; , 1:x6=1; 1:x7=1; [x]=2; [y]=1; ]
+[1:x6=0; 1:x7=0; [x]=1; [y]=1; , 1:x6=0; 1:x7=0; [x]=2; [y]=1; , 1:x6=0; 1:x7=1; [x]=1; [y]=1; , 1:x6=0; 1:x7=1; [x]=2; [y]=1; , 1:x6=1; 1:x7=0; [x]=1; [y]=1; , 1:x6=1; 1:x7=1; [x]=1; [y]=1; ]
+RISCV S+fence.rw.rw+poxp
+"Fence.rw.rwdWW RfePX PodRWXP Wse"
+Cycle=Wse Fence.rw.rwdWW RfePX PodRWXP
+Relax=PodRWXP
+Safe=Rfe Wse Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=Fence.rw.rwdWW RfePX PodRWXP Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=y; 1:x8=1; 1:x9=x;
+}
+ P0          | P1               ;
+ sw x5,0(x6) | lr.w x6,0(x5)    ;
+ fence rw,rw | sc.w x7,x6,0(x5) ;
+ sw x7,0(x8) | sw x8,0(x9)      ;
+exists
+(x=2 /\ y=1 /\ 1:x7=0 /\ 1:x6=1)
+
+LB+ctrl+popx
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=1; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; ]
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; ]
+RISCV LB+ctrl+popx
+"DpCtrldW Rfe PodRWPX RfeXP"
+Cycle=Rfe PodRWPX RfeXP DpCtrldW
+Relax=PodRWPX
+Safe=Rfe DpCtrldW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=DpCtrldW Rfe PodRWPX RfeXP
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=x; 1:x8=1;
+}
+ P0             | P1                ;
+ lw x5,0(x6)    | lw x5,0(x6)       ;
+ bne x5,x0,LC00 | lr.w x9,0(x7)     ;
+ LC00:          | sc.w x10,x8,0(x7) ;
+ sw x7,0(x8)    |                   ;
+exists
+(x=1 /\ 0:x5=1 /\ 1:x10=0 /\ 1:x5=1 /\ 1:x9=0)
+
+LB+ctrl+poxp
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=1; [y]=1; ]
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; ]
+RISCV LB+ctrl+poxp
+"DpCtrldW RfePX PodRWXP Rfe"
+Cycle=Rfe DpCtrldW RfePX PodRWXP
+Relax=PodRWXP
+Safe=Rfe DpCtrldW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=DpCtrldW RfePX PodRWXP Rfe
+{
+0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=y; 1:x8=1; 1:x9=x;
+}
+ P0             | P1               ;
+ lw x5,0(x6)    | lr.w x6,0(x5)    ;
+ bne x5,x0,LC00 | sc.w x7,x6,0(x5) ;
+ LC00:          | sw x8,0(x9)      ;
+ sw x7,0(x8)    |                  ;
+exists
+(y=1 /\ 0:x5=1 /\ 1:x7=0 /\ 1:x6=1)
+
+R+fence.tsopx+fence.tso
+[0:x8=0; 0:x9=0; 1:x7=0; [y]=2; , 0:x8=0; 0:x9=0; 1:x7=1; [y]=2; , 0:x8=0; 0:x9=1; 1:x7=0; [y]=2; , 0:x8=0; 0:x9=1; 1:x7=1; [y]=2; , 0:x8=2; 0:x9=0; 1:x7=0; [y]=1; , 0:x8=2; 0:x9=0; 1:x7=1; [y]=1; , 0:x8=2; 0:x9=1; 1:x7=0; [y]=2; , 0:x8=2; 0:x9=1; 1:x7=1; [y]=2; ]
+[0:x8=0; 0:x9=0; 1:x7=1; [y]=2; , 0:x8=0; 0:x9=1; 1:x7=1; [y]=2; , 0:x8=2; 0:x9=0; 1:x7=0; [y]=1; , 0:x8=2; 0:x9=0; 1:x7=1; [y]=1; , 0:x8=2; 0:x9=1; 1:x7=0; [y]=2; , 0:x8=2; 0:x9=1; 1:x7=1; [y]=2; ]
+RISCV R+fence.tsopx+fence.tso
+"Fence.tsodWWPX WseXP Fence.tsodWR Fre"
+Cycle=Fre Fence.tsodWWPX WseXP Fence.tsodWR
+Relax=
+Safe=Fre Wse Fence.tsodWW Fence.tsodWR X
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.tsodWWPX WseXP Fence.tsodWR Fre
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0               | P1          ;
+ sw x5,0(x6)      | sw x5,0(x6) ;
+ fence.tso        | fence.tso   ;
+ lr.w x8,0(x7)    | lw x7,0(x8) ;
+ sc.w x9,x5,0(x7) |             ;
+exists
+(y=2 /\ 0:x9=0 /\ 0:x8=0 /\ 1:x7=0)
+
+R+fence.tso+fence.tsopx
+[1:x8=0; 1:x9=0; [x]=1; [y]=1; , 1:x8=0; 1:x9=1; [x]=1; [y]=1; , 1:x8=0; 1:x9=1; [x]=1; [y]=2; , 1:x8=1; 1:x9=0; [x]=1; [y]=1; , 1:x8=1; 1:x9=0; [x]=1; [y]=2; , 1:x8=1; 1:x9=1; [x]=1; [y]=1; , 1:x8=1; 1:x9=1; [x]=1; [y]=2; ]
+[1:x8=0; 1:x9=0; [x]=1; [y]=1; , 1:x8=0; 1:x9=1; [x]=1; [y]=1; , 1:x8=1; 1:x9=0; [x]=1; [y]=1; , 1:x8=1; 1:x9=0; [x]=1; [y]=2; , 1:x8=1; 1:x9=1; [x]=1; [y]=1; , 1:x8=1; 1:x9=1; [x]=1; [y]=2; ]
+RISCV R+fence.tso+fence.tsopx
+"Fence.tsodWW Wse Fence.tsodWRPX FreXP"
+Cycle=Wse Fence.tsodWRPX FreXP Fence.tsodWW
+Relax=
+Safe=Fre Wse Fence.tsodWW Fence.tsodWR X
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.tsodWW Wse Fence.tsodWRPX FreXP
+{
+0:x5=1; 0:x6=x; 0:x7=y;
+1:x5=2; 1:x6=y; 1:x7=x;
+}
+ P0          | P1               ;
+ sw x5,0(x6) | sw x5,0(x6)      ;
+ fence.tso   | fence.tso        ;
+ sw x5,0(x7) | lr.w x8,0(x7)    ;
+             | sc.w x9,x8,0(x7) ;
+exists
+(x=1 /\ y=2 /\ 1:x9=0 /\ 1:x8=0)
+
+LB+data+poxp
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=1; [y]=1; ]
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; ]
+RISCV LB+data+poxp
+"DpDatadW RfePX PodRWXP Rfe"
+Cycle=Rfe DpDatadW RfePX PodRWXP
+Relax=PodRWXP
+Safe=Rfe DpDatadW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=DpDatadW RfePX PodRWXP Rfe
+{
+0:x6=x; 0:x8=y;
+1:x5=y; 1:x8=1; 1:x9=x;
+}
+ P0           | P1               ;
+ lw x5,0(x6)  | lr.w x6,0(x5)    ;
+ xor x7,x5,x5 | sc.w x7,x6,0(x5) ;
+ ori x7,x7,1  | sw x8,0(x9)      ;
+ sw x7,0(x8)  |                  ;
+exists
+(y=1 /\ 0:x5=1 /\ 1:x7=0 /\ 1:x6=1)
+
+R+fence.tsoxp+fence.tso
+[0:x7=0; 0:x8=0; 1:x7=0; [x]=1; [y]=1; , 0:x7=0; 0:x8=0; 1:x7=0; [x]=1; [y]=2; , 0:x7=0; 0:x8=0; 1:x7=1; [x]=1; [y]=1; , 0:x7=0; 0:x8=0; 1:x7=1; [x]=1; [y]=2; , 0:x7=0; 0:x8=1; 1:x7=0; [x]=0; [y]=1; , 0:x7=0; 0:x8=1; 1:x7=0; [x]=0; [y]=2; ]
+[0:x7=0; 0:x8=0; 1:x7=0; [x]=1; [y]=1; , 0:x7=0; 0:x8=0; 1:x7=1; [x]=1; [y]=1; , 0:x7=0; 0:x8=0; 1:x7=1; [x]=1; [y]=2; , 0:x7=0; 0:x8=1; 1:x7=0; [x]=0; [y]=1; , 0:x7=0; 0:x8=1; 1:x7=0; [x]=0; [y]=2; ]
+RISCV R+fence.tsoxp+fence.tso
+"Fence.tsodWWXP Wse Fence.tsodWR FrePX"
+Cycle=Wse Fence.tsodWR FrePX Fence.tsodWWXP
+Relax=
+Safe=Fre Wse Fence.tsodWW Fence.tsodWR X
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=T
+Com=Ws Fr
+Orig=Fence.tsodWWXP Wse Fence.tsodWR FrePX
+{
+0:x5=x; 0:x6=1; 0:x9=y;
+1:x5=2; 1:x6=y; 1:x8=x;
+}
+ P0               | P1          ;
+ lr.w x7,0(x5)    | sw x5,0(x6) ;
+ sc.w x8,x6,0(x5) | fence.tso   ;
+ fence.tso        | lw x7,0(x8) ;
+ sw x6,0(x9)      |             ;
+exists
+(x=1 /\ y=2 /\ 0:x8=0 /\ 0:x7=0 /\ 1:x7=0)
+
+LB+addr+popx
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=1; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; ]
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; ]
+RISCV LB+addr+popx
+"DpAddrdW Rfe PodRWPX RfeXP"
+Cycle=Rfe PodRWPX RfeXP DpAddrdW
+Relax=PodRWPX
+Safe=Rfe DpAddrdW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=DpAddrdW Rfe PodRWPX RfeXP
+{
+0:x6=x; 0:x8=1; 0:x9=y;
+1:x6=y; 1:x7=x; 1:x8=1;
+}
+ P0            | P1                ;
+ lw x5,0(x6)   | lw x5,0(x6)       ;
+ xor x7,x5,x5  | lr.w x9,0(x7)     ;
+ add x10,x9,x7 | sc.w x10,x8,0(x7) ;
+ sw x8,0(x10)  |                   ;
+exists
+(x=1 /\ 0:x5=1 /\ 1:x10=0 /\ 1:x5=1 /\ 1:x9=0)
+
+LB+data+popx
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=1; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; ]
+[0:x5=0; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=0; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=0; [x]=1; , 0:x5=0; 1:x5=1; 1:x9=0; 1:x10=1; [x]=0; , 0:x5=1; 1:x5=0; 1:x9=0; 1:x10=0; [x]=1; ]
+RISCV LB+data+popx
+"DpDatadW Rfe PodRWPX RfeXP"
+Cycle=Rfe PodRWPX RfeXP DpDatadW
+Relax=PodRWPX
+Safe=Rfe DpDatadW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=DpDatadW Rfe PodRWPX RfeXP
+{
+0:x6=x; 0:x8=y;
+1:x6=y; 1:x7=x; 1:x8=1;
+}
+ P0           | P1                ;
+ lw x5,0(x6)  | lw x5,0(x6)       ;
+ xor x7,x5,x5 | lr.w x9,0(x7)     ;
+ ori x7,x7,1  | sc.w x10,x8,0(x7) ;
+ sw x7,0(x8)  |                   ;
+exists
+(x=1 /\ 0:x5=1 /\ 1:x10=0 /\ 1:x5=1 /\ 1:x9=0)
+
+SB+fence.tso+fence.tsopx
+[0:x7=0; 1:x8=0; 1:x9=0; [x]=1; , 0:x7=0; 1:x8=0; 1:x9=1; [x]=1; , 0:x7=0; 1:x8=1; 1:x9=0; [x]=1; , 0:x7=0; 1:x8=1; 1:x9=1; [x]=1; , 0:x7=1; 1:x8=0; 1:x9=0; [x]=1; , 0:x7=1; 1:x8=0; 1:x9=1; [x]=1; , 0:x7=1; 1:x8=1; 1:x9=0; [x]=1; , 0:x7=1; 1:x8=1; 1:x9=1; [x]=1; ]
+[0:x7=0; 1:x8=1; 1:x9=0; [x]=1; , 0:x7=0; 1:x8=1; 1:x9=1; [x]=1; , 0:x7=1; 1:x8=0; 1:x9=0; [x]=1; , 0:x7=1; 1:x8=0; 1:x9=1; [x]=1; , 0:x7=1; 1:x8=1; 1:x9=0; [x]=1; , 0:x7=1; 1:x8=1; 1:x9=1; [x]=1; ]
+RISCV SB+fence.tso+fence.tsopx
+"Fence.tsodWR Fre Fence.tsodWRPX FreXP"
+Cycle=Fre Fence.tsodWRPX FreXP Fence.tsodWR
+Relax=
+Safe=Fre Fence.tsodWR X
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.tsodWR Fre Fence.tsodWRPX FreXP
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=1; 1:x6=y; 1:x7=x;
+}
+ P0          | P1               ;
+ sw x5,0(x6) | sw x5,0(x6)      ;
+ fence.tso   | fence.tso        ;
+ lw x7,0(x8) | lr.w x8,0(x7)    ;
+             | sc.w x9,x8,0(x7) ;
+exists
+(x=1 /\ 0:x7=0 /\ 1:x9=0 /\ 1:x8=0)
+
+2+2W+fence.tso+fence.tsopx
+[1:x9=0; 1:x10=0; [x]=2; [y]=1; , 1:x9=0; 1:x10=1; [x]=2; [y]=1; , 1:x9=0; 1:x10=1; [x]=2; [y]=2; , 1:x9=2; 1:x10=0; [x]=1; [y]=1; , 1:x9=2; 1:x10=0; [x]=1; [y]=2; , 1:x9=2; 1:x10=1; [x]=2; [y]=1; , 1:x9=2; 1:x10=1; [x]=2; [y]=2; ]
+[1:x9=0; 1:x10=0; [x]=2; [y]=1; , 1:x9=0; 1:x10=1; [x]=2; [y]=1; , 1:x9=2; 1:x10=0; [x]=1; [y]=1; , 1:x9=2; 1:x10=0; [x]=1; [y]=2; , 1:x9=2; 1:x10=1; [x]=2; [y]=1; , 1:x9=2; 1:x10=1; [x]=2; [y]=2; ]
+RISCV 2+2W+fence.tso+fence.tsopx
+"Fence.tsodWW Wse Fence.tsodWWPX WseXP"
+Cycle=Wse Fence.tsodWWPX WseXP Fence.tsodWW
+Relax=
+Safe=Wse Fence.tsodWW X
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=Fence.tsodWW Wse Fence.tsodWWPX WseXP
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=x; 1:x8=1;
+}
+ P0          | P1                ;
+ sw x5,0(x6) | sw x5,0(x6)       ;
+ fence.tso   | fence.tso         ;
+ sw x7,0(x8) | lr.w x9,0(x7)     ;
+             | sc.w x10,x8,0(x7) ;
+exists
+(x=2 /\ y=2 /\ 1:x10=0 /\ 1:x9=0)
+
+SB+fence.tso+fence.tsoxp
+[0:x7=0; 1:x7=0; 1:x8=0; 1:x9=0; [y]=1; , 0:x7=0; 1:x7=0; 1:x8=0; 1:x9=1; [y]=1; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x9=0; [y]=0; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x9=1; [y]=0; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x9=0; [y]=1; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x9=1; [y]=1; ]
+[0:x7=0; 1:x7=0; 1:x8=0; 1:x9=1; [y]=1; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x9=0; [y]=0; , 0:x7=0; 1:x7=0; 1:x8=1; 1:x9=1; [y]=0; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x9=0; [y]=1; , 0:x7=1; 1:x7=0; 1:x8=0; 1:x9=1; [y]=1; ]
+RISCV SB+fence.tso+fence.tsoxp
+"Fence.tsodWR FrePX Fence.tsodWRXP Fre"
+Cycle=Fre Fence.tsodWR FrePX Fence.tsodWRXP
+Relax=
+Safe=Fre Fence.tsodWR X
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=Fence.tsodWR FrePX Fence.tsodWRXP Fre
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=y; 1:x6=1; 1:x10=x;
+}
+ P0          | P1               ;
+ sw x5,0(x6) | lr.w x7,0(x5)    ;
+ fence.tso   | sc.w x8,x6,0(x5) ;
+ lw x7,0(x8) | fence.tso        ;
+             | lw x9,0(x10)     ;
+exists
+(y=1 /\ 0:x7=0 /\ 1:x8=0 /\ 1:x7=0 /\ 1:x9=0)
+
+LB+addr+poxp
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=1; 1:x7=1; [y]=1; ]
+[0:x5=0; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=0; 1:x7=1; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=0; [y]=1; , 0:x5=0; 1:x6=1; 1:x7=1; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=0; [y]=1; , 0:x5=1; 1:x6=0; 1:x7=1; [y]=1; ]
+RISCV LB+addr+poxp
+"DpAddrdW RfePX PodRWXP Rfe"
+Cycle=Rfe DpAddrdW RfePX PodRWXP
+Relax=PodRWXP
+Safe=Rfe DpAddrdW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Rf
+Orig=DpAddrdW RfePX PodRWXP Rfe
+{
+0:x6=x; 0:x8=1; 0:x9=y;
+1:x5=y; 1:x8=1; 1:x9=x;
+}
+ P0            | P1               ;
+ lw x5,0(x6)   | lr.w x6,0(x5)    ;
+ xor x7,x5,x5  | sc.w x7,x6,0(x5) ;
+ add x10,x9,x7 | sw x8,0(x9)      ;
+ sw x8,0(x10)  |                  ;
+exists
+(y=1 /\ 0:x5=1 /\ 1:x7=0 /\ 1:x6=1)
+
+ISA-MP-DEP-SUCCESS-SWAP-SIMPLE
+[1:x3=0; 1:x4=0; 1:x5=0; , 1:x3=0; 1:x4=0; 1:x5=2; , 1:x3=0; 1:x4=1; 1:x5=0; , 1:x3=0; 1:x4=1; 1:x5=2; , 1:x3=1; 1:x4=0; 1:x5=2; , 1:x3=1; 1:x4=1; 1:x5=0; , 1:x3=1; 1:x4=1; 1:x5=2; ]
+[1:x3=0; 1:x4=0; 1:x5=0; , 1:x3=0; 1:x4=0; 1:x5=2; , 1:x3=0; 1:x4=1; 1:x5=0; , 1:x3=0; 1:x4=1; 1:x5=2; , 1:x3=1; 1:x4=0; 1:x5=2; , 1:x3=1; 1:x4=1; 1:x5=2; ]
+RISCV ISA-MP-DEP-SUCCESS-SWAP-SIMPLE
+(*
+ MP-style success dependency inserted in load-to-load, second load part of
+ amoswap, simple version on two locations only.
+ From an idea by Jonas Oberhausen.
+*)
+{
+0:x6=x; 0:x8=y;
+1:x6=x; 1:x8=y;
+}
+ P0          | P1                ;
+ ori x5,x0,2 | lr.w x3,0(x8)     ;
+ sw x5,0(x6) | sc.w x4,x3,0(x8) ;
+ fence w,w   | amoswap.w x5,x4,0(x6) ;
+ ori x7,x0,1 |                   ;
+ sw x7,0(x8) |                   ;
+
+locations [1:x4;]
+exists
+(1:x3=1 /\ 1:x5=0)
+
+LB+data+datapx-dataxp
+[0:x5=0; 1:x5=0; 1:x10=0; [z]=1; , 0:x5=0; 1:x5=0; 1:x10=1; [z]=0; , 0:x5=0; 1:x5=1; 1:x10=0; [z]=1; , 0:x5=0; 1:x5=1; 1:x10=1; [z]=0; , 0:x5=1; 1:x5=0; 1:x10=0; [z]=1; , 0:x5=1; 1:x5=0; 1:x10=1; [z]=0; , 0:x5=1; 1:x5=1; 1:x10=1; [z]=0; ]
+[0:x5=0; 1:x5=0; 1:x10=0; [z]=1; , 0:x5=0; 1:x5=0; 1:x10=1; [z]=0; , 0:x5=0; 1:x5=1; 1:x10=0; [z]=1; , 0:x5=0; 1:x5=1; 1:x10=1; [z]=0; , 0:x5=1; 1:x5=0; 1:x10=0; [z]=1; , 0:x5=1; 1:x5=0; 1:x10=1; [z]=0; ]
+RISCV LB+data+datapx-dataxp
+"based on: DpDatadW Rfe DpDatadWPX PodWWXP Rfe"
+{
+0:x6=x; 0:x8=y;
+1:x6=y; 1:x8=z; 1:x12=x;
+}
+ P0           | P1                ;
+ lw x5,0(x6)  | lw x5,0(x6)       ;
+ xor x7,x5,x5 | xor x7,x5,x5      ;
+ ori x7,x7,1  | ori x7,x7,1       ;
+ sw x7,0(x8)  | lr.w x9,0(x8)     ;
+              | sc.w x10,x7,0(x8) ;
+              | xor x11,x10,x10   ;
+              | ori x11,x11,1     ;
+              | sw x11,0(x12)     ;
+exists
+(z=1 /\ 0:x5=1 /\ 1:x10=0 /\ 1:x5=1)
+
+LB+addr+addrpx-poxp+VAR2
+[0:x5=0; 1:x5=0; 1:x11=0; , 0:x5=0; 1:x5=0; 1:x11=1; , 0:x5=0; 1:x5=1; 1:x11=0; , 0:x5=0; 1:x5=1; 1:x11=1; , 0:x5=1; 1:x5=0; 1:x11=0; , 0:x5=1; 1:x5=0; 1:x11=1; , 0:x5=1; 1:x5=1; 1:x11=1; ]
+[0:x5=0; 1:x5=0; 1:x11=0; , 0:x5=0; 1:x5=0; 1:x11=1; , 0:x5=0; 1:x5=1; 1:x11=0; , 0:x5=0; 1:x5=1; 1:x11=1; , 0:x5=1; 1:x5=0; 1:x11=0; , 0:x5=1; 1:x5=0; 1:x11=1; ]
+RISCV LB+addr+addrpx-poxp+VAR2
+(*
+   Variation on a test by Shaked Flur.
+
+   The existence of an address dependency from initial read
+   to "write conditional" and thus of ppo from initial read
+   to last write depends on the existence of a specific
+   "write -conditional-failed" event.
+   At the moment Allow.
+   This test illustrates the two possibilities of the sc
+   succeeding or failling.
+*)   
+{
+0:x6=x; 0:x9=y;
+1:x6=y; 1:x8=z; 1:x13=x;
+}
+ P0            | P1                 ;
+ lw x5,0(x6)   | lw x5,0(x6)        ;
+ xor x7,x5,x5  | xor x7,x5,x5       ;
+ ori x8,x0,1   | add x9,x8,x7       ;
+ add x10,x9,x7 | ori x10,x0,1       ;
+ sw x8,0(x10)  | lr.w x4,0(x8)      ;
+               | sc.w x11,x10,0(x9) ;
+               | ori x12,x0,1       ;
+               | sw x12,0(x13)      ;
+               
+locations [1:x11;]
+exists
+(0:x5=1 /\ 1:x5=1 /\ not(1:x11=0))
+
+ISA-MP-DEP-SUCCESS-SWAP
+[1:x2=0; 1:x4=0; 1:x5=0; , 1:x2=0; 1:x4=0; 1:x5=2; , 1:x2=0; 1:x4=1; 1:x5=0; , 1:x2=0; 1:x4=1; 1:x5=2; , 1:x2=1; 1:x4=0; 1:x5=2; , 1:x2=1; 1:x4=1; 1:x5=0; , 1:x2=1; 1:x4=1; 1:x5=2; ]
+[1:x2=0; 1:x4=0; 1:x5=0; , 1:x2=0; 1:x4=0; 1:x5=2; , 1:x2=0; 1:x4=1; 1:x5=0; , 1:x2=0; 1:x4=1; 1:x5=2; , 1:x2=1; 1:x4=0; 1:x5=2; , 1:x2=1; 1:x4=1; 1:x5=2; ]
+RISCV ISA-MP-DEP-SUCCESS-SWAP
+(*
+ MP-style success dependency inserted in load-to-load, second load part of
+ amoswap.
+ From an idea by Jonas Oberhausen.
+*)
+{
+0:x6=x; 0:x8=y;
+1:x6=x; 1:x8=y; 1:x10=z;
+}
+ P0          | P1                ;
+ ori x5,x0,2 | lw x2,0(x8)       ;
+ sw x5,0(x6) | lr.w x3,0(x10)    ;
+ fence w,w   | sc.w x4,x2,0(x10) ;
+ ori x7,x0,1 | amoswap.w x5,x4,0(x6) ;
+ sw x7,0(x8) |                   ;
+
+locations [1:x4;]
+exists
+(1:x2=1 /\ 1:x5=0)
+
+2+2W+porlps+NEW
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; , [x]=2; [y]=2; ]
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; ]
+RISCV 2+2W+porlps+NEW
+"PodWWRlP WsePRl PodWWRlP WsePRl"
+Cycle=WsePRl PodWWRlP WsePRl PodWWRlP
+Relax=Rl
+Safe=Wse PodWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=PodWWRlP WsePRl PodWWRlP WsePRl
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0                      | P1                      ;
+ amoswap.w.rl x0,x5,(x6) | amoswap.w.rl x0,x5,(x6) ;
+ sw x7,0(x8)             | sw x7,0(x8)             ;
+exists
+(x=2 /\ y=2)
+
+SB+popaqs+NEW
+[0:x7=0; 1:x7=0; , 0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+[0:x7=0; 1:x7=1; , 0:x7=1; 1:x7=0; , 0:x7=1; 1:x7=1; ]
+RISCV SB+popaqs+NEW
+"PodWRPAq FreAqP PodWRPAq FreAqP"
+Cycle=PodWRPAq FreAqP PodWRPAq FreAqP
+Relax=Aq
+Safe=Fre PodWR
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=T
+Com=Fr Fr
+Orig=PodWRPAq FreAqP PodWRPAq FreAqP
+{
+0:x5=1; 0:x6=x; 0:x8=y;
+1:x5=1; 1:x6=y; 1:x8=x;
+}
+ P0                    | P1                    ;
+ sw x5,0(x6)           | sw x5,0(x6)           ;
+ amoor.w.aq x7,x0,(x8) | amoor.w.aq x7,x0,(x8) ;
+exists
+(0:x7=0 /\ 1:x7=0)
+
+2+2W+poprl+porlp+NEW
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; , [x]=2; [y]=2; ]
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; ]
+RISCV 2+2W+poprl+porlp+NEW
+"PodWWPRl WseRlRl PodWWRlP Wse"
+Cycle=Wse PodWWPRl WseRlRl PodWWRlP
+Relax=Rl
+Safe=Wse PodWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=PodWWPRl WseRlRl PodWWRlP Wse
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0                      | P1                      ;
+ sw x5,0(x6)             | amoswap.w.rl x0,x5,(x6) ;
+ amoswap.w.rl x0,x7,(x8) | sw x7,0(x8)             ;
+exists
+(x=2 /\ y=2)
+
+S+porlp+poprl+NEW
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; , 1:x5=1; [x]=2; ]
+[1:x5=0; [x]=1; , 1:x5=0; [x]=2; , 1:x5=1; [x]=1; ]
+RISCV S+porlp+poprl+NEW
+"PodWWRlP Rfe PodRWPRl WseRlRl"
+Cycle=Rfe PodRWPRl WseRlRl PodWWRlP
+Relax=Rl
+Safe=Rfe Wse PodWW PodRW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Rf Ws
+Orig=PodWWRlP Rfe PodRWPRl WseRlRl
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0                      | P1                      ;
+ amoswap.w.rl x0,x5,(x6) | lw x5,0(x6)             ;
+ sw x7,0(x8)             | amoswap.w.rl x0,x7,(x8) ;
+exists
+(x=2 /\ 1:x5=1)
+
+2+2W+porlp+porlrl+NEW
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; , [x]=2; [y]=2; ]
+[[x]=1; [y]=1; , [x]=1; [y]=2; , [x]=2; [y]=1; ]
+RISCV 2+2W+porlp+porlrl+NEW
+"PodWWRlP WsePRl PodWWRlRl WseRlRl"
+Cycle=WsePRl PodWWRlRl WseRlRl PodWWRlP
+Relax=Rl
+Safe=Wse PodWW
+Generator=diy7 (version 7.51+4(dev))
+Prefetch=0:x=F,0:y=W,1:y=F,1:x=W
+Com=Ws Ws
+Orig=PodWWRlP WsePRl PodWWRlRl WseRlRl
+{
+0:x5=2; 0:x6=x; 0:x7=1; 0:x8=y;
+1:x5=2; 1:x6=y; 1:x7=1; 1:x8=x;
+}
+ P0                      | P1                      ;
+ amoswap.w.rl x0,x5,(x6) | amoswap.w.rl x0,x5,(x6) ;
+ sw x7,0(x8)             | amoswap.w.rl x0,x7,(x8) ;
+exists
+(x=2 /\ y=2)
+
+2+2Swap
+[0:x10=0; 0:x11=0; 1:x10=1; 1:x11=2; [x]=1; [y]=2; , 0:x10=0; 0:x11=2; 1:x10=0; 1:x11=2; [x]=1; [y]=1; , 0:x10=1; 0:x11=0; 1:x10=1; 1:x11=0; [x]=2; [y]=2; , 0:x10=1; 0:x11=2; 1:x10=0; 1:x11=0; [x]=2; [y]=1; ]
+[0:x10=0; 0:x11=0; 1:x10=1; 1:x11=2; [x]=1; [y]=2; , 0:x10=0; 0:x11=2; 1:x10=0; 1:x11=2; [x]=1; [y]=1; , 0:x10=1; 0:x11=2; 1:x10=0; 1:x11=0; [x]=2; [y]=1; ]
+RISCV 2+2Swap
+"PodWW Wse PodWW Wse"
+{
+0:x6=x; 0:x8=y;
+1:x6=y; 1:x8=x;
+}
+ P0                     | P1                     ;
+ ori x5,x0,2            | ori x5,x0,2            ;
+ amoswap.w x10,x5,0(x6) | amoswap.w x10,x5,0(x6) ;
+ ori x7,x0,1            | ori x7,x0,1            ;
+ amoswap.w x11,x7,0(x8) | amoswap.w x11,x7,0(x8) ;
+exists
+(x=2 /\ y=2 /\ 0:x10=1 /\ 0:x11=0 /\ 1:x10=1 /\ 1:x11=0)
+

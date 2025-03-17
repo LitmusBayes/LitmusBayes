@@ -1,0 +1,317 @@
+Coe_Fence.rw.rwdWR_Fre_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpAddrdW_Rfe_Fence.rw.rwdRW_Coe_Fence.w.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_Fence.r.rwdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Fre_Fence.w.wdWW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWR.litmus: {"[z]": 2, "1:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_PodRW_Rfe_PodRW_RfLeave_FrBack.litmus: {"[x]": 2, "0:x5": 2, "1:x5": 1, "2:x5": 1}
+Rfe_Fence.rw.rwdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_PodRR_Fre_PodWW_Rfe_DpCtrldW.litmus: {"0:x5": 1, "0:x7": 0, "2:x5": 1}
+Rfe_DpCtrldW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.w.wdWW_Wse_Fence.rw.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Rfe_PodRW_RfLeave_FrBack_Rfe_PodRW.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "2:x5": 2}
+Coe_Fence.r.rwdWR_Fre_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.rw.rwdRR_Fre_CoLeave_Fence.rw.rwdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x7": 0}
+Rfe_Fence.r.rwdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Rfe_Fence.rw.wdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.r.rwdRR_Fre_CoLeave_Fence.rw.wdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Rfe_DpAddrdR_Fre.litmus: {"[x]": 2, "1:x7": 0, "3:x5": 1, "3:x8": 0}
+Rfe_PosRR_Fre_PodWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x5": 1, "0:x7": 1, "2:x5": 1}
+Rfe_PodRW_Rfe_PodRR_Fre_PosWW.litmus: {"[x]": 2, "0:x5": 2, "1:x5": 1, "1:x7": 0}
+Rfe_Fence.rw.wdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.rw.wdWW_Wse_Fence.rw.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[x]": 2, "0:x7": 0}
+Rfe_PodRWPAR_CoeARAR_PodWWARP.litmus: {"[y]": 2, "0:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Rfe_DpCtrlFenceIsR_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x7": 1}
+Rfe_DpAddrdW_Wse_PodWW_Wse_PodWW.litmus: {"[y]": 2, "[z]": 2, "0:x5": 1}
+Rfe_DpCtrldW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_PodRW_Rfe_DpAddrdW_Rfe_PodRW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.wdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "2:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_Rfe_PodRR_Fre.litmus: {"[y]": 2, "1:x5": 1, "3:x5": 2, "3:x7": 0}
+Coe_Fence.rw.rwdWW_Wse_Fence.w.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Fre_PodWR_Fre_RfLeave_PodRW_RfBack.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 1, "2:x5": 1}
+Rfe_DpAddrdR_Fre_CoLeave_Fence.rw.rwdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x8": 0, "2:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Wse_PodWW_Wse_PodWW.litmus: {"[x]": 2, "[y]": 2}
+Fre_PodWWPAR_CoeARAR_PodWRARP.litmus: {"[y]": 2, "1:x7": 0}
+Rfe_PodRW_Rfe_FrLeave_PodWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PosRR_Fre_PodWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x5": 1, "0:x7": 1, "2:x5": 1}
+PodRWPAR_CoeARAR_PodWWARAR_RfeARP.litmus: {"[y]": 2, "0:x5": 1}
+Rfe_PodRW_Rfe_DpAddrdR_Fre_PodWW.litmus: {"0:x5": 1, "1:x5": 1, "1:x8": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Fre_Fence.rw.rwdWW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWR.litmus: {"[z]": 2, "1:x5": 1, "2:x7": 0}
+Rfe_PodRW_Rfe_PodRW_Wse.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Rfe_DpAddrdR_Fre_PodWR_Fre_PodWW.litmus: {"0:x5": 1, "0:x8": 0, "1:x7": 0}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+CoePAR_PodWWARP_RfePAR_PodRWARP.litmus: {"[x]": 2, "1:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_RfLeave_Fence.r.rwdRR_FrBack_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x5": 2, "0:x7": 0, "1:x5": 1}
+Rfe_Fence.rw.rwdRR_Fre_CoLeave_Fence.rw.wdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x7": 0}
+Rfe_DpCtrlFenceIsR_Fre_PodWR_Fre_PodWW.litmus: {"[x]": 2, "0:x5": 1, "0:x7": 1, "1:x7": 0}
+CoePAR_PodWRARAR_FreARAR_PodWWARP.litmus: {"[x]": 2, "0:x7": 0}
+Coe_PodWRPAR_FreARAR_PodWWARP.litmus: {"[x]": 2, "0:x7": 0}
+Hat_Rmw_PodWR_Hat_Rmw_PodWR.litmus: {"0:x6": 0, "0:x8": 0, "1:x6": 0, "1:x8": 0}
+Fre_RfLeave_FrBack_PodWW_Wse_PodWR.litmus: {"[x]": 2, "[y]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_RfLeave_Fence.r.rwdRR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x7": 0}
+RfePAR_PodRWARAR_CoeARAR_PodWWARP.litmus: {"[y]": 2, "0:x5": 1}
+Coe_Fence.rw.wdWR_Fre_RfLeave_Fence.r.rwdRR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Rfe_Fence.rw.wdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWW_Wse_Fence.w.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Rfe_Fence.r.rwdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.w.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_PosRR_Fre_PodWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x5": 1, "0:x7": 1, "2:x5": 1}
+Rfe_Fence.rw.rwdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.w.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Fre_Fence.rw.wdWW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWR.litmus: {"[z]": 2, "1:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Rfe_DpCtrlFenceIdW_Wse_PodWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+CoeARAR_PodWRARAR_FreARAR_PodWWARAR.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_RfLeave_Fence.rw.rwdRR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_Rfe_PodRW_Wse.litmus: {"[x]": 2, "[y]": 2, "1:x5": 2, "3:x5": 2}
+Rfe_DpAddrsR_Fre_PodWR_Fre_PodWW.litmus: {"[x]": 2, "0:x5": 1, "0:x8": 1, "1:x7": 0}
+Rfe_PosRW_Rfe_PodRW_Wse_PodWW.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "1:x5": 2}
+Rfe_PodRW_Rfe_DpCtrlFenceIdW_Rfe_PodRW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_DpAddrsR_Fre_PodWW_Wse_PodWW.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x8": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Rfe_DpAddrdR_Fre_CoLeave_Fence.rw.wdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x8": 0, "2:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.r.rwdWR_Fre_RfLeave_Fence.rw.rwdRR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Rfe_Fence.rw.wdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpAddrdW_Wse_PodWR_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+PodWRPAR_FreARAR_PodWWARAR_CoeARP.litmus: {"[x]": 2, "0:x7": 0}
+Fre_PodWW_Wse_PodWR.litmus: {"[y]": 2, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.rwdWW_Wse_Fence.rw.rwdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Rfe_PodRW.litmus: {"0:x5": 1, "1:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.w.wdWW_Wse_Fence.rw.rwdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW.litmus: {"[x]": 2, "0:x7": 0}
+Rfe_Fence.rw.rwdRW_Rfe_Fence.rw.rwdRW_Coe.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+FrePAR_PodWWARAR_CoeARAR_PodWRARP.litmus: {"[y]": 2, "1:x7": 0}
+Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Fre_PodWW_Wse_RfLeave_PodRW_RfBack.litmus: {"[x]": 2, "[y]": 2, "1:x7": 1, "2:x5": 2}
+Rfe_PodRW_Rfe_PodRW_Rfe_DpCtrldW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.rw.rwdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRR_Fre_PosWW_Rfe_PodRW.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x5": 2}
+Coe_PodWWPAR_RfeARAR_PodRWARP.litmus: {"[x]": 2, "1:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Rfe_PodRR_Fre.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.wdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.r.rwdRW_Coe_Fence.r.rwdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "2:x7": 0}
+Rfe_PosRW_Rfe_PodRR_Fre_PodWW.litmus: {"[x]": 2, "0:x5": 1, "1:x5": 2, "1:x7": 0}
+Rfe_DpDatadW_Rfe_Fence.rw.rwdRW_Coe.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+Fre_PodWR_Fre_PodWR.litmus: {"0:x7": 0, "1:x7": 0}
+Rfe_PodRR_Fre_RfLeave_FrBack_PodWW.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWW_Wse_Fence.rw.rwdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Rfe_PodRW_Rfe_PodRW_Rfe_DpAddrdW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Rfe_DpCtrlFenceIdW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+CoePAR_PodWWARAR_RfeARAR_PodRWARP.litmus: {"[x]": 2, "1:x5": 1}
+Rfe_DpDatadW_Wse_PodWR_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Fre_PodWR_Fre_PodWR_FrLeave_RfBack.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0, "1:x9": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.r.rwdRR_Fre_RfLeave_Fence.rw.rwdRW_CoBack.litmus: {"[x]": 2, "0:x5": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+PodWWPAR_CoeARP_PodWRPAR_FreARP.litmus: {"[y]": 2, "1:x7": 0}
+Rfe_DpCtrlFenceIdW_Rfe_Fence.rw.rwdRW_Coe_Fence.w.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_PodRR_Fre_PodWR_Fre_PosWW.litmus: {"[x]": 2, "0:x5": 2, "0:x7": 0, "1:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_PodWW_Rfe_DpCtrlFenceIdW.litmus: {"[y]": 2, "0:x5": 1, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpAddrdR_Fre_RfLeave_Fence.rw.rwdRW_CoBack.litmus: {"[x]": 2, "0:x5": 2, "0:x8": 0, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWR_Fre_Fence.w.wdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Rfe_FrLeave_PodWW_RfBack_Fre_PodWW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1, "2:x7": 1}
+Rfe_Fence.r.rwdRW_Rfe_Fence.rw.rwdRW_Coe.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+Rfe_PodRW_Rfe_DpDatadW_Wse_PodWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_DpAddrdR_Fre_PosWR_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "0:x8": 0, "1:x7": 1}
+Rfe_DpAddrdW_Rfe_Fence.rw.rwdRW_Coe.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_PodRR_FrLeave_RfBack_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "0:x9": 1}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_DpDatadW_Wse_PodWW_Wse_PodWW.litmus: {"[y]": 2, "[z]": 2, "0:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWR_Fre.litmus: {"[x]": 2, "1:x7": 0, "2:x7": 0}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_RfLeave_DpAddrdR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x8": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpAddrdW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_DpCtrlFenceIdW_Wse_PodWW_Wse_PodWW.litmus: {"[y]": 2, "[z]": 2, "0:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_Fence.rw.rwdRR_Fre_RfLeave_Fence.rw.rwdRW_CoBack.litmus: {"[x]": 2, "0:x5": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_DpCtrldW_Rfe_Fence.rw.rwdRW_Coe_Fence.w.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_PodRW_Wse_PodWW_Wse.litmus: {"[x]": 2, "[y]": 2, "1:x5": 2}
+Rfe_PosRW_Rfe_PodRW_Rfe_PodRW.litmus: {"[x]": 2, "0:x5": 1, "1:x5": 2, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Rfe_DpAddrdW_Wse_PodWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpCtrldW_Wse_PodWR_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_RfLeave_Fence.r.rwdRR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWW_Wse_Fence.rw.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_PodWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWR_Fre.litmus: {"[x]": 2, "1:x7": 0, "2:x7": 0}
+Coe_Fence.rw.rwdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "1:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Rfe_Fence.r.rwdRR_Fre.litmus: {"[x]": 2, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Rfe_Fence.rw.rwdRR_Fre.litmus: {"[x]": 2, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWR_Fre_Fence.w.wdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Rfe_PodRW_Rfe_DpCtrldW_Wse_PodWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRR_Fre_PodWW_Wse.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_DpDatadW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_PosRR_Fre_PodWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x5": 1, "0:x7": 1, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Rfe_Fence.rw.rwdRR_Fre.litmus: {"[x]": 2, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpAddrdW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_PodRW_Rfe_PodRW_Rfe_DpDatadW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_DpCtrlFenceIdW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_RfLeave_DpAddrdR_FrBack_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x5": 2, "0:x8": 0, "1:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.r.rwdRR_Fre_Coe_Fence.rw.rwdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "1:x7": 0, "3:x7": 0}
+PodWWPAR_RfeARAR_PodRWARAR_CoeARP.litmus: {"[x]": 2, "1:x5": 1}
+Rfe_PodRW_Wse_RfLeave_PodRR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "2:x5": 2, "2:x7": 0}
+Coe_Fence.rw.wdWR_Fre_RfLeave_Fence.rw.rwdRR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x7": 0}
+Rfe_PodRR_Fre_PodWW_Rfe_DpCtrlFenceIdW.litmus: {"0:x5": 1, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_PodWR_Fre_PosWW.litmus: {"[x]": 2, "[y]": 2, "0:x5": 2, "1:x7": 0}
+Rfe_DpCtrlFenceIdW_Rfe_Fence.rw.rwdRW_Coe.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_RfLeave_DpAddrdR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x8": 0}
+Coe_Fence.rw.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "1:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[x]": 2, "0:x7": 0}
+Rfe_Fence.rw.wdRW_Rfe_Fence.rw.rwdRW_Coe.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.rwdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.rwdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "2:x7": 0}
+Rfe_PodRW_Rfe_DpDatadW_Rfe_PodRW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Rfe_Fence.rw.wdRW_Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Rfe_PodRW_Rfe_DpCtrlFenceIdW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.rw.rwdRR_Fre_CoLeave_Fence.r.rwdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_RfLeave_Fence.rw.rwdRR_FrBack_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "0:x5": 2, "0:x7": 0, "1:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWR_Fre_Fence.w.wdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Rfe_DpCtrlFenceIdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_PodWW_Rfe_DpDatadW.litmus: {"[y]": 2, "0:x5": 1, "2:x5": 1}
+Rfe_Fence.rw.wdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.w.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_Fence.r.rwdRR_Fre_Coe_Fence.rw.wdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "1:x7": 0, "3:x7": 0}
+Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Fre_RfLeave_PodRR_FrBack_Wse_PodWR.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "1:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_PodRR_Fre_Rfe_PodRR_Fre.litmus: {"1:x5": 1, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+Rfe_PodRR_Fre_PodWW.litmus: {"0:x5": 1, "0:x7": 0}
+Rfe_FrLeave_RfBack_PodRR_Fre_PodWW.litmus: {"[x]": 2, "1:x5": 1, "1:x7": 2, "1:x8": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+CoePAR_PodWRARP_FrePAR_PodWWARP.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.w.wdWW_Wse_Fence.w.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "[y]": 2, "2:x5": 1}
+Coe_Fence.rw.rwdWR_Fre_Rfe_DpAddrdR_Fre.litmus: {"[x]": 2, "1:x7": 0, "3:x5": 1, "3:x8": 0}
+Rfe_PodRW_Wse_Rfe_PodRW.litmus: {"[y]": 2, "0:x5": 1, "2:x5": 2}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Wse_Fence.w.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Fre_PodWR_Fre_RfLeave_FrBack_PodWR.litmus: {"[y]": 2, "0:x7": 0, "1:x8": 0, "2:x5": 1}
+Rfe_PodRR_Fre_RfLeave_PodRR_FrBack.litmus: {"0:x5": 1, "0:x7": 0, "2:x5": 1, "2:x7": 0}
+Rfe_DpCtrlFenceIsR_Fre_PodWW_Wse_PodWW.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x7": 1}
+Rfe_Fence.r.rwdRR_Fre_CoLeave_Fence.r.rwdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x7": 0}
+Rfe_PodRW_Wse_PodWW_Rfe_DpAddrdW.litmus: {"[y]": 2, "0:x5": 1, "2:x5": 1}
+Coe_Fence.tsodWR_Fre_Fence.tsodWW.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.r.rwdWR_Fre_RfLeave_DpAddrdR_FrBack.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1, "2:x8": 0}
+Rfe_PodRR_Fre_PodWR_Fre.litmus: {"1:x5": 1, "1:x7": 0, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.wdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpAddrdR_Fre_CoLeave_Fence.r.rwdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x8": 0, "2:x7": 0}
+PodWWPAR_RfeARP_PodRWPAR_CoeARP.litmus: {"[x]": 2, "1:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Rfe_DpAddrdW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_DpAddrdR_Fre_PodWW_Wse_PodWW.litmus: {"[z]": 2, "0:x5": 1, "0:x8": 0}
+Rfe_PodRW_Wse_PodWW.litmus: {"[y]": 2, "0:x5": 1}
+Rfe_DpDatadW_Rfe_Fence.rw.rwdRW_Coe_Fence.w.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_Fence.r.rwdRR_Fre_CoLeave_Fence.rw.rwdWR_FrBack.litmus: {"[y]": 2, "0:x5": 1, "0:x7": 0, "2:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW_Wse_Fence.rw.rwdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.w.wdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Rfe_DpCtrldW_Rfe_Fence.rw.rwdRW_Coe.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1}
+Coe_Fence.rw.wdWR_Fre_Rfe_DpCtrldW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_DpDatadW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.wdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Rfe_PodRR_Fre_PodWW_Rfe_DpAddrdW.litmus: {"0:x5": 1, "0:x7": 0, "2:x5": 1}
+Rfe_DpCtrlFenceIdW_Wse_PodWR_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.wdWR_Fre_Fence.rw.rwdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}
+Rfe_PodRW_Rfe_DpCtrldW_Rfe_PodRW.litmus: {"0:x5": 1, "1:x5": 1, "2:x5": 1}
+Fre_PodWW_Wse_PodWR_FrLeave_RfBack.litmus: {"[x]": 2, "[y]": 2, "1:x7": 0, "1:x9": 1}
+CoeARAR_PodWWARAR_RfeARAR_PodRWARAR.litmus: {"[x]": 2, "1:x5": 1}
+Rfe_DpCtrldW_Wse_PodWW_Wse_PodWW.litmus: {"[y]": 2, "[z]": 2, "0:x5": 1}
+Rfe_PodRR_Fre_PodWW_RfLeave_FrBack.litmus: {"[x]": 2, "0:x5": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Rfe_DpAddrsR_Fre_PodWW.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.wdWW.litmus: {"[x]": 2, "0:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWW_Wse_Fence.rw.wdWW.litmus: {"[x]": 2, "[z]": 2, "0:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Rfe_DpAddrdR_Fre.litmus: {"[x]": 2, "1:x7": 0, "3:x5": 1, "3:x8": 0}
+Coe_Fence.w.wdWW_Rfe_Fence.rw.rwdRW.litmus: {"[x]": 2, "1:x5": 1}
+Rfe_PodRR_Fre_Rfe_PodRW_Wse.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Rfe_Fence.rw.rwdRR_Fre.litmus: {"[x]": 2, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+Coe_Fence.r.rwdWR_Fre_Fence.w.wdWW_Rfe_Fence.rw.wdRW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_PodRR_Fre_PodWW_Rfe_DpDatadW.litmus: {"0:x5": 1, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_PodWW_Rfe_DpCtrldW.litmus: {"[y]": 2, "0:x5": 1, "2:x5": 1}
+Rfe_PodRR_Fre_Rfe_PodRW.litmus: {"0:x5": 1, "0:x7": 0, "2:x5": 1}
+Rfe_PodRW_Wse_PodWW_RfLeave_FrBack.litmus: {"[x]": 2, "[y]": 2, "0:x5": 2, "2:x5": 1}
+Rfe_FrLeave_RfBack_PodRW_Wse_PodWW.litmus: {"[x]": 2, "[y]": 2, "1:x5": 1, "1:x7": 2}
+Rfe_FrLeave_PodWR_FrBack_Wse_PodWW.litmus: {"[x]": 2, "[y]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.rw.wdRW_Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWW.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1}
+Coe_Fence.r.rwdWR_Fre_Fence.rw.rwdWR_Fre.litmus: {"[x]": 2, "1:x7": 0, "2:x7": 0}
+Coe_Fence.rw.wdWR_Fre_Fence.rw.wdWW_Rfe_DpDatadW.litmus: {"[x]": 2, "0:x7": 0, "2:x5": 1}
+Rfe_Fence.rw.rwdRW_Coe_Fence.rw.rwdWR_Fre.litmus: {"[y]": 2, "1:x5": 1, "2:x7": 0}
+Coe_Fence.rw.rwdWR_Fre_Fence.rw.rwdWR_Fre_Fence.rw.rwdWW.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 0}
+Wse_PodWW_Wse_RfLeave_PodRR_FrBack.litmus: {"[x]": 2, "[y]": 2, "2:x5": 2, "2:x7": 0}
+Rfe_PodRW_Rfe_FrLeave_RfBack_PodRW.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x7": 2}
+PodWWPAR_CoeARAR_PodWRARAR_FreARP.litmus: {"[y]": 2, "1:x7": 0}
+Rfe_Fence.r.rwdRW_Coe_Fence.rw.rwdWR_Fre_Fence.w.wdWW.litmus: {"[y]": 2, "0:x5": 1, "1:x7": 0}

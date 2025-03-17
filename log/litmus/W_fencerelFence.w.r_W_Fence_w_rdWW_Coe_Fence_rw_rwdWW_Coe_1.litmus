@@ -1,0 +1,12 @@
+RISCV W_fencerelFence.w.r_W_Fence_w_rdWW_Coe_Fence_rw_rwdWW_Coe
+ {0:x6=x; 0:x8=y; 1:x6=y; 1:x8=x; }
+      P0      |      P1       ;
+lw x0, 0(x6)  | lw x0, 0(x6)  ;
+ori x5, x0, 2 | ori x5, x0, 2 ;
+sw x5, 0(x6)  | sw x5, 0(x6)  ;
+fence w, r    | fence rw, rw  ;
+ori x7, x0, 1 | ori x7, x0, 1 ;
+sw x7, 0(x8)  | sw x7, 0(x8)  ;
+lw x9, 0(x8)  | lw x9, 0(x8)  ;
+
+exists (0:x9=2 /\ 1:x9=2)

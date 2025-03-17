@@ -1,0 +1,45 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBthread_2/LB.c
+306c306
+<   pthread_t thread[NT];
+---
+>   op_t *op[NT];
+337c337
+<       launch(&thread[_p],fun[_p],&parg[_p]);
+---
+>       op[_p] = launch_cached(fun[_p],&parg[_p]);
+339d338
+<     if (_b->do_change) perm_threads(&ctx.seed,thread,NT);
+341c340
+<       join(&thread[_p]);
+---
+>       join_detached(op[_p]);
+513c512
+<   pthread_t th[n_th];
+---
+>   op_t *op[n_th];
+546c545
+<       launch(&th[k],zyva,p);
+---
+>       op[k] = launch_cached(zyva,p);
+554c553
+<     hist_t *hk = (hist_t *)join(&th[k]);
+---
+>     hist_t *hk = (hist_t *)join_detached(op[k]);
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBthread_2/run.c
+2a3
+> extern void set_pool(void);
+17c18
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -thread cached -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBthread_2");
+46a48
+>   set_pool();
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

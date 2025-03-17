@@ -1,0 +1,23 @@
+Mon Jan 26 01:49:15 2026
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier user2 -detached true -thread cached -launch fixed -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc before -contiguous false -noalign none ./make_new_litmus/litmus_output/Fre_RfLeave_PodRR_FrBack_Wse_PodWR.litmus -o ./make_new_litmus/litmus_output_bayes/Fre_RfLeave_PodRR_FrBack_Wse_PodWR_0_2_1_1_2_1_2_1_0_0_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: user2 */
+/* launch: fixed */
+/* affinity: incr1 */
+/* alloc: Before */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_06553683.exe -s 100000
+Mon Jan 26 01:49:15 2026

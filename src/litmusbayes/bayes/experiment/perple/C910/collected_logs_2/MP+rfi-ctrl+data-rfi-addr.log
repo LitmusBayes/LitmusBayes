@@ -1,0 +1,92 @@
+Sun Mar 15 00:19:58 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+rfi-ctrl+data-rfi-addr.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV MP+rfi-ctrl+data-rfi-addr
+"Rfi DpCtrldW Rfe DpDatadW Rfi DpAddrdR Fre"
+{0:x5=1; 0:x6=x; 0:x8=y; 1:x6=y; 1:x8=z; 1:x12=x;}
+ P0             | P1              ;
+ sw x5,0(x6)    | lw x5,0(x6)     ;
+ lw x7,0(x6)    | xor x7,x5,x5    ;
+ bne x7,x0,LC00 | ori x7,x7,1     ;
+ LC00:          | sw x7,0(x8)     ;
+ sw x5,0(x8)    | lw x9,0(x8)     ;
+                | xor x10,x9,x9   ;
+                | add x13,x12,x10 ;
+                | lw x11,0(x13)   ;
+
+exists (0:x7=1 /\ 1:x5=1 /\ 1:x9=1 /\ 1:x11=0)
+Generated assembler
+	#START _litmus_P1
+	lw a6,0(a5)
+	xor s2,a6,a6
+	ori s2,s2,1
+	sw s2,0(a4)
+	lw a7,0(a4)
+	xor s1,a7,a7
+	add t2,a3,s1
+	lw t1,0(t2)
+	#START _litmus_P0
+	sw a2,0(a5)
+	lw a6,0(a5)
+	bne a6,x0,0f
+	0:
+	sw a2,0(a4)
+heuristic statistic: 53
+heuristic statistic: 659
+heuristic statistic: 66
+heuristic statistic: 699
+heuristic statistic: 806
+heuristic statistic: 45
+heuristic statistic: 19
+heuristic statistic: 20
+heuristic statistic: 120
+heuristic statistic: 17
+heuristic statistic: 141
+heuristic statistic: 31
+heuristic statistic: 176
+heuristic statistic: 38
+heuristic statistic: 191
+heuristic statistic: 43
+heuristic statistic: 164
+heuristic statistic: 22
+heuristic statistic: 181
+heuristic statistic: 4
+Test MP+rfi-ctrl+data-rfi-addr Allowed
+Histogram (0 states)
+No
+
+Witnesses
+Positive: 0, Negative: 2000000
+Condition exists (0:x7=1 /\ 1:x5=1 /\ 1:x9=1 /\ 1:x11=0) is NOT validated
+Hash=28ef96e217f97c5736b727b17a72e640
+Cycle=Rfi DpAddrdR Fre Rfi DpCtrldW Rfe DpDatadW
+Relax MP+rfi-ctrl+data-rfi-addr No Rfi
+Safe=Rfe Fre DpAddrdR DpDatadW DpCtrldW
+Generator=diy7 (version 7.51+4(dev))
+Com=Rf Fr
+Orig=Rfi DpCtrldW Rfe DpDatadW Rfi DpAddrdR Fre
+Observation MP+rfi-ctrl+data-rfi-addr Never 0 2000000
+Time MP+rfi-ctrl+data-rfi-addr 0.29
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier none -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -alloc dynamic -contiguous false -noalign none /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+rfi-ctrl+data-rfi-addr.litmus -o /home/whq/Desktop/code_list/perple_test/bayes_banana_perple/MP+rfi-ctrl+data-rfi-addr_0_5_0_0_0_0_2_0_0_0_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/perple/MP+rfi-ctrl+data-rfi-addr_0_5_0_0_0_0_2_0_0_0_1/run.exe -s 100000
+Sun Mar 15 00:19:58 2026

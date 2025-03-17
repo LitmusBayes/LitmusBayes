@@ -1,0 +1,11 @@
+.idea/
+__pycache__/
+.VSCodeCounter/
+
+
+.vscode/
+dev.env
+/report/
+*.html
+environment.yml
+/tests/log.txt

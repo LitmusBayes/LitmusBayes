@@ -1,0 +1,86 @@
+Sun Mar 15 00:22:45 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/SB+pos-addrs.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV SB+pos-addrs
+"PosWR DpAddrdR Fre PosWR DpAddrdR Fre"
+{0:x5=1; 0:x6=x; 0:x10=y; 1:x5=1; 1:x6=y; 1:x10=x;}
+ P0             | P1             ;
+ sw x5,0(x6)    | sw x5,0(x6)    ;
+ lw x7,0(x6)    | lw x7,0(x6)    ;
+ xor x8,x7,x7   | xor x8,x7,x7   ;
+ add x11,x10,x8 | add x11,x10,x8 ;
+ lw x9,0(x11)   | lw x9,0(x11)   ;
+
+exists (0:x9=0 /\ 1:x9=0)
+Generated assembler
+	#START _litmus_P1
+	sw a3,0(a5)
+	lw t5,0(a5)
+	xor t4,t5,t5
+	add t3,a4,t4
+	lw a6,0(t3)
+	#START _litmus_P0
+	sw a3,0(a5)
+	lw t5,0(a5)
+	xor t4,t5,t5
+	add t3,a4,t4
+	lw a6,0(t3)
+heuristic statistic: 23510
+heuristic statistic: 23129
+heuristic statistic: 20787
+heuristic statistic: 21150
+heuristic statistic: 21204
+heuristic statistic: 21045
+heuristic statistic: 21549
+heuristic statistic: 21562
+heuristic statistic: 22420
+heuristic statistic: 22424
+heuristic statistic: 21380
+heuristic statistic: 20529
+heuristic statistic: 22367
+heuristic statistic: 22212
+heuristic statistic: 13648
+heuristic statistic: 16660
+heuristic statistic: 11176
+heuristic statistic: 15088
+heuristic statistic: 10328
+heuristic statistic: 12094
+Test SB+pos-addrs Allowed
+Histogram (0 states)
+No
+
+Witnesses
+Positive: 0, Negative: 2000000
+Condition exists (0:x9=0 /\ 1:x9=0) is NOT validated
+Hash=2b1e9852aae486f2a0a95de030240bef
+Cycle=Fre PosWR DpAddrdR Fre PosWR DpAddrdR
+Relax SB+pos-addrs No PosWR
+Safe=Fre DpAddrdR
+Generator=diy7 (version 7.51+4(dev))
+Com=Fr Fr
+Orig=PosWR DpAddrdR Fre PosWR DpAddrdR Fre
+Observation SB+pos-addrs Never 0 2000000
+Time SB+pos-addrs 0.17
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier none -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -alloc dynamic -contiguous false -noalign none /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/SB+pos-addrs.litmus -o /home/whq/Desktop/code_list/perple_test/bayes_banana_perple/SB+pos-addrs_0_5_0_0_0_0_2_0_0_0_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/perple/SB+pos-addrs_0_5_0_0_0_0_2_0_0_0_1/run.exe -s 100000
+Sun Mar 15 00:22:45 2026

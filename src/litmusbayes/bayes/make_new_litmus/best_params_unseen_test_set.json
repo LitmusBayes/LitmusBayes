@@ -1,0 +1,2297 @@
+{
+    "MP+fence.rw.rw+ctrl-wsi-rfi-ctrl": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.684769423888945,
+        "decision": "low_gain_fallback"
+    },
+    "2+2W+fence.rw.w+po": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            3,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.379921232538369,
+        "decision": "optimized"
+    },
+    "SB+pos-pos-addrs": {
+        "param": [
+            1,
+            5,
+            1,
+            1,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 7.2762126824471505,
+        "decision": "optimized"
+    },
+    "MP+rfi-addr+data-rfi-ctrlfenceis": {
+        "param": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            4,
+            1,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 2.355396331797466,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-addr+addr-rfi-ctrlfencei": {
+        "param": [
+            1,
+            0,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 12.227818943384323,
+        "decision": "optimized"
+    },
+    "SB+pos-po+pos-po-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            1,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.5617022419659357,
+        "decision": "optimized"
+    },
+    "R+porlrl+po+NEW": {
+        "param": [
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            3,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.8177442032743738,
+        "decision": "optimized"
+    },
+    "MP+porlp+po+NEW": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.6731807594601114,
+        "decision": "low_gain_fallback"
+    },
+    "MP+pos-rfi-data+fence.r.rw": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.5814581069352069,
+        "decision": "low_gain_fallback"
+    },
+    "MP+pos-rfi-data+ctrlfencei": {
+        "param": [
+            1,
+            0,
+            1,
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 13.552434795313602,
+        "decision": "optimized"
+    },
+    "S+rfi-ctrl+fence.rw.rw": {
+        "param": [
+            1,
+            0,
+            1,
+            1,
+            2,
+            1,
+            3,
+            0,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 4.370157709581606,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-data+ctrlfencei-rfi-addr": {
+        "param": [
+            1,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 28.535053918201726,
+        "decision": "optimized"
+    },
+    "SB+po-ctrlfenceis+pos-po-addr": {
+        "param": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.526186022353271,
+        "decision": "optimized"
+    },
+    "R+fence.rw.w+rfi-addr-rfi": {
+        "param": [
+            0,
+            1,
+            0,
+            0,
+            0,
+            1,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 2.515163263798655,
+        "decision": "optimized"
+    },
+    "S+rfi-addr+ctrlfencei-rfi-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.8434982667435186,
+        "decision": "low_gain_fallback"
+    },
+    "R+rfi-data+rfi-addr": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.4633507832838877,
+        "decision": "optimized"
+    },
+    "2+2W+fence.w.w+rfi-data": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            4,
+            2,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 7.290582548303941,
+        "decision": "optimized"
+    },
+    "SB+fence.rw.rw+po-addrs": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            3,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.3283029210790036,
+        "decision": "optimized"
+    },
+    "MP+rfi-ctrl+fence.r.rw": {
+        "param": [
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.306396048937922,
+        "decision": "optimized"
+    },
+    "MP+rfi-addr+ctrlfencei-rfi-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.57)"
+    },
+    "R+rfi-data+rfi-data-rfi": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            2,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 1.5358332487046051,
+        "decision": "optimized"
+    },
+    "MP+rfi-data+ctrlfencei-rfi-ctrlfenceis": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            4,
+            0,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 3.645203933569605,
+        "decision": "optimized"
+    },
+    "R+fence.rw.rw+po-addrs": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            3,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.536161046946769,
+        "decision": "optimized"
+    },
+    "R+rfi-data+fence.rw.rw": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.927109301593536,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-addr+ctrl-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.7991013444735016,
+        "decision": "low_gain_fallback"
+    },
+    "S+rfi-addr+ctrlfencei-rfi-ctrl": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            2,
+            1,
+            4,
+            0,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 2.3890977224427994,
+        "decision": "optimized"
+    },
+    "SB+pos-rfi-addr+pos-rfi-ctrlfencei": {
+        "param": [
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.9304470715905842,
+        "decision": "optimized"
+    },
+    "S+po+fence.rw.w": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.8650573663711714,
+        "decision": "low_gain_fallback"
+    },
+    "S+rfi-addr+fence.rw.rw": {
+        "param": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 4.194246182023095,
+        "decision": "optimized"
+    },
+    "S+rfi-addr+addr": {
+        "param": [
+            0,
+            2,
+            1,
+            0,
+            2,
+            0,
+            4,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 3.7522025581278684,
+        "decision": "optimized"
+    },
+    "S+rfi-ctrl+data-rfi-addr": {
+        "param": [
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            3,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 8.640595359447325,
+        "decision": "optimized"
+    },
+    "MP+rfi-data+data-rfi-ctrlfencei": {
+        "param": [
+            1,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 93.72310302396306,
+        "decision": "optimized"
+    },
+    "SB+rfi-ctrlfencei+rfi-data-rfi": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=3.94)"
+    },
+    "SB+po+pos-po-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            2,
+            0,
+            2,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 2.685976878171716,
+        "decision": "optimized"
+    },
+    "S+rfi-data+addr": {
+        "param": [
+            1,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 3.7749118626289686,
+        "decision": "optimized"
+    },
+    "SB+po+pos-po-addr": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.0992312571768963,
+        "decision": "optimized"
+    },
+    "MP+rfi-ctrl+addr-rfi-ctrlfenceis": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=3.42)"
+    },
+    "SB+pos-addrs": {
+        "param": [
+            1,
+            5,
+            1,
+            0,
+            0,
+            0,
+            4,
+            2,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 6.1727033989480296,
+        "decision": "optimized"
+    },
+    "MP+rfi-ctrl+ctrl-rfi": {
+        "param": [
+            1,
+            5,
+            0,
+            1,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 11.1126052325616,
+        "decision": "optimized"
+    },
+    "S+rfi-data+data": {
+        "param": [
+            1,
+            5,
+            0,
+            1,
+            0,
+            1,
+            4,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 21.791191081959568,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-addr+addr": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            4,
+            2,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 2.209068500716032,
+        "decision": "optimized"
+    },
+    "SB+wsi-rfi-ctrls": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.6258861019556504,
+        "decision": "low_gain_fallback"
+    },
+    "LB+po+poaqp+NEW": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            4,
+            1,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 1.1580451723310332,
+        "decision": "optimized"
+    },
+    "MP+wsi-rfi-addr+ctrl": {
+        "param": [
+            1,
+            5,
+            1,
+            0,
+            1,
+            1,
+            4,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 1.5157293476071274,
+        "decision": "optimized"
+    },
+    "MP+rfi-ctrl+ctrlfencei-rfi-ctrlfencei": {
+        "param": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            3,
+            0,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 110.82163597311919,
+        "decision": "optimized"
+    },
+    "SB+po+po-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            2,
+            0,
+            2,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 2.5161198205784396,
+        "decision": "optimized"
+    },
+    "MP+rfi-ctrl+ctrl-rfi-addrs": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            2,
+            1,
+            3,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 3.1602501947704336,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-addr+ctrlfencei-rfi-ctrlfencei": {
+        "param": [
+            1,
+            2,
+            1,
+            0,
+            0,
+            1,
+            3,
+            1,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 7.420850153306306,
+        "decision": "optimized"
+    },
+    "MP+rfi-ctrlfencei+ctrl-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.80)"
+    },
+    "S+rfi-ctrl+addr-rfi-data": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 1.5134830271118203,
+        "decision": "optimized"
+    },
+    "S+po+addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.8181893933252178,
+        "decision": "low_gain_fallback"
+    },
+    "S+po+poprl+NEW": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.8130943149229544,
+        "decision": "low_gain_fallback"
+    },
+    "SB+pos-po-addr+pos-po-ctrlfenceis": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            2,
+            1,
+            3,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 9.46960140084029,
+        "decision": "optimized"
+    },
+    "MP+rfi-data+data-rfi": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            1,
+            4,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 13.461044491884945,
+        "decision": "optimized"
+    },
+    "MP+rfi-addr+ctrlfencei-rfi-addrs": {
+        "param": [
+            0,
+            3,
+            1,
+            0,
+            2,
+            1,
+            4,
+            0,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 1.16743490956763,
+        "decision": "optimized"
+    },
+    "SB+rfi-addr+pos-rfi-addr": {
+        "param": [
+            1,
+            5,
+            1,
+            0,
+            2,
+            0,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 10.826748744277225,
+        "decision": "optimized"
+    },
+    "MP+rfi-data+ctrl-rfi-ctrlfencei": {
+        "param": [
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 93.4907092736562,
+        "decision": "optimized"
+    },
+    "SB+pos-rfi-addrs": {
+        "param": [
+            1,
+            5,
+            1,
+            1,
+            1,
+            0,
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 7.2762126824471505,
+        "decision": "optimized"
+    },
+    "SB+po-addrs+pos-po-addrs": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 2.4786811960489064,
+        "decision": "optimized"
+    },
+    "S+rfi-data+ctrl-rfi-data": {
+        "param": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            1,
+            3,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 10.984245526918514,
+        "decision": "optimized"
+    },
+    "R+po+fence.rw.rw": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.7329799087251541,
+        "decision": "low_gain_fallback"
+    },
+    "S+rfi-addr+ctrl-rfi-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            0,
+            3,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.6940390513603962,
+        "decision": "optimized"
+    },
+    "LB+fri-rfi-data+fri-rfi-ctrl": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.77)"
+    },
+    "SB+fence.rw.rw+pos-addr": {
+        "param": [
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 2.6742107211181003,
+        "decision": "optimized"
+    },
+    "R+fence.rw.w+po-addr": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            2,
+            1,
+            4,
+            2,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 1.3127535391110499,
+        "decision": "optimized"
+    },
+    "R+pos-rfi-ctrl+rfi-addr": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            1,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 2.4872227813119414,
+        "decision": "optimized"
+    },
+    "S+po+ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.6393055156639867,
+        "decision": "low_gain_fallback"
+    },
+    "R+porlrl+porlp+NEW": {
+        "param": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.5721165883551753,
+        "decision": "optimized"
+    },
+    "SB+rfi-data-rfi+rfi-ctrl-rfi": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            2,
+            0,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 1.2343925889216607,
+        "decision": "optimized"
+    },
+    "MP+rfi-data+addr-rfi-ctrlfenceis": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=5.28)"
+    },
+    "SB+po+pos-po": {
+        "param": [
+            1,
+            5,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 2.5418147785549774,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-ctrl+ctrl-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.8201028639992021,
+        "decision": "low_gain_fallback"
+    },
+    "S+rfi-addr+data": {
+        "param": [
+            1,
+            5,
+            0,
+            0,
+            0,
+            1,
+            4,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 39.26174969303868,
+        "decision": "optimized"
+    },
+    "R+porlps+NEW": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            3,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.5959974173349454,
+        "decision": "optimized"
+    },
+    "MP+rfi-ctrl+ctrl-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.7412356536219284,
+        "decision": "low_gain_fallback"
+    },
+    "SB+pos-po+pos-po-addr": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.7352280076421216,
+        "decision": "optimized"
+    },
+    "S+rfi-addr+fence.r.rw": {
+        "param": [
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 4.133669382637149,
+        "decision": "optimized"
+    },
+    "MP+fence.rw.rw+ctrl-fri-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.6895757724075037,
+        "decision": "low_gain_fallback"
+    },
+    "MP+wsi-rfi-ctrl+fence.rw.rw": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.8931763968308967,
+        "decision": "low_gain_fallback"
+    },
+    "S+rfi-addr+addr-rfi-ctrl": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 1.9270925187220698,
+        "decision": "optimized"
+    },
+    "MP+po+poaqaq+NEW": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            3,
+            1,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 1.5451190860692519,
+        "decision": "optimized"
+    },
+    "MP+fence.w.w+ctrl": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            4,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.2907649382688122,
+        "decision": "optimized"
+    },
+    "2+2W+rfi-addr+rfi-ctrl": {
+        "param": [
+            1,
+            5,
+            0,
+            1,
+            0,
+            1,
+            4,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 15.495262167893975,
+        "decision": "optimized"
+    },
+    "S+rfi-ctrl+ctrl-rfi-ctrl": {
+        "param": [
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            3,
+            0,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 5.123170259232312,
+        "decision": "optimized"
+    },
+    "MP+rfi-addr+ctrlfencei-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.64)"
+    },
+    "MP+fence.w.w+fri-rfi-addr": {
+        "param": [
+            0,
+            1,
+            1,
+            0,
+            1,
+            1,
+            3,
+            2,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 2.1828425000715246,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-data+ctrlfencei-rfi-ctrlfencei": {
+        "param": [
+            1,
+            2,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 11.12616433408981,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-data+addr-rfi-ctrlfencei": {
+        "param": [
+            1,
+            2,
+            1,
+            1,
+            1,
+            1,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 20.091912208314355,
+        "decision": "optimized"
+    },
+    "S+porlp+po+NEW": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=4.95)"
+    },
+    "MP+fence.rw.w+ctrl-rfi-addr": {
+        "param": [
+            0,
+            6,
+            1,
+            0,
+            0,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.704257255311863,
+        "decision": "optimized"
+    },
+    "S+rfi-ctrl+addr-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.5102747885169494,
+        "decision": "optimized"
+    },
+    "2+2W+po+porlrl+NEW": {
+        "param": [
+            0,
+            3,
+            1,
+            1,
+            2,
+            1,
+            4,
+            0,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 1.2651029466452082,
+        "decision": "optimized"
+    },
+    "R+wsi-rfi-data+fence.rw.rw": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.678316397063891,
+        "decision": "low_gain_fallback"
+    },
+    "MP+rfi-data+fence.r.rw": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 3.244852755670896,
+        "decision": "optimized"
+    },
+    "R+pos-rfi-ctrlfencei+rfi-addr": {
+        "param": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            0,
+            2,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.560874161327953,
+        "decision": "optimized"
+    },
+    "R+fence.rw.w+po": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            0,
+            1,
+            4,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.7327084985609749,
+        "decision": "optimized"
+    },
+    "S+rfi-data+addr-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.30)"
+    },
+    "SB+pos-addr+pos-pos-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 6.780599476006962,
+        "decision": "optimized"
+    },
+    "SB+pos-ctrlfencei+pos-pos-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.7761839405225804,
+        "decision": "low_gain_fallback"
+    },
+    "MP+rfi-addr+addr-rfi-ctrlfenceis": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=3.46)"
+    },
+    "SB+fence.rw.rw+rfi-data-rfi": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 3.071100854561313,
+        "decision": "optimized"
+    },
+    "2+2W+po+poprl+NEW": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.51)"
+    },
+    "MP+pos-rfi-ctrl+data-rfi-ctrlfencei": {
+        "param": [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 8.591549825207613,
+        "decision": "optimized"
+    },
+    "SB+po-ctrlfencei+pos-po-addrs": {
+        "param": [
+            0,
+            2,
+            0,
+            1,
+            1,
+            0,
+            4,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 2.1672836414071845,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-data+addr": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            3,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 3.081336749376342,
+        "decision": "optimized"
+    },
+    "SB+pos-addr+pos-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 40.24200277689259,
+        "decision": "optimized"
+    },
+    "LB+fence.rw.rw+po": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            4,
+            2,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 1.5857438699660102,
+        "decision": "optimized"
+    },
+    "R+rfi-data+rfi-ctrlfencei": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.73)"
+    },
+    "S+rfi-addr+addr-rfi-ctrlfencei": {
+        "param": [
+            0,
+            3,
+            0,
+            1,
+            0,
+            1,
+            2,
+            1,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 2.2805577333561136,
+        "decision": "optimized"
+    },
+    "2+2W+po+porlp+NEW": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 2.7239542287736502,
+        "decision": "optimized"
+    },
+    "S+rfi-ctrl+ctrlfencei": {
+        "param": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            3,
+            1,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 1.5896381076433428,
+        "decision": "optimized"
+    },
+    "C-Will02+HEAD": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.42)"
+    },
+    "R+fence.rw.w+rfi-data-rfi": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            1,
+            0,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 4.437419422072221,
+        "decision": "optimized"
+    },
+    "SB+rfi-addr-rfi+rfi-data-rfi": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            2,
+            2,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 1.6709840172081583,
+        "decision": "optimized"
+    },
+    "SB+rfi-ctrlfencei+rfi-addr-rfi": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=4.32)"
+    },
+    "MP+pos-rfi-data+data-rfi-ctrlfencei": {
+        "param": [
+            1,
+            0,
+            1,
+            1,
+            2,
+            1,
+            4,
+            0,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 8.002086606059914,
+        "decision": "optimized"
+    },
+    "SB+po-addrss": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            0,
+            1,
+            2,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.463733666066709,
+        "decision": "optimized"
+    },
+    "MP+fence.w.w+ctrl-rfi-addr": {
+        "param": [
+            0,
+            6,
+            0,
+            0,
+            1,
+            0,
+            1,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 2.5248497988494423,
+        "decision": "optimized"
+    },
+    "2+2W+rfi-data+rfi-ctrl": {
+        "param": [
+            1,
+            5,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 14.046125616974221,
+        "decision": "optimized"
+    },
+    "MP+fence.rw.rw+data-wsi-rfi-ctrl": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.8018716878580805,
+        "decision": "low_gain_fallback"
+    },
+    "R+fence.rw.w+po-addrs": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.3823076014213966,
+        "decision": "optimized"
+    },
+    "R+fence.rw.rw+po-addr": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            2,
+            1,
+            4,
+            2,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 1.1898930082275427,
+        "decision": "optimized"
+    },
+    "LB+fence.r.rw+po": {
+        "param": [
+            0,
+            1,
+            1,
+            1,
+            2,
+            0,
+            4,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.6315125566691986,
+        "decision": "optimized"
+    },
+    "MP+rfi-addr+ctrl-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.7373678271406243,
+        "decision": "low_gain_fallback"
+    },
+    "S+rfi-addr+ctrlfencei-rfi-addr": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 0.7402615523440768,
+        "decision": "low_gain_fallback"
+    },
+    "R": {
+        "param": [
+            1,
+            5,
+            0,
+            0,
+            2,
+            1,
+            4,
+            2,
+            1,
+            1,
+            0
+        ],
+        "pred_score": 3.2346703239970123,
+        "decision": "optimized"
+    },
+    "MP+wsi-rfi-data+ctrl": {
+        "param": [
+            1,
+            5,
+            0,
+            1,
+            0,
+            1,
+            4,
+            0,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 1.2067304110179498,
+        "decision": "optimized"
+    },
+    "2+2W": {
+        "param": [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+        ],
+        "pred_score": -1,
+        "decision": "OOD_fallback (dist=2.41)"
+    },
+    "S+fence.w.w+po": {
+        "param": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            2,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 7.936315836194819,
+        "decision": "optimized"
+    },
+    "MP+pos-rfi-ctrl+addr-rfi-addr": {
+        "param": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.3299903169386236,
+        "decision": "optimized"
+    },
+    "R+rfi-addr+rfi-data-rfi": {
+        "param": [
+            1,
+            5,
+            0,
+            0,
+            2,
+            1,
+            1,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 6.013763597519132,
+        "decision": "optimized"
+    },
+    "SB+rfi-addr+rfi-ctrlfencei-rfi": {
+        "param": [
+            0,
+            0,
+            0,
+            1,
+            0,
+            1,
+            3,
+            1,
+            1,
+            0,
+            0
+        ],
+        "pred_score": 4.0811729603569695,
+        "decision": "optimized"
+    },
+    "S+rfi-data+addr-rfi-data": {
+        "param": [
+            0,
+            2,
+            1,
+            0,
+            1,
+            1,
+            4,
+            1,
+            0,
+            1,
+            0
+        ],
+        "pred_score": 8.979683738108234,
+        "decision": "optimized"
+    },
+    "MP+fence.rw.rw+ctrl": {
+        "param": [
+            0,
+            1,
+            0,
+            1,
+            1,
+            1,
+            4,
+            2,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 1.2700556126865346,
+        "decision": "optimized"
+    },
+    "S+rfi-addr+ctrl": {
+        "param": [
+            1,
+            5,
+            0,
+            0,
+            0,
+            1,
+            4,
+            1,
+            0,
+            0,
+            0
+        ],
+        "pred_score": 55.22071090794918,
+        "decision": "optimized"
+    }
+}

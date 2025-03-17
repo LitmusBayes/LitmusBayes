@@ -1,0 +1,84 @@
+Sun Jan 25 22:42:46 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for ./make_new_litmus/litmus_output/Rfe_Fence.rw.rwdRR_Fre_CoLeave_Fence.r.rwdWR_FrBack.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV A
+"Rfe Fence.rw.rwdRR Fre CoLeave Fence.r.rwdWR FrBack"
+{0:x6=x; 0:x8=y; 1:x6=y; 1:x8=x; 2:x6=y; 2:x8=x;}
+ P0          | P1          | P2          ;
+ lw x5,0(x6) | ori x5,x0,1 | ori x5,x0,2 ;
+ fence rw,rw | sw x5,0(x6) | sw x5,0(x6) ;
+ lw x7,0(x8) | ori x7,x0,1 | fence r,rw  ;
+             | sw x7,0(x8) | lw x7,0(x8) ;
+
+exists (y=2 /\ 0:x5=1 /\ 0:x7=0 /\ 2:x7=0)
+Generated assembler
+#START _litmus_P0
+	lw a1,0(a5)
+	fence rw,rw
+	lw t6,0(a4)
+#START _litmus_P1
+	ori t3,x0,1
+	sw t3,0(a5)
+	ori a2,x0,1
+	sw a2,0(a4)
+#START _litmus_P2
+	ori t4,x0,2
+	sw t4,0(a5)
+	fence r,rw
+	lw a1,0(a4)
+Test A Allowed
+Histogram (21 states)
+26691 :>0:x5=0; 0:x7=0; 2:x7=0; y=1;
+339351:>0:x5=0; 0:x7=1; 2:x7=0; y=1;
+2712  :>0:x5=1; 0:x7=1; 2:x7=0; y=1;
+26245 :>0:x5=0; 0:x7=2; 2:x7=0; y=1;
+5     :>0:x5=1; 0:x7=2; 2:x7=0; y=1;
+12029 :>0:x5=0; 0:x7=0; 2:x7=1; y=1;
+355   :>0:x5=1; 0:x7=0; 2:x7=1; y=1;
+13566 :>0:x5=0; 0:x7=1; 2:x7=1; y=1;
+12927 :>0:x5=1; 0:x7=1; 2:x7=1; y=1;
+10261 :>0:x5=0; 0:x7=2; 2:x7=1; y=1;
+15445 :>0:x5=1; 0:x7=2; 2:x7=1; y=1;
+3123  :>0:x5=0; 0:x7=0; 2:x7=0; y=2;
+1153  :>0:x5=0; 0:x7=1; 2:x7=0; y=2;
+9477  :>0:x5=0; 0:x7=2; 2:x7=0; y=2;
+423   :>0:x5=1; 0:x7=2; 2:x7=0; y=2;
+176026:>0:x5=0; 0:x7=0; 2:x7=1; y=2;
+888   :>0:x5=1; 0:x7=0; 2:x7=1; y=2;
+36060 :>0:x5=0; 0:x7=1; 2:x7=1; y=2;
+3252  :>0:x5=1; 0:x7=1; 2:x7=1; y=2;
+91948 :>0:x5=0; 0:x7=2; 2:x7=1; y=2;
+218063:>0:x5=1; 0:x7=2; 2:x7=1; y=2;
+No
+
+Witnesses
+Positive: 0, Negative: 1000000
+Condition exists (y=2 /\ 0:x5=1 /\ 0:x7=0 /\ 2:x7=0) is NOT validated
+Hash=502aed5a617d1d70bce46ec214a71bda
+Generator=diyone7 (version 7.56)
+Com=Fr Rf Fr
+Orig=Rfe Fence.rw.rwdRR Fre CoLeave Fence.r.rwdWR FrBack
+Observation A Never 0 1000000
+Time A 0.90
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -detached false -thread std -launch changing -stride 0 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc dynamic -contiguous false -noalign none ./make_new_litmus/litmus_output/Rfe_Fence.rw.rwdRR_Fre_CoLeave_Fence.r.rwdWR_FrBack.litmus -o ./make_new_litmus/litmus_output_bayes/Rfe_Fence.rw.rwdRR_Fre_CoLeave_Fence.r.rwdWR_FrBack_0_1_0_0_0_0_2_0_0_0_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE (-1)
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_c02c7d70.exe -s 100000
+Sun Jan 25 22:42:47 2026

@@ -1,0 +1,82 @@
+Sun Mar 15 13:14:17 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+fence.rw.rw+ctrl.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV MP+fence.rw.rw+ctrl
+"Fence.rw.rwdWW Rfe DpCtrldR Fre"
+{0:x5=1; 0:x6=x; 0:x7=y; 1:x6=y; 1:x8=x;}
+ P0          | P1             ;
+ sw x5,0(x6) | lw x5,0(x6)    ;
+ fence rw,rw | bne x5,x0,LC00 ;
+ sw x5,0(x7) | LC00:          ;
+             | lw x7,0(x8)    ;
+
+exists (1:x5=1 /\ 1:x7=0)
+Generated assembler
+	#START _litmus_P1
+	lw a7,0(a5)
+	bne a7,x0,0f
+	0:
+	lw t1,0(a4)
+	#START _litmus_P0
+	sw a2,0(a5)
+	fence rw,rw
+	sw a2,0(a4)
+heuristic statistic: 14
+heuristic statistic: 7202
+heuristic statistic: 21
+heuristic statistic: 5555
+heuristic statistic: 25
+heuristic statistic: 3575
+heuristic statistic: 22
+heuristic statistic: 2790
+heuristic statistic: 20
+heuristic statistic: 1819
+heuristic statistic: 10
+heuristic statistic: 3644
+heuristic statistic: 21
+heuristic statistic: 19
+heuristic statistic: 6128
+heuristic statistic: 12
+heuristic statistic: 7188
+heuristic statistic: 24
+heuristic statistic: 6048
+heuristic statistic: 14
+Test MP+fence.rw.rw+ctrl Allowed
+Histogram (0 states)
+No
+
+Witnesses
+Positive: 0, Negative: 2000000
+Condition exists (1:x5=1 /\ 1:x7=0) is NOT validated
+Hash=51ecc10877d4b4f57d8b431de41bd8b2
+Cycle=Rfe DpCtrldR Fre Fence.rw.rwdWW
+Relax MP+fence.rw.rw+ctrl No DpCtrldR
+Safe=Rfe Fre Fence.rw.rwdWW
+Generator=diy7 (version 7.51+4(dev))
+Com=Rf Fr
+Orig=Fence.rw.rwdWW Rfe DpCtrldR Fre
+Observation MP+fence.rw.rw+ctrl Never 0 2000000
+Time MP+fence.rw.rw+ctrl 0.18
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier none -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -alloc dynamic -contiguous false -noalign none /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+fence.rw.rw+ctrl.litmus -o /home/whq/Desktop/code_list/perple_test/bayes_banana_perple/MP+fence.rw.rw+ctrl_0_5_0_0_0_0_2_0_0_0_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /root/perple/MP+fence.rw.rw+ctrl_0_5_0_0_0_0_2_0_0_0_1/run.exe -s 100000
+Sun Mar 15 13:14:17 2026

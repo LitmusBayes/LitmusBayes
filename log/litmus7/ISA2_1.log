@@ -1,0 +1,64 @@
+Mon Aug  4 09:18:04 2025
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/sipeed/riscv/ISA2_1/ISA2_2.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV ISA2
+{0:x5=1; 1:x7=1; 0:x6=x; 0:x7=y; 1:x6=y; 1:x8=z; 2:x6=z; 2:x8=x;}
+ P0          | P1          | P2          ;
+ sd x5,0(x6) | ld x5,0(x6) | lw x0,0(x6) ;
+ sd x5,0(x7) | sd x7,0(x8) | ld x5,0(x6) ;
+             |             | ld x7,0(x8) ;
+
+exists (1:x5=1 /\ 2:x5=1 /\ 2:x7=0)
+Generated assembler
+#START _litmus_P2
+	lw x0,0(a5)
+	ld a1,0(a5)
+	ld a0,0(a4)
+#START _litmus_P0
+	sd a7,0(a5)
+	sd a7,0(a4)
+#START _litmus_P1
+	ld a1,0(a5)
+	sd t1,0(a4)
+Test ISA2 Allowed
+Histogram (8 states)
+231039:>1:x5=0; 2:x5=0; 2:x7=0;
+131869:>1:x5=1; 2:x5=0; 2:x7=0;
+89815 :>1:x5=0; 2:x5=1; 2:x7=0;
+592   *>1:x5=1; 2:x5=1; 2:x7=0;
+23692 :>1:x5=0; 2:x5=0; 2:x7=1;
+169427:>1:x5=1; 2:x5=0; 2:x7=1;
+245299:>1:x5=0; 2:x5=1; 2:x7=1;
+108267:>1:x5=1; 2:x5=1; 2:x7=1;
+Ok
+
+Witnesses
+Positive: 592, Negative: 999408
+Condition exists (1:x5=1 /\ 2:x5=1 /\ 2:x7=0) is validated
+Hash=37aa96f4a9bcf01b4cdfc66c4b8406dc
+Observation ISA2 Sometimes 592 999408
+Time ISA2 35.20
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -mem direct -p 0,1 -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/sipeed/riscv/ISA2_1/ISA2_2.litmus -o /home/sipeed/riscv/ISA2_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: changing */
+/* affinity: none */
+/* procs: {0,1} */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/riscv/ISA2_1/run.exe -r 10000
+Mon Aug  4 09:18:39 2025

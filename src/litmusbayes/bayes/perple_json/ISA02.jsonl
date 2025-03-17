@@ -1,0 +1,15 @@
+{
+    "exhaust": "REVERSE_CTX(ctx.out_0_x11, _b->size_of_test);\nREVERSE_CTX(ctx.out_1_x13, _b->size_of_test);\nint counter_heuristic = 0;\nfor (int perple_a = 0; perple_a <= _b->size_of_test - 1 ; perple_a++){\n  if (perple_a< _b->size_of_test && ctx.out_1_x13[(ctx.out_0_x11[perple_a] - 1) / 1 + 1]<=1*(perple_a-1)+1 && (ctx.out_0_x11[perple_a] - 1) / 1 + 1< _b->size_of_test){\n    counter_heuristic += 1;\n  }\n}\nprintf(\"heuristic statistic: %d\\n\", counter_heuristic);",
+    "P0": "asm __volatile__ (\n\"#START _litmus_P0\\n\"\n\"#_litmus_P0_0\\n\\t\"\n\"#_litmus_P0_1\\n\\t\"\n\"sw %[x6],0(%[x8])\\n\"\n\"#_litmus_P0_2\\n\\t\"\n\"lw %[x10],0(%[x8])\\n\"\n\"#_litmus_P0_3\\n\\t\"\n\"fence r,r\\n\"\n\"#_litmus_P0_4\\n\\t\"\n\"lw %[x11],0(%[x9])\\n\"\n\"#END _litmus_P0\\n\\t\"\n:[x11] \"=&r\" (out_0_x11[_i]),[x10] \"=&r\" (out_0_x10[_i])\n:[x8] \"r\" (&_a->x[_j]),[x9] \"r\" (&_a->y[_j]), [x6] \"r\" (trashed_x6)\n:\"cc\",\"memory\"\n);",
+    "P0_init": "int trashed_x6 = 1;\n\n",
+    "P0_var": [
+        "trashed_x6"
+    ],
+    "P0_after_asm": "trashed_x6 += 1;\n\n",
+    "P1": "asm __volatile__ (\n\"#START _litmus_P1\\n\"\n\"#_litmus_P1_0\\n\\t\"\n\"#_litmus_P1_1\\n\\t\"\n\"sw %[x6],0(%[x9])\\n\"\n\"#_litmus_P1_2\\n\\t\"\n\"lw %[x12],0(%[x9])\\n\"\n\"#_litmus_P1_3\\n\\t\"\n\"fence r,r\\n\"\n\"#_litmus_P1_4\\n\\t\"\n\"lw %[x13],0(%[x8])\\n\"\n\"#END _litmus_P1\\n\\t\"\n:[x13] \"=&r\" (out_1_x13[_i]),[x12] \"=&r\" (out_1_x12[_i])\n:[x8] \"r\" (&_a->x[_j]),[x9] \"r\" (&_a->y[_j]), [x6] \"r\" (trashed_x6)\n:\"cc\",\"memory\"\n);",
+    "P1_init": "int trashed_x6 = 1;\n\n",
+    "P1_var": [
+        "trashed_x6"
+    ],
+    "P1_after_asm": "trashed_x6 += 1;\n\n"
+}

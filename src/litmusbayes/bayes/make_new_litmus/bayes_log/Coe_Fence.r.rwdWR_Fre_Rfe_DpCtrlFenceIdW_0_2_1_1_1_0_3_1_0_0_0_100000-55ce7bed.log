@@ -1,0 +1,23 @@
+Mon Jan 26 02:24:21 2026
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr2 -force_affinity true -mem direct -barrier user2 -detached true -thread detached -launch changing -stride 31 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc before -contiguous false -noalign none ./make_new_litmus/litmus_output/Coe_Fence.r.rwdWR_Fre_Rfe_DpCtrlFenceIdW.litmus -o ./make_new_litmus/litmus_output_bayes/Coe_Fence.r.rwdWR_Fre_Rfe_DpCtrlFenceIdW_0_2_1_1_1_0_3_1_0_0_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 31
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: user2 */
+/* launch: changing */
+/* affinity: incr2 */
+/* alloc: Before */
+/* memory: direct */
+/* stride: 31 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_55ce7bed.exe -s 100000
+Mon Jan 26 02:24:21 2026

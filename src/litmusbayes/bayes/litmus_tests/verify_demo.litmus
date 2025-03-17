@@ -1,0 +1,6 @@
+
+RISCV R+rfi-data+rfi-ctrl-rfi
+...
+exists
+(x=2 /\ y=2 /\ 0:x7=2 /\ 1:x7=2 /\ 1:x10=1)
+            

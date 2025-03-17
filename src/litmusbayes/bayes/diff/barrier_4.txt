@@ -1,0 +1,87 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_4/LB.c
+49,56c49,60
+< /* Barriers macros */
+< inline static void barrier_wait(unsigned int id, unsigned int k, int volatile *b) {
+<   if ((k % N) == id) {
+<     *b = 1 ;
+<     mbar();
+<   } else {
+<     while (*b == 0) ;
+<   }
+---
+> 
+> /* pthread based test barrier */
+> 
+> typedef struct {
+>   pb_t *b ;
+>   int volatile loop ;
+> } barrier_t ;
+> 
+> static barrier_t *barrier_create(void) {
+>   barrier_t *p = malloc_check(sizeof(*p)) ;
+>   p->b = pb_create(N) ;
+>   return p ;
+58a63,75
+> static void barrier_free(barrier_t *p) {
+>   pb_free(p->b) ;
+>   free(p) ;
+> }
+> 
+> static void barrier_wait(int id, barrier_t *p) {
+>   p->loop = 1000 ;
+>   pb_wait(p->b) ;
+>   /* give a chance for everybody to start together */
+>   while (--(p->loop) > 0) ;
+> }
+> 
+> 
+95c112
+<   int volatile *barrier;
+---
+>   barrier_t *barrier;
+198,199c215
+<   int _th_id = _b->th_id;
+<   int volatile *barrier = _a->barrier;
+---
+>   barrier_t *barrier = _a->barrier;
+205c221
+<       barrier_wait(_th_id,_i,&barrier[_i]);
+---
+>       barrier_wait(0,barrier);
+231,232c247
+<   int _th_id = _b->th_id;
+<   int volatile *barrier = _a->barrier;
+---
+>   barrier_t *barrier = _a->barrier;
+238c253
+<       barrier_wait(_th_id,_i,&barrier[_i]);
+---
+>       barrier_wait(1,barrier);
+270c285
+<   _a->barrier = malloc_check(size_of_test*sizeof(*(_a->barrier)));
+---
+>   _a->barrier = barrier_create();
+279c294
+<   free((void *)_a->barrier);
+---
+>   barrier_free(_a->barrier);
+288d302
+<     _a->barrier[_i] = 0;
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_4/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier pthread -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBbarrier_4");
+26c26
+<   fprintf(out,"%s\n","/* barrier: userfence */");
+---
+>   fprintf(out,"%s\n","/* barrier: pthread */");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

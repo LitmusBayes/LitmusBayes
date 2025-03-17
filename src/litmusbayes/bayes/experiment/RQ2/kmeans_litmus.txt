@@ -1,0 +1,18 @@
+MP+pos-rfi-ctrl+ctrlfencei
+R+pos-rfi-addr+fence.rw.rw
+MP+fence.rw.w+ctrl, param
+MP+rfi-data+fence.rw.rw
+2+2W+rfi-addr+rfi-data
+R+rfi-data+rfi-ctrlfencei-rfi
+S+rfi-addr+ctrl-rfi-ctrl
+R+rfi-addr+rfi-ctrlfencei
+MP+rfi-addr+addr-rfi-ctrlfencei
+S+fence.w.w+po
+SB+po-addrs+pos-po-addrs
+S+rfi-addr+addr-rfi-ctrlfencei
+MP+pos-rfi-ctrl+ctrl-rfi-addr
+MP+po+ctrlfencei
+2+2W+po+poprl+NEW
+MP+rfi-addr+ctrl-rfi-addrs
+R+porlp+po+NEW
+MP+rfi-ctrl+data-rfi-ctrlfencei

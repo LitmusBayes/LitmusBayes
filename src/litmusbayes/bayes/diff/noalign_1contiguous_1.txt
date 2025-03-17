@@ -1,0 +1,37 @@
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: affinity.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/LB.c /home/whq/Desktop/code_list/perple_test/stride/LBnoalign_1contiguous_1/LB.c
+86a87,88
+>   void *mem;
+>   int *malloc_y;
+87a90
+>   int *malloc_x;
+267,268c270,277
+<   _a->y = malloc_check(size_of_test*sizeof(*(_a->y)));
+<   _a->x = malloc_check(size_of_test*sizeof(*(_a->x)));
+---
+>   _a->mem = malloc_check((size_of_test+1) * (sizeof(_a->y[0])+sizeof(_a->x[0])));
+>   void * _am = _a->mem;
+>   _a->y = do_align(_am,sizeof(int));
+>   _a->y = (int *)_am;
+>   _am += sizeof(int)*size_of_test;
+>   _a->x = do_align(_am,sizeof(int));
+>   _a->x = (int *)_am;
+>   _am += sizeof(int)*size_of_test;
+274,275c283
+<   free((void *)_a->y);
+<   free((void *)_a->x);
+---
+>   free((void *)_a->mem);
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.h
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: LB.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: litmus_rand.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: obj
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: outs.o
+diff -r /home/whq/Desktop/code_list/perple_test/stride/LB/run.c /home/whq/Desktop/code_list/perple_test/stride/LBnoalign_1contiguous_1/run.c
+17c17
+<   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LB");
+---
+>   fprintf(out,"%s\n","Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -contiguous true -noalign all /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive/LB.litmus -o /home/whq/Desktop/code_list/perple_test/stride/LBnoalign_1contiguous_1");
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.exe
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: run.o
+Only in /home/whq/Desktop/code_list/perple_test/stride/LB: utils.o

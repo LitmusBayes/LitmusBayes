@@ -1,0 +1,36 @@
+2026-03-22 12:37:25 | INFO    | bayes_eval | ================================================================================
+2026-03-22 12:37:25 | INFO    | bayes_eval | Logger initialized
+2026-03-22 12:37:25 | INFO    | bayes_eval | log_file=./two_tower.check.run.log
+2026-03-22 12:37:25 | INFO    | bayes_eval | level=INFO
+2026-03-22 12:37:25 | INFO    | bayes_eval | ================================================================================
+2026-03-22 12:37:25 | INFO    | bayes_eval | === Start Two-Tower Hybrid Evaluation (Train/Test Split) | Seed=2025 ===
+2026-03-22 12:37:25 | INFO    | bayes_eval | Loading performance data: ../../../log/cache_norm.jsonl
+2026-03-22 12:37:26 | INFO    | bayes_eval | Total Litmus Programs: 448
+2026-03-22 12:37:26 | INFO    | bayes_eval | Training set: 358 | Test set: 90
+2026-03-22 12:37:26 | INFO    | bayes_eval | Extracting N-gram features for all programs...
+2026-03-22 12:37:26 | INFO    | bayes_eval | Parsing Graphs & Injecting N-grams...
+2026-03-22 12:37:43 | INFO    | bayes_eval | Inference: Generating embeddings for test set...
+2026-03-22 13:04:00 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:04:00 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:04:00 | INFO    | bayes_eval | log_file=./two_tower.check.run.log
+2026-03-22 13:04:00 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:04:00 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:04:00 | INFO    | bayes_eval | === Start Two-Tower Hybrid Evaluation (Train/Test Split) | Seed=2025 ===
+2026-03-22 13:04:00 | INFO    | bayes_eval | Loading performance data: ../../../log/cache_norm.jsonl
+2026-03-22 13:04:00 | INFO    | bayes_eval | Total Litmus Programs: 448
+2026-03-22 13:04:00 | INFO    | bayes_eval | Training set: 358 | Test set: 90
+2026-03-22 13:04:00 | INFO    | bayes_eval | Extracting N-gram features for all programs...
+2026-03-22 13:04:00 | INFO    | bayes_eval | Parsing Graphs & Injecting N-grams...
+2026-03-22 13:04:18 | INFO    | bayes_eval | Inference: Generating embeddings for test set...
+2026-03-22 13:06:23 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:23 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:06:23 | INFO    | bayes_eval | log_file=./two_tower.check.run.log
+2026-03-22 13:06:23 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:06:23 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:23 | INFO    | bayes_eval | === Start Two-Tower Hybrid Evaluation (Train/Test Split) | Seed=2025 ===
+2026-03-22 13:06:23 | INFO    | bayes_eval | Loading performance data: ../../../log/cache_norm.jsonl
+2026-03-22 13:06:23 | INFO    | bayes_eval | Total Litmus Programs: 448
+2026-03-22 13:06:23 | INFO    | bayes_eval | Training set: 358 | Test set: 90
+2026-03-22 13:06:23 | INFO    | bayes_eval | Extracting N-gram features for all programs...
+2026-03-22 13:06:23 | INFO    | bayes_eval | Parsing Graphs & Injecting N-grams...
+2026-03-22 13:06:42 | INFO    | bayes_eval | Inference: Generating embeddings for test set...

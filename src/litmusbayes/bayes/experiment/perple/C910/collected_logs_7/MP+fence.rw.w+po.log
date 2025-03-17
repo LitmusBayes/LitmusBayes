@@ -1,0 +1,79 @@
+Sun Mar 15 00:40:18 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+fence.rw.w+po.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV MP+fence.rw.w+po
+"Fence.rw.wdWW Rfe PodRR Fre"
+{0:x5=1; 0:x6=x; 0:x7=y; 1:x6=y; 1:x8=x;}
+ P0          | P1          ;
+ sw x5,0(x6) | lw x5,0(x6) ;
+ fence rw,w  | lw x7,0(x8) ;
+ sw x5,0(x7) |             ;
+
+exists (1:x5=1 /\ 1:x7=0)
+Generated assembler
+	#START _litmus_P1
+	lw a7,0(a5)
+	lw t1,0(a4)
+	#START _litmus_P0
+	sw a2,0(a5)
+	fence rw,w
+	sw a2,0(a4)
+heuristic statistic: 43
+heuristic statistic: 133
+heuristic statistic: 42
+heuristic statistic: 119
+heuristic statistic: 49
+heuristic statistic: 110
+heuristic statistic: 64
+heuristic statistic: 157
+heuristic statistic: 55
+heuristic statistic: 181
+heuristic statistic: 70
+heuristic statistic: 147
+heuristic statistic: 80
+heuristic statistic: 189
+heuristic statistic: 82
+heuristic statistic: 178
+heuristic statistic: 69
+heuristic statistic: 205
+heuristic statistic: 96
+heuristic statistic: 3
+Test MP+fence.rw.w+po Allowed
+Histogram (0 states)
+No
+
+Witnesses
+Positive: 0, Negative: 2000000
+Condition exists (1:x5=1 /\ 1:x7=0) is NOT validated
+Hash=c120b52301d040f6c06b38673e7c9c6b
+Cycle=Rfe PodRR Fre Fence.rw.wdWW
+Relax MP+fence.rw.w+po No PodRR
+Safe=Rfe Fre Fence.rw.wdWW
+Generator=diy7 (version 7.51+4(dev))
+Com=Rf Fr
+Orig=Fence.rw.wdWW Rfe PodRR Fre
+Observation MP+fence.rw.w+po Never 0 2000000
+Time MP+fence.rw.w+po 0.18
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier none -detached false -thread std -launch changing -stride 1 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -smtmode seq -smt 2 -avail 4 -alloc dynamic -contiguous false -noalign none /home/whq/Desktop/code_list/perple_test/all_allow_litmus_C910_naive_perple/MP+fence.rw.w+po.litmus -o /home/whq/Desktop/code_list/perple_test/bayes_banana_perple/MP+fence.rw.w+po_0_5_0_0_0_0_2_0_0_0_1
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 1
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: none */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* stride: 1 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/perple/MP+fence.rw.w+po_0_5_0_0_0_0_2_0_0_0_1/run.exe -s 100000
+Sun Mar 15 00:40:18 2026

@@ -1,0 +1,80 @@
+Mon Jan 26 01:49:47 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for ./make_new_litmus/litmus_output/Rfe_PodRR_Fre_RfLeave_FrBack_PodWW.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV A
+"Rfe PodRR Fre RfLeave FrBack PodWW"
+{0:x6=x; 0:x8=y; 1:x6=y; 1:x9=x; 2:x6=y;}
+ P0          | P1          | P2          ;
+ lw x5,0(x6) | ori x5,x0,1 | lw x5,0(x6) ;
+ lw x7,0(x8) | sw x5,0(x6) |             ;
+             | ori x7,x0,2 |             ;
+             | sw x7,0(x6) |             ;
+             | ori x8,x0,1 |             ;
+             | sw x8,0(x9) |             ;
+
+exists (y=2 /\ 0:x5=1 /\ 0:x7=0 /\ 2:x5=1)
+Generated assembler
+#START _litmus_P1
+	ori s1,x0,1
+	sw s1,0(a5)
+	ori t2,x0,2
+	sw t2,0(a5)
+	ori a2,x0,1
+	sw a2,0(a4)
+#START _litmus_P2
+	lw a4,0(a5)
+#START _litmus_P0
+	lw a1,0(a5)
+	lw s2,0(a4)
+Test A Allowed
+Histogram (16 states)
+377113:>0:x5=0; 0:x7=0; 2:x5=0; y=2;
+59158 :>0:x5=1; 0:x7=0; 2:x5=0; y=2;
+88    :>0:x5=0; 0:x7=1; 2:x5=0; y=2;
+171650:>0:x5=0; 0:x7=2; 2:x5=0; y=2;
+34133 :>0:x5=1; 0:x7=2; 2:x5=0; y=2;
+35    :>0:x5=0; 0:x7=0; 2:x5=1; y=2;
+1175  :>0:x5=0; 0:x7=1; 2:x5=1; y=2;
+107   :>0:x5=1; 0:x7=1; 2:x5=1; y=2;
+9     :>0:x5=0; 0:x7=2; 2:x5=1; y=2;
+101   :>0:x5=1; 0:x7=2; 2:x5=1; y=2;
+50150 :>0:x5=0; 0:x7=0; 2:x5=2; y=2;
+34375 :>0:x5=1; 0:x7=0; 2:x5=2; y=2;
+22    :>0:x5=0; 0:x7=1; 2:x5=2; y=2;
+48    :>0:x5=1; 0:x7=1; 2:x5=2; y=2;
+69344 :>0:x5=0; 0:x7=2; 2:x5=2; y=2;
+202492:>0:x5=1; 0:x7=2; 2:x5=2; y=2;
+No
+
+Witnesses
+Positive: 0, Negative: 1000000
+Condition exists (y=2 /\ 0:x5=1 /\ 0:x7=0 /\ 2:x5=1) is NOT validated
+Hash=39e184050479af8b4d5a91a17e6d85c0
+Generator=diyone7 (version 7.56)
+Com=Fr Rf Fr
+Orig=Rfe PodRR Fre RfLeave FrBack PodWW
+Observation A Never 0 1000000
+Time A 1.05
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr2 -force_affinity true -mem direct -barrier userfence -detached true -thread std -launch fixed -stride 2 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc before -contiguous false -noalign none ./make_new_litmus/litmus_output/Rfe_PodRR_Fre_RfLeave_FrBack_PodWW.litmus -o ./make_new_litmus/litmus_output_bayes/Rfe_PodRR_Fre_RfLeave_FrBack_PodWW_0_1_1_1_0_1_3_2_0_0_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE 2
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: fixed */
+/* affinity: incr2 */
+/* alloc: Before */
+/* memory: direct */
+/* stride: 2 */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_e3725b57.exe -s 100000
+Mon Jan 26 01:49:48 2026

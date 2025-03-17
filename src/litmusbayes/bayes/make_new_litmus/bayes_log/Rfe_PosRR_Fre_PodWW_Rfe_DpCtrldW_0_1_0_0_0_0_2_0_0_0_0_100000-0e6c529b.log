@@ -1,0 +1,87 @@
+Sun Jan 25 22:42:57 2026
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Results for ./make_new_litmus/litmus_output/Rfe_PosRR_Fre_PodWW_Rfe_DpCtrldW.litmus %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+RISCV A
+"Rfe PosRR Fre PodWW Rfe DpCtrldW"
+{0:x6=x; 1:x6=x; 1:x8=y; 2:x6=y; 2:x8=x;}
+ P0          | P1          | P2             ;
+ lw x5,0(x6) | ori x5,x0,2 | lw x5,0(x6)    ;
+ lw x7,0(x6) | sw x5,0(x6) | bne x5,x0,LC00 ;
+             | ori x7,x0,1 | LC00:          ;
+             | sw x7,0(x8) | ori x7,x0,1    ;
+             |             | sw x7,0(x8)    ;
+
+exists (x=2 /\ 0:x5=1 /\ 0:x7=1 /\ 2:x5=1)
+Generated assembler
+#START _litmus_P2
+	lw a1,0(a5)
+	bne a1,x0,0f
+0:
+	ori t4,x0,1
+	sw t4,0(a4)
+#START _litmus_P0
+	lw a4,0(a5)
+	lw a1,0(a5)
+#START _litmus_P1
+	ori t3,x0,2
+	sw t3,0(a5)
+	ori a2,x0,1
+	sw a2,0(a4)
+Test A Allowed
+Histogram (23 states)
+263412:>0:x5=0; 0:x7=0; 2:x5=0; x=1;
+75    :>0:x5=0; 0:x7=1; 2:x5=0; x=1;
+27716 :>0:x5=1; 0:x7=1; 2:x5=0; x=1;
+27    :>0:x5=2; 0:x7=1; 2:x5=0; x=1;
+161   :>0:x5=0; 0:x7=2; 2:x5=0; x=1;
+55138 :>0:x5=2; 0:x7=2; 2:x5=0; x=1;
+43723 :>0:x5=0; 0:x7=0; 2:x5=1; x=1;
+44    :>0:x5=0; 0:x7=1; 2:x5=1; x=1;
+52966 :>0:x5=1; 0:x7=1; 2:x5=1; x=1;
+32    :>0:x5=2; 0:x7=1; 2:x5=1; x=1;
+101   :>0:x5=0; 0:x7=2; 2:x5=1; x=1;
+177932:>0:x5=2; 0:x7=2; 2:x5=1; x=1;
+136443:>0:x5=0; 0:x7=0; 2:x5=0; x=2;
+145   :>0:x5=0; 0:x7=1; 2:x5=0; x=2;
+100920:>0:x5=1; 0:x7=1; 2:x5=0; x=2;
+82    :>0:x5=0; 0:x7=2; 2:x5=0; x=2;
+8     :>0:x5=1; 0:x7=2; 2:x5=0; x=2;
+137790:>0:x5=2; 0:x7=2; 2:x5=0; x=2;
+2351  :>0:x5=0; 0:x7=0; 2:x5=1; x=2;
+16    :>0:x5=0; 0:x7=1; 2:x5=1; x=2;
+527   *>0:x5=1; 0:x7=1; 2:x5=1; x=2;
+3     :>0:x5=0; 0:x7=2; 2:x5=1; x=2;
+388   :>0:x5=2; 0:x7=2; 2:x5=1; x=2;
+Ok
+
+Witnesses
+Positive: 527, Negative: 999473
+Condition exists (x=2 /\ 0:x5=1 /\ 0:x7=1 /\ 2:x5=1) is validated
+Hash=cb30b760f0613abdb16c75e2f3e9f98d
+Generator=diyone7 (version 7.56)
+Com=Fr Rf Rf
+Orig=Rfe PosRR Fre PodWW Rfe DpCtrldW
+Observation A Sometimes 527 999473
+Time A 0.65
+Revision exported, version 7.56
+Command line: litmus7 -carch RISCV -limit true -affinity incr1 -force_affinity true -mem direct -barrier userfence -detached false -thread std -launch changing -stride 0 -size_of_test 100 -number_of_run 10 -driver C -gcc riscv64-unknown-linux-gnu-gcc -ccopts -O2 -linkopt -static -avail 4 -alloc dynamic -contiguous false -noalign none ./make_new_litmus/litmus_output/Rfe_PosRR_Fre_PodWW_Rfe_DpCtrldW.litmus -o ./make_new_litmus/litmus_output_bayes/Rfe_PosRR_Fre_PodWW_Rfe_DpCtrldW_0_1_0_0_0_0_2_0_0_0_0
+Parameters
+#define SIZE_OF_TEST 100
+#define NUMBER_OF_RUN 10
+#define AVAIL 4
+#define STRIDE (-1)
+#define MAX_LOOP 0
+/* gcc options: -D_GNU_SOURCE -DFORCE_AFFINITY -Wall -std=gnu99 -O2 -pthread */
+/* gcc link options: -static */
+/* barrier: userfence */
+/* launch: changing */
+/* affinity: incr1 */
+/* alloc: dynamic */
+/* memory: direct */
+/* safer: write */
+/* preload: random */
+/* speedcheck: no */
+/* proc used: 4 */
+Command: /home/sipeed/test/run_0e6c529b.exe -s 100000
+Sun Jan 25 22:42:58 2026

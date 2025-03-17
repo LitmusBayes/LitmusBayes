@@ -1,0 +1,19 @@
+{
+    "exhaust": "REVERSE_CTX(ctx.out_1_x5, _b->size_of_test);\nREVERSE_CTX(ctx.out_2_x5, _b->size_of_test);\nREVERSE_CTX(ctx.out_2_x7, _b->size_of_test);\nint counter_heuristic = 0;\nfor (int perple_c = 0; perple_c <= _b->size_of_test - 1 ; perple_c++){\n  if (perple_c< _b->size_of_test && ctx.out_1_x5[(ctx.out_2_x5[perple_c] - 1) / 1]>=1*((ctx.out_2_x7[perple_c] - 1) / 1 + 1)+1 && (ctx.out_2_x5[perple_c] - 1) / 1< _b->size_of_test){\n    counter_heuristic += 1;\n  }\n}\nprintf(\"heuristic statistic: %d\\n\", counter_heuristic);",
+    "P0": "asm __volatile__ (\n\"#START _litmus_P0\\n\"\n\"#_litmus_P0_0\\n\\t\"\n\"sw %[x5],0(%[x6])\\n\"\n\"#_litmus_P0_1\\n\\t\"\n\"fence w,w\\n\"\n\"#_litmus_P0_2\\n\\t\"\n\"sw %[x5],0(%[x7])\\n\"\n\"#END _litmus_P0\\n\\t\"\n:\n:[x5] \"r\" (x5_val),[x6] \"r\" (&_a->x[_j]),[x7] \"r\" (&_a->y[_j])\n:\"cc\",\"memory\"\n);",
+    "P0_init": "int x5_val = 1 ;\n\n",
+    "P0_var": [
+        "trashed_x5"
+    ],
+    "P0_after_asm": "x5_val += 1;\n\n",
+    "P1": "asm __volatile__ (\n\"#START _litmus_P1\\n\"\n\"#_litmus_P1_0\\n\\t\"\n\"lw %[x5],0(%[x6])\\n\"\n\"#_litmus_P1_1\\n\\t\"\n\"bne %[x5],x0,0f\\n\"\n\"#_litmus_P1_2\\n\\t\"\n\"0:\\n\"\n\"#_litmus_P1_3\\n\\t\"\n\"sw %[x7],0(%[x8])\\n\"\n\"#END _litmus_P1\\n\\t\"\n:[x5] \"=&r\" (out_1_x5[_i])\n:[x6] \"r\" (&_a->y[_j]),[x7] \"r\" (x7_val),[x8] \"r\" (&_a->z[_j])\n:\"cc\",\"memory\"\n);",
+    "P1_init": "int x7_val = 1 ;\n\n",
+    "P1_var": [
+        "trashed_x7"
+    ],
+    "P1_after_asm": "x7_val += 1;\n\n",
+    "P2": "asm __volatile__ (\n\"#START _litmus_P2\\n\"\n\"#_litmus_P2_0\\n\\t\"\n\"lw %[x5],0(%[x6])\\n\"\n\"#_litmus_P2_1\\n\\t\"\n\"bne %[x5],x0,0f\\n\"\n\"#_litmus_P2_2\\n\\t\"\n\"0:\\n\"\n\"#_litmus_P2_3\\n\\t\"\n\"fence.i\\n\"\n\"#_litmus_P2_4\\n\\t\"\n\"lw %[x7],0(%[x8])\\n\"\n\"#END _litmus_P2\\n\\t\"\n:[x7] \"=&r\" (out_2_x7[_i]),[x5] \"=&r\" (out_2_x5[_i])\n:[x6] \"r\" (&_a->z[_j]),[x8] \"r\" (&_a->x[_j])\n:\"cc\",\"memory\"\n);",
+    "P2_init": "",
+    "P2_var": [],
+    "P2_after_asm": ""
+}

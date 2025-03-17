@@ -1,0 +1,48 @@
+2026-03-22 13:03:34 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:03:34 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:03:34 | INFO    | bayes_eval | log_file=./n_gram.check.run.log
+2026-03-22 13:03:34 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:03:34 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:03:34 | INFO    | bayes_eval | === Start N-gram DNN Split Evaluation | Seed=2025 ===
+2026-03-22 13:03:34 | INFO    | bayes_eval | Loading performance data...
+2026-03-22 13:03:34 | INFO    | bayes_eval | Total Unique Litmus Tests: 448
+2026-03-22 13:03:34 | INFO    | bayes_eval | Train Set Size: 358
+2026-03-22 13:03:34 | INFO    | bayes_eval | Test Set Size:  90
+2026-03-22 13:03:34 | INFO    | bayes_eval | Extracting N-gram features...
+2026-03-22 13:03:35 | INFO    | bayes_eval | Training DNN with N-gram features...
+2026-03-22 13:03:44 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:03:44 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:03:44 | INFO    | bayes_eval | log_file=./n_gram.check.run.log
+2026-03-22 13:03:44 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:03:44 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:03:44 | INFO    | bayes_eval | === Start N-gram DNN Split Evaluation | Seed=2025 ===
+2026-03-22 13:03:44 | INFO    | bayes_eval | Loading performance data...
+2026-03-22 13:03:44 | INFO    | bayes_eval | Total Unique Litmus Tests: 448
+2026-03-22 13:03:44 | INFO    | bayes_eval | Train Set Size: 358
+2026-03-22 13:03:44 | INFO    | bayes_eval | Test Set Size:  90
+2026-03-22 13:03:44 | INFO    | bayes_eval | Extracting N-gram features...
+2026-03-22 13:03:45 | INFO    | bayes_eval | Training DNN with N-gram features...
+2026-03-22 13:05:55 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:05:55 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:05:55 | INFO    | bayes_eval | log_file=./n_gram.check.run.log
+2026-03-22 13:05:55 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:05:55 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:05:55 | INFO    | bayes_eval | === Start N-gram DNN Split Evaluation | Seed=2025 ===
+2026-03-22 13:05:55 | INFO    | bayes_eval | Loading performance data...
+2026-03-22 13:05:56 | INFO    | bayes_eval | Total Unique Litmus Tests: 448
+2026-03-22 13:05:56 | INFO    | bayes_eval | Train Set Size: 358
+2026-03-22 13:05:56 | INFO    | bayes_eval | Test Set Size:  90
+2026-03-22 13:05:56 | INFO    | bayes_eval | Extracting N-gram features...
+2026-03-22 13:05:57 | INFO    | bayes_eval | Training DNN with N-gram features...
+2026-03-22 13:06:04 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:04 | INFO    | bayes_eval | Logger initialized
+2026-03-22 13:06:04 | INFO    | bayes_eval | log_file=./n_gram.check.run.log
+2026-03-22 13:06:04 | INFO    | bayes_eval | level=INFO
+2026-03-22 13:06:04 | INFO    | bayes_eval | ================================================================================
+2026-03-22 13:06:04 | INFO    | bayes_eval | === Start N-gram DNN Split Evaluation | Seed=2025 ===
+2026-03-22 13:06:04 | INFO    | bayes_eval | Loading performance data...
+2026-03-22 13:06:04 | INFO    | bayes_eval | Total Unique Litmus Tests: 448
+2026-03-22 13:06:04 | INFO    | bayes_eval | Train Set Size: 358
+2026-03-22 13:06:04 | INFO    | bayes_eval | Test Set Size:  90
+2026-03-22 13:06:04 | INFO    | bayes_eval | Extracting N-gram features...
+2026-03-22 13:06:05 | INFO    | bayes_eval | Training DNN with N-gram features...

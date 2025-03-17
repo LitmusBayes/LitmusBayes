@@ -1,0 +1,17 @@
+RISCV A
+"Rfe FrLeave PodWR FrBack Coe PodWW"
+Generator=diyone7 (version 7.56)
+Prefetch=0:x=F,0:y=T,1:y=F,1:x=W,2:x=F,2:y=W
+Com=Fr Rf Co
+Orig=Rfe FrLeave PodWR FrBack Coe PodWW
+{
+0:x6=x; 0:x8=y;
+1:x6=y; 1:x8=x;
+2:x6=x; 2:x8=y;
+}
+ P0          | P1          | P2          ;
+ ori x5,x0,2 | ori x5,x0,2 | lw x5,0(x6) ;
+ sw x5,0(x6) | sw x5,0(x6) | ori x7,x0,1 ;
+ lw x7,0(x8) | ori x7,x0,1 | sw x7,0(x8) ;
+             | sw x7,0(x8) |             ;
+exists (x=2 /\ y=2 /\ 0:x7=0 /\ 2:x5=1)

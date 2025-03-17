@@ -1,0 +1,872 @@
+LB+addr+data-wsi-rfi-data.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+MP+rfi-ctrl+ctrl-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+SB+pos-addr+pos-ctrlfencei.litmus: {"0:x9": 0, "1:x8": 0}
+R+poprl+porlp+NEW.litmus: {"[y]": 2, "1:x7": 0}
+MP+rfi-ctrl+addr-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+MP+fence.rw.w+fence.w.w.litmus: {"1:x5": 1, "1:x7": 0}
+R+rfi-data+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+S+rfi-addr+addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+R+po+fence.rw.rw.litmus: {"[y]": 2, "1:x7": 0}
+LB.litmus: {"0:x5": 1, "1:x5": 1}
+S+rfi-ctrl+ctrlfencei-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+LB+fence.r.rw+po.litmus: {"0:x5": 1, "1:x5": 1}
+S+rfi-ctrlfencei+fence.r.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+ISA09.litmus: {"[y]": 2, "1:x5": 1, "1:x8": 2, "1:x10": 0}
+LB+addr+fri-rfi-data.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+LB+ctrl+data-wsi-rfi-ctrl.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+SB+po-ctrlfenceis+pos-po-addr.litmus: {"[y]": 2, "0:x9": 0, "1:x11": 0}
+LB+addr+addrpx-poxp+VAR2.litmus: {"0:x5": 1, "1:x5": 1, "1:x11": 0}
+S+rfi-ctrlfencei+fence.rw.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+MP+po+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0}
+MP+pos-rfi-data+addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x8": 0}
+MP+fence.rw.w+fence.i.litmus: {"1:x5": 1, "1:x7": 0}
+Z6.3+fence.rw.w+fence.rw.w+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+SB+fence.rw.rw+wsi-rfi-ctrl.litmus: {"[y]": 2, "0:x7": 0, "1:x8": 2, "1:x9": 0}
+MP+rfi-ctrl+ctrlfencei-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+rfi-ctrl+fence.rw.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+SB+rfi-data-rfi+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x10": 1, "1:x7": 2, "1:x10": 1}
+W+RWC+fence.rw.w+ctrlfencei+fence.rw.rws.litmus: {"[x]": 2, "1:x5": 1, "1:x7": 0, "2:x7": 1}
+S+rfi-addr+ctrlfencei-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB+po+pos-po-addr.litmus: {"[y]": 2, "0:x7": 0, "1:x11": 0}
+MP+rfi-addr+ctrl-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+[ws-rf]-ctrlfencei+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "2:x5": 1, "2:x7": 0}
+SB+po-addrs+pos-po-ctrlfenceis.litmus: {"[y]": 2, "0:x10": 0, "1:x10": 0}
+MP+poxxs.litmus: {"[x]": 1, "[y]": 1, "0:x11": 0, "0:x8": 0, "0:x7": 0, "0:x10": 0, "1:x10": 0, "1:x7": 0, "1:x6": 1, "1:x9": 0}
+MP+po+poaqaq+NEW.litmus: {"1:x5": 1, "1:x7": 0}
+MP+[rf-fence.r.rw-ws]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+MP+fence.w.w-[rf-fr]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+SB+fence.rw.rw+pos-pos-ctrlfencei.litmus: {"[y]": 2, "0:x7": 0, "1:x9": 0}
+SB+fence.rw.rw+po-addrs.litmus: {"0:x7": 0, "1:x10": 0}
+LB+po+poaqp+NEW.litmus: {"0:x5": 1, "1:x5": 1}
+MP+pos-rfi-data+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+pos-rfi-addr+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+Data-XX-Addr.litmus: {"[a]": 1, "[z]": 1, "1:x14": 0, "1:x10": 0, "1:x5": 1, "1:x15": 0}
+2+2W+fence.i+fence.w.w.litmus: {"[x]": 2, "[y]": 2}
+SB+fence.rw.rw+po-addr.litmus: {"0:x7": 0, "1:x10": 0}
+MP+[rf-ctrlfencei-fr]+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0, "2:x5": 1, "2:x7": 0}
+S+rfi-data+ctrlfencei-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+rfi-ctrl+ctrl-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+MP+rfi-addr+addr-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x13": 1}
+ISA2+fence.rw.w+addr+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+MP+pos-rfi-data+data-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+S+rfi-addr+addr-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+LB+fence.rw.rw+poxp.litmus: {"[y]": 1, "0:x5": 1, "1:x7": 0, "1:x6": 1}
+R+rfi-ctrlfencei+rfi-addr.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x9": 0}
+R+porlrl+porlp+NEW.litmus: {"[y]": 2, "1:x7": 0}
+ISA-MP-DEP-SUCCESS-SWAP.litmus: {"1:x2": 1, "1:x5": 0}
+S+fence.r.rw+fence.rw.rw.litmus: {"[x]": 2, "1:x5": 1}
+S+rfi-data+data-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+rfi-ctrl+data-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+WRC+data+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+MP+rfi-data+data-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB+po-ctrlfencei+pos-po-ctrlfencei.litmus: {"[z]": 2, "0:x9": 0, "1:x10": 0}
+2+2W+[rf-ctrlfencei-fr]+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "1:x5": 2, "1:x7": 0}
+MP+fence.rw.rw+ctrl.litmus: {"1:x5": 1, "1:x7": 0}
+SB+rfi-addr+rfi-data-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x9": 0, "1:x7": 1, "1:x10": 1}
+MP+rfi-data+ctrlfencei-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+SB+pos-po+po-ctrlfencei.litmus: {"[x]": 2, "0:x8": 0, "1:x9": 0}
+LB+fence.w.w+fence.rw.w.litmus: {"0:x5": 1, "1:x5": 1}
+LB+data+poxx.litmus: {"[x]": 1, "[y]": 1, "0:x5": 1, "1:x11": 0, "1:x7": 0, "1:x6": 1, "1:x10": 0}
+S+rfi-ctrlfencei+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB+rfi-ctrlfencei+pos-rfi-ctrlfencei.litmus: {"[y]": 2, "0:x7": 1, "0:x8": 0, "1:x8": 2, "1:x9": 0}
+2+2W+rfi-data+rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+MP+fence.rw.rw+fence.i.litmus: {"1:x5": 1, "1:x7": 0}
+R+fence.rw.rw+rfi-ctrlfencei.litmus: {"[y]": 2, "1:x7": 2, "1:x8": 0}
+R+rfi-data+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+R+fence.rw.w+po.litmus: {"[y]": 2, "1:x7": 0}
+R+fence.rw.w+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+MP+pos-rfi-ctrlfencei+data-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+S+rfi-data+ctrl-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+ISA2+fence.w.w+fence.rw.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+S+rfi-addr+data-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+rfi-data+ctrlfencei-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+fence.w.w+pos-ctrlfencei.litmus: {"[y]": 2, "1:x8": 0}
+R+fence.w.w+fence.i.litmus: {"[y]": 2, "1:x7": 0}
+MP+rfi-ctrlfencei+addr-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x12": 1}
+SB+po+po-ctrlfenceis.litmus: {"0:x7": 0, "1:x9": 0}
+WRC+fence.rw.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+LB+ctrlfencei+po.litmus: {"0:x5": 1, "1:x5": 1}
+LB+fri-rfi-addr+fri-rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x8": 2, "1:x5": 1, "1:x8": 2}
+R+fence.rw.w+po-ctrlfenceis.litmus: {"[y]": 2, "1:x9": 0}
+MP+rfi-ctrl+data-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+MP+rfi-ctrl+addr-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x12": 1}
+R+rfi-ctrlfencei+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+R+rfi-ctrlfenceis.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x8": 0}
+R+pos-rfi-ctrl+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x8": 0}
+SB+po-addrs+pos-po-ctrlfencei.litmus: {"[y]": 2, "0:x10": 0, "1:x10": 0}
+S+rfi-ctrl+data-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+rfi-addr+addr-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+SB+fence.tsos.litmus: {"0:x7": 0, "1:x7": 0}
+MP+rfi-addr+data-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+S+rfi-data+fence.rw.w.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+Luc01+Rlx.litmus: {"[x]": 2, "[y]": 2, "1:x5": 2, "1:x9": 1}
+MP+pos-rfi-ctrlfencei+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+S+fence.rw.rw+poxx.litmus: {"[x]": 2, "[y]": 1, "1:x11": 0, "1:x7": 0, "1:x6": 1, "1:x10": 0}
+IRRWIW+ctrlfenceis.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+MP+fence.w.w+ctrlfencei-rfi-addr.litmus: {"1:x5": 1, "1:x9": 1, "1:x11": 0}
+ISA2+pos+fence.r.rw+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1, "2:x7": 0}
+S+[rf-ctrlfencei-fr]+data.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x5": 1}
+SB+po-addrss.litmus: {"0:x10": 0, "1:x10": 0}
+SB+rfi-ctrl-rfis.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x10": 1, "1:x7": 2, "1:x10": 1}
+SB+po-addr+po-ctrlfencei.litmus: {"0:x10": 0, "1:x9": 0}
+LB+fence.w.w+fence.rw.rw.litmus: {"0:x5": 1, "1:x5": 1}
+MP+rfi-ctrlfencei+fence.rw.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+MP.litmus: {"1:x5": 1, "1:x7": 0}
+MP+fence.rw.rw+rmw-wsi-rfi-addr.litmus: {"[y]": 3, "1:x6": 1, "1:x9": 3, "1:x11": 0}
+SB+fence.rw.rw+pos-rfi-addr.litmus: {"[y]": 2, "0:x7": 0, "1:x8": 2, "1:x10": 0}
+SB+fence.rw.rw+pos-addr.litmus: {"0:x7": 0, "1:x9": 0}
+MP+fence.rw.rw-[rf-fr]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+ISA2+fence.rw.rw+data+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+SB+pos-po+pos-po-ctrlfenceis.litmus: {"[x]": 2, "[y]": 2, "0:x8": 0, "1:x10": 0}
+MP+rfi-ctrlfencei+ctrlfencei-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+rfi-data+data-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+[ws-rf]-addr+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "2:x5": 1, "2:x7": 0}
+LB+fence.rw.w+po.litmus: {"0:x5": 1, "1:x5": 1}
+R+rfi-data+rfi-ctrlfencei.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x8": 0}
+2+2W+fence.w.w+rfi-addr.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+R+fence.w.w+po-addrs.litmus: {"[y]": 2, "1:x10": 0}
+ISA2+fence.rw.rw+addr+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+MP+fence.rw.rw+data-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+po+addr.litmus: {"[x]": 2, "1:x5": 1}
+MP+rfi-ctrlfencei+ctrl-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+SB+fence.rw.rw+wsi-rfi-addr.litmus: {"[y]": 2, "0:x7": 0, "1:x8": 2, "1:x10": 0}
+SB+po-ctrlfenceis+pos-po-ctrlfencei.litmus: {"[y]": 2, "0:x9": 0, "1:x10": 0}
+MP+pos-rfi-addr+addr-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+SB+fence.r.rw+fence.rw.rw.litmus: {"0:x7": 0, "1:x7": 0}
+SB+fence.rw.rw+rfi-addr.litmus: {"0:x7": 0, "1:x7": 1, "1:x9": 0}
+R+rfi-addr+rfi-addr-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x12": 1}
+SB+pos-po-addrs+pos-po-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x11": 0, "1:x10": 0}
+LB+addr+addrpx-poxp+VAR.litmus: {"0:x5": 1, "1:x5": 1}
+SB+fence.rw.rw+rfi-ctrlfencei.litmus: {"0:x7": 0, "1:x7": 1, "1:x8": 0}
+2+2W+fence.rw.w+rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+S+rfi-addr+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+LB+fence.i+fence.r.rw.litmus: {"0:x5": 1, "1:x5": 1}
+WRR+2W+ctrlfencei+fence.rw.w.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0}
+R+pos-rfi-ctrlfencei+rfi-addr.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x9": 0}
+MP+pos-rfi-ctrl+data-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+R+pos-rfi-ctrl+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 0}
+ISA10+TER.litmus: {"1:x5": 1, "1:x8": 0, "1:x12": 1, "1:x14": 0}
+ISA15.litmus: {"[x]": 3, "1:x5": 1, "1:x12": 0}
+MP+wsi-rfi-data+addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x8": 0}
+SB+fence.i+fence.rw.rw.litmus: {"0:x7": 0, "1:x7": 0}
+2+2W+rfi-data+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+MP+fence.rw.rw+ctrl-fri-rfi-addr.litmus: {"1:x5": 1, "1:x7": 0, "1:x10": 1, "1:x12": 0}
+S+rfi-ctrl+fence.rw.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+LB+addr+fri-rfi-addr.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+SB+wsi-rfi-ctrls.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "0:x9": 0, "1:x8": 2, "1:x9": 0}
+MP+rfi-data+ctrl-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+rfi-ctrl+rfi-addr.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x9": 0}
+MP+fence.rw.w+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0}
+MP+rfi-ctrlfencei+data-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+S+rfi-ctrl+data-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+fence.rw.rw+addr-wsi-rfi-ctrl.litmus: {"[z]": 2, "1:x5": 1, "1:x12": 2, "1:x13": 0}
+SB+fence.rw.rw+pos-rfi-ctrlfencei.litmus: {"[y]": 2, "0:x7": 0, "1:x8": 2, "1:x9": 0}
+R+fence.rw.rw+po-addrs.litmus: {"[y]": 2, "1:x10": 0}
+MP+rfi-ctrl+ctrl-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+R+fence.w.w+pos-addr.litmus: {"[y]": 2, "1:x9": 0}
+MP+rfi-ctrl+addr-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+2+2W+fence.w.w+rfi-data.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+2+2W+fence.rw.w+rfi-data.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+S+porlp+poprl+NEW.litmus: {"[x]": 2, "1:x5": 1}
+ISA2+fence.rw.w+ctrlfencei+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+SB+fence.tso+fence.tsoxp.litmus: {"[y]": 1, "0:x7": 0, "1:x8": 0, "1:x7": 0, "1:x9": 0}
+SB+rfi-addr+pos-rfi-ctrlfencei.litmus: {"[y]": 2, "0:x7": 1, "0:x9": 0, "1:x8": 2, "1:x9": 0}
+LB+fence.r.rw+data-po.litmus: {"0:x5": 1, "1:x5": 1}
+SB+pos-addrs.litmus: {"0:x9": 0, "1:x9": 0}
+S+rfi-addr+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+pos-rfi-ctrlfencei+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+fence.rw.w+[fr-rf]-ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "1:x7": 2, "1:x8": 0}
+ISA2+pos+fence.rw.w+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1, "2:x7": 0}
+LB+fence.r.rw+fence.w.w.litmus: {"0:x5": 1, "1:x5": 1}
+MP+fence.rw.rw+ctrl-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+fence.rw.rw+ctrlfencei-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+SB+pos-ctrlfenceis.litmus: {"0:x8": 0, "1:x8": 0}
+S+fence.rw.w+fence.w.w.litmus: {"[x]": 2, "1:x5": 1}
+SB+fence.rw.rw+rfi-ctrl-rfi.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 1, "1:x9": 1}
+MP+pos-rfi-ctrl+fence.rw.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+R+fence.rw.ws.litmus: {"[y]": 2, "1:x7": 0}
+MP+pos-rfi-addr+data-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+SB+fence.rw.rw+po.litmus: {"0:x7": 0, "1:x7": 0}
+S+rfi-ctrlfencei+ctrl-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+IRIW+addr+ctrlfencei.litmus: {"1:x5": 1, "1:x8": 0, "3:x5": 1, "3:x7": 0}
+MP+pos-rfi-data+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+fence.rw.rw+addr-fri-rfi-addr.litmus: {"1:x5": 1, "1:x8": 0, "1:x12": 1, "1:x14": 0}
+MP+porlp+po+NEW.litmus: {"1:x5": 1, "1:x7": 0}
+SB+po-addr+po-ctrlfenceis.litmus: {"0:x10": 0, "1:x9": 0}
+SB+popaqs+NEW.litmus: {"0:x7": 0, "1:x7": 0}
+MP+pos-rfi-ctrlfencei+fence.rw.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+RSW.litmus: {"1:x5": 1, "1:x13": 0}
+MP+wsi-rfi-ctrl+fence.rw.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+2+2W+rfi-addr+rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+MP+[rf-addr-fr]+ctrlfencei.litmus: {"1:x5": 1, "1:x8": 0, "2:x5": 1, "2:x7": 0}
+S+rfi-ctrl+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+fence.w.w+po.litmus: {"[y]": 2, "1:x7": 0}
+MP+fence.rw.rw-[fr-ws]+ctrlfencei.litmus: {"[y]": 2, "0:x7": 0, "2:x5": 2, "2:x7": 0}
+MP+rfi-addr+data-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+R+fence.w.w+fence.r.rw.litmus: {"[y]": 2, "1:x7": 0}
+SB+pos-po-addr+pos-po-ctrlfencei.litmus: {"[x]": 2, "[z]": 2, "0:x11": 0, "1:x10": 0}
+MP+rfi-addr+addr-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+SB+pos-addr+pos-pos-addr.litmus: {"[y]": 2, "0:x9": 0, "1:x10": 0}
+S+rfi-ctrlfencei+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+SB+pos-rfi-addrs.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "0:x10": 0, "1:x8": 2, "1:x10": 0}
+SB+fence.tso+fence.tsopx.litmus: {"[x]": 1, "0:x7": 0, "1:x9": 0, "1:x8": 0}
+2+2W+rfi-ctrlfenceis.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+MP+fence.rw.rw+data-wsi-rfi-addr.litmus: {"[z]": 2, "1:x5": 1, "1:x10": 2, "1:x12": 0}
+S+rfi-ctrl+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+S+[rf-ctrlfencei-fr]+fence.rw.w.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x5": 1}
+MP+fence.w.w+fence.i.litmus: {"1:x5": 1, "1:x7": 0}
+MP+po+poaqp+NEW.litmus: {"1:x5": 1, "1:x7": 0}
+R+po+porlp+NEW.litmus: {"[y]": 2, "1:x7": 0}
+SB+poxxs.litmus: {"[x]": 1, "[y]": 1, "0:x11": 0, "0:x8": 0, "0:x7": 0, "0:x10": 0, "1:x11": 0, "1:x8": 0, "1:x7": 0, "1:x10": 0}
+S+fence.rw.rw+popx.litmus: {"[x]": 2, "1:x10": 0, "1:x5": 1, "1:x9": 0}
+S+rfi-addr+fence.rw.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+2+2W+rfi-ctrl+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+OpVsHerd01.litmus: {"0:a5": 0, "1:a0": 0, "0:a2": 0}
+MP+rfi-ctrl+ctrlfencei-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+R+wsi-rfi-data+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 0}
+ISA2+pos+ctrl+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1, "2:x7": 0}
+MP+rfi-ctrlfencei+addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x8": 0}
+IRRWIW+ctrlfencei+fence.rw.rw.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+MP+fence.rw.rw+po.litmus: {"1:x5": 1, "1:x7": 0}
+MP+pos-rfi-ctrl+fence.r.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+MP+fence.rw.rw+ctrl-fri-rfi-ctrl.litmus: {"1:x5": 1, "1:x7": 0, "1:x10": 1, "1:x11": 0}
+2+2W+po+poprl+NEW.litmus: {"[x]": 2, "[y]": 2}
+MP+fence.w.ws.litmus: {"1:x5": 1, "1:x7": 0}
+SB+rfi-ctrlfenceis.litmus: {"0:x7": 1, "0:x8": 0, "1:x7": 1, "1:x8": 0}
+MP+pos-rfi-addr+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+fence.rw.w+ctrl-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+rfi-ctrlfencei+ctrlfencei-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+MP+poprl+po+NEW.litmus: {"1:x5": 1, "1:x7": 0}
+SB+pos-po+pos-po-addr.litmus: {"[x]": 2, "[y]": 2, "0:x8": 0, "1:x11": 0}
+SB+fence.rw.rw+pos-po.litmus: {"[y]": 2, "0:x7": 0, "1:x8": 0}
+SB+rfi-addr-rfi+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x12": 1, "1:x7": 2, "1:x10": 1}
+S+poxxs.litmus: {"[x]": 2, "[y]": 1, "0:x12": 0, "0:x8": 0, "0:x7": 1, "0:x11": 0, "1:x11": 0, "1:x7": 0, "1:x6": 1, "1:x10": 0}
+ISA2+fence.rw.rw+fence.r.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+S+rfi-data+data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+SB+pos-po-ctrlfenceis+pos-po-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x10": 0, "1:x10": 0}
+R+fence.w.w+po-addr.litmus: {"[y]": 2, "1:x10": 0}
+MP+rfi-data+addr-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+MP+fence.rw.rw+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0}
+SB+po+pos-po-addrs.litmus: {"[y]": 2, "0:x7": 0, "1:x11": 0}
+R+fence.rw.w+pos-ctrlfencei.litmus: {"[y]": 2, "1:x8": 0}
+S+rfi-ctrlfencei+ctrl-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+ISA2+fence.rw.rw+ctrl+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+R+rfi-ctrl+fence.rw.rw.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 0}
+MP+fence.w.w+fri-rfi-ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "1:x8": 2, "1:x9": 0}
+S+rfi-data+ctrl-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+rfi-ctrl+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB+wsi-rfi-addr+wsi-rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "0:x10": 0, "1:x8": 2, "1:x9": 0}
+R+fence.w.w+rfi-addr-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x12": 1}
+MP+wsi-rfi-addr+fence.rw.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+S+rfi-addr+fence.rw.w.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+LB+data+fri-rfi-addr.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+S+rfi-data+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+Z6.3+fence.rw.rw+fence.w.w+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+R+rfi-ctrl+rfi-addr-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x12": 1}
+MP+rfi-data+ctrl-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+rfi-ctrlfencei+data-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+[rf-fr]-fence.w.w+ctrlfencei.litmus: {"[x]": 2, "1:x5": 1, "2:x5": 1, "2:x7": 0}
+MP+rfi-data+ctrlfencei-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+LB+addr+poxp.litmus: {"[y]": 1, "0:x5": 1, "1:x7": 0, "1:x6": 1}
+2+2W+rfi-datas.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+ISA-MP-DEP-SUCCESS-SWAP-SIMPLE.litmus: {"1:x3": 1, "1:x5": 0}
+SB+fence.tsoxps.litmus: {"[x]": 1, "[y]": 1, "0:x8": 0, "0:x7": 0, "0:x9": 0, "1:x8": 0, "1:x7": 0, "1:x9": 0}
+MP+rfi-ctrl+addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x8": 0}
+MP+pos-rfi-ctrlfencei+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+rfi-ctrl+data-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+fence.r.rw+fence.rw.w.litmus: {"[x]": 2, "1:x5": 1}
+S+rfi-ctrlfencei+ctrlfencei-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+rfi-data+rfi-addr.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x9": 0}
+S+rfi-ctrlfencei+ctrlfencei-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+ISA2+fence.w.w+addr+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+IRRWIW+ctrlfencei+fence.r.rw.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+MP+rfi-addr+ctrl-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+R+fence.rw.rw+fence.r.rw.litmus: {"[y]": 2, "1:x7": 0}
+MP+rfi-data+ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+SB+fence.is.litmus: {"0:x7": 0, "1:x7": 0}
+SB+po-addr+pos-po-ctrlfenceis.litmus: {"[z]": 2, "0:x10": 0, "1:x10": 0}
+MP+fence.i+fence.r.rw.litmus: {"1:x5": 1, "1:x7": 0}
+MP+rfi-addr+ctrl-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+SB+pos-po+po-ctrlfenceis.litmus: {"[x]": 2, "0:x8": 0, "1:x9": 0}
+ISA09+BIS.litmus: {"1:x5": 1, "1:x10": 0, "1:x8": 2}
+MP+rfi-data+ctrl-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+fence.i+fence.rw.rw.litmus: {"[x]": 2, "1:x5": 1}
+MP+pos-rfi-ctrl+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+LB+poxxs.litmus: {"[x]": 1, "[y]": 1, "0:x11": 0, "0:x7": 0, "0:x6": 1, "0:x10": 0, "1:x11": 0, "1:x7": 0, "1:x6": 1, "1:x10": 0}
+LB+fence.is.litmus: {"0:x5": 1, "1:x5": 1}
+S+fence.rw.rw+fri-rfi-data.litmus: {"[x]": 2, "[y]": 2, "1:x5": 1, "1:x8": 2}
+MP+fence.i+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0}
+SB+fence.w.ws.litmus: {"0:x7": 0, "1:x7": 0}
+MP+pos-rfi-addr+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+fence.rw.w+ctrlfencei-[fr-rf].litmus: {"[x]": 2, "1:x5": 1, "1:x7": 0, "1:x9": 1}
+MP+fence.rw.rw+ctrlfencei-rfi-addr.litmus: {"1:x5": 1, "1:x9": 1, "1:x11": 0}
+SB+po-addrs+po-addr.litmus: {"0:x10": 0, "1:x10": 0}
+S+fence.rw.w+fence.i.litmus: {"[x]": 2, "1:x5": 1}
+MP+rfi-data+data-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+SB+po-ctrlfenceiss.litmus: {"0:x9": 0, "1:x9": 0}
+S+fence.i+fence.r.rw.litmus: {"[x]": 2, "1:x5": 1}
+S+fence.w.w+fri-rfi-ctrl+REAL.litmus: {"[x]": 2, "[y]": 2, "1:x5": 1, "1:x8": 2}
+MP+rfi-ctrlfencei+ctrl-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+LB+fence.rw.rw+data-wsi-rfi-data.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+S+rfi-addr+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+S+[rf-ctrlfencei-fr]+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x5": 1}
+MP+rfi-ctrlfencei+fence.r.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+R+wsi-rfi-addr+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 0}
+R+fence.rw.rw+fence.i.litmus: {"[y]": 2, "1:x7": 0}
+S+rfi-ctrlfencei+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+2+2W+rfi-addr+rfi-data.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+MP+rfi-ctrlfencei+addr-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+MP+rfi-addr+ctrlfencei-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+S+rfi-addr+addr-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+MP+rfi-ctrlfencei+addr-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+2+2W+porlps+NEW.litmus: {"[x]": 2, "[y]": 2}
+MP+rfi-ctrlfencei+addr-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+MP+pos-rfi-ctrlfencei+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+LB+fence.rw.rw+po.litmus: {"0:x5": 1, "1:x5": 1}
+SB+po-addr+pos-po-ctrlfencei.litmus: {"[z]": 2, "0:x10": 0, "1:x10": 0}
+MP+fence.rw.rw+fence.w.w.litmus: {"1:x5": 1, "1:x7": 0}
+W+RWC+pos+ctrlfencei+fence.rw.rw.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x7": 0}
+R+fence.tsopx+fence.tso.litmus: {"[y]": 2, "0:x9": 0, "0:x8": 0, "1:x7": 0}
+R+fence.i+fence.rw.rw.litmus: {"[y]": 2, "1:x7": 0}
+MP+rfi-ctrl+addr-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x13": 1}
+SB+rfi-pos.litmus: {"0:x7": 1, "0:x8": 0, "1:x7": 1, "1:x8": 0}
+LB+addr+fri-rfi-ctrl.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+SB+fence.rw.ws.litmus: {"0:x7": 0, "1:x7": 0}
+MP+rfi-addr+fence.rw.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+MP+rfi-ctrl+fence.r.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+2+2W+fence.i+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2}
+S+fence.rw.rw+fence.w.w.litmus: {"[x]": 2, "1:x5": 1}
+LB+addr+popx.litmus: {"[x]": 1, "0:x5": 1, "1:x10": 0, "1:x5": 1, "1:x9": 0}
+S+fence.rw.rw+fence.i.litmus: {"[x]": 2, "1:x5": 1}
+LB+ctrl+data-wsi-rfi-addr.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+MP+fence.rw.rw+fence.rw.w.litmus: {"1:x5": 1, "1:x7": 0}
+MP+fence.rw.w+ctrlfencei-rfi-addr.litmus: {"1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+pos-rfi-addr+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+MP+pos-rfi-addr+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+R+pos-rfi-addr+rfi-addr.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x9": 0}
+SB+fence.rw.rw+pos-ctrlfencei.litmus: {"0:x7": 0, "1:x8": 0}
+R+rfi-data+rfi-addr-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x12": 1}
+S+rfi-ctrl+addr-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+S+rfi-ctrlfencei+ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+MP+[rf-ctrlfencei-fr]+fence.r.rw.litmus: {"1:x5": 1, "1:x7": 0, "2:x5": 1, "2:x7": 0}
+S+rfi-ctrl+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+R+rfi-addr+fence.rw.rw.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 0}
+SB+wsi-rfi-addrs.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "0:x10": 0, "1:x8": 2, "1:x10": 0}
+S+rfi-ctrlfencei+addr-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+SB+rfi-fence.r.rs.litmus: {"0:x7": 1, "0:x8": 0, "1:x7": 1, "1:x8": 0}
+S+fence.i+addr.litmus: {"[x]": 2, "1:x5": 1}
+R+pos-rfi-addr+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 0}
+LB+data+data-wsi-rfi-data.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+S+rfi-ctrlfencei+addr-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+MP+pos-rfi-ctrl+addr-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+MP+fence.w.w+fence.rw.w.litmus: {"1:x5": 1, "1:x7": 0}
+LB+fence.rw.rw+data-wsi-rfi-ctrl.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+ISA12.litmus: {"[x]": 2}
+MP+pos-rfi-data+fence.r.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+WRR+2W+ctrlfencei+fence.w.w.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0}
+MP+rfi-ctrlfencei+ctrlfencei-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+LB+fence.w.w+addr.litmus: {"0:x5": 1, "1:x5": 1}
+MP+pos-rfi-ctrl+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+fence.i+fence.rw.w.litmus: {"[x]": 2, "1:x5": 1}
+LB+ctrl+poxp.litmus: {"[y]": 1, "0:x5": 1, "1:x7": 0, "1:x6": 1}
+SB+fence.rw.rw+rfi-addr-rfi.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 1, "1:x11": 1}
+S+fence.i+data.litmus: {"[x]": 2, "1:x5": 1}
+2+2W+po+porlrl+NEW.litmus: {"[x]": 2, "[y]": 2}
+MP+wsi-rfi-addr+ctrl.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+R+porlrl+po+NEW.litmus: {"[y]": 2, "1:x7": 0}
+LB+fri-rfi-data+fri-rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x8": 2, "1:x5": 1, "1:x8": 2}
+SB+pos-ctrlfencei+pos-pos-addr.litmus: {"[y]": 2, "0:x8": 0, "1:x10": 0}
+SB+rfi-data-rfis.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x10": 1, "1:x7": 2, "1:x10": 1}
+R+fence.rw.rw+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+MP+fence.w.w+ctrl.litmus: {"1:x5": 1, "1:x7": 0}
+R+fence.w.w+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+MP+fence.w.w+addr-fence.i.litmus: {"1:x5": 1, "1:x11": 0}
+MP+[ws-rf]-fence.rw.w+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "2:x5": 1, "2:x7": 0}
+MP+fence.r.rws.litmus: {"1:x5": 1, "1:x7": 0}
+MP+wsi-rfi-ctrl+ctrl.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+MP+rfi-ctrl+data-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+fence.rw.rw+rfi-addr-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x12": 1}
+LB+fence.rw.rw+data-wsi-rfi-addr.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+SB+rfi-addr+rfi-ctrlfencei.litmus: {"0:x7": 1, "0:x9": 0, "1:x7": 1, "1:x8": 0}
+MP+[rf-ctrlfencei-fr]+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0, "2:x5": 1, "2:x7": 0}
+SB+fence.tso+fence.tsoxx.litmus: {"[x]": 1, "[y]": 1, "0:x7": 0, "1:x11": 0, "1:x8": 0, "1:x7": 0, "1:x10": 0}
+Z6.3+fence.w.w+fence.w.w+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+MP+[rf-ctrl-ws]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+MP+fence.rw.rw+ctrl-rfi-addr.litmus: {"1:x5": 1, "1:x9": 1, "1:x11": 0}
+LB+data+fri-rfi-ctrl.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+LB+data+data-wsi-rfi-ctrl.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+LB+fence.i+fence.rw.rw.litmus: {"0:x5": 1, "1:x5": 1}
+S+fence.rw.rw+po.litmus: {"[x]": 2, "1:x5": 1}
+R+rfi-data+fence.rw.rw.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 0}
+MP+pos-rfi-ctrl+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+[rf-fence.rw.rw-ws]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+R+pos-rfi-ctrlfencei+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x8": 0}
+MP+rfi-ctrl+ctrlfencei-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+MP+[ws-rf]-fence.r.rw+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "2:x5": 1, "2:x7": 0}
+R+fence.rw.rw+po-addr.litmus: {"[y]": 2, "1:x10": 0}
+2+2W+[rf-ctrlfencei-fr]+fence.rw.w.litmus: {"[x]": 2, "[y]": 2, "1:x5": 2, "1:x7": 0}
+MP+fence.i+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0}
+MP+fence.rw.w+ctrlfencei-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+ISA2+fence.w.w+fence.r.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+R+fence.r.rw+fence.rw.rw.litmus: {"[y]": 2, "1:x7": 0}
+R+fence.rw.w+po-addr.litmus: {"[y]": 2, "1:x10": 0}
+MP+rfi-data+addr-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+2+2W+fence.is.litmus: {"[x]": 2, "[y]": 2}
+SB+pos-po-ctrlfenceis.litmus: {"[x]": 2, "[z]": 2, "0:x10": 0, "1:x10": 0}
+MP+fence.w.w+data-fence.i.litmus: {"1:x5": 1, "1:x9": 0}
+S+rfi-data+fence.rw.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+MP+pos-rfi-ctrl+addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x8": 0}
+R+fence.rw.rw+po.litmus: {"[y]": 2, "1:x7": 0}
+S+rfi-addr+ctrlfencei-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+fence.rw.rw+fri-rfi-ctrl-fri-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x5": 1, "1:x8": 2, "1:x9": 0, "1:x12": 1}
+MP+wsi-rfi-data+ctrl.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+SB+pos-rfi-addr+pos-rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "0:x10": 0, "1:x8": 2, "1:x9": 0}
+MP+rfi-ctrl+ctrlfencei-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+LB+fence.rw.rw+popx.litmus: {"[x]": 1, "0:x5": 1, "1:x10": 0, "1:x5": 1, "1:x9": 0}
+MP+rfi-ctrl+addr-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+R+pos-rfi-data+rfi-addr.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x9": 0}
+MP+pos-rfi-data+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+SB+rfi-ctrlfencei+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x8": 0, "1:x7": 1, "1:x9": 1}
+S+rfi-data+fence.r.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+S+rfi-ctrl+fence.rw.w.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+ISA2+fence.rw.w+fence.rw.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+LB+fri-rfi-ctrls.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x8": 2, "1:x5": 1, "1:x8": 2}
+R+rfi-ctrlfencei+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+ISA2+fence.w.w+pos+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+IRRWIW+ctrlfencei+data.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+S+rfi-data+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+wsi-rfi-data+fence.rw.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+MP+fence.rw.rw+ctrl-wsi-rfi-addr.litmus: {"[z]": 2, "1:x5": 1, "1:x10": 2, "1:x12": 0}
+LB+data+data-wsi-rfi-addr.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+MP+[rf-addr-ws]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+R+rfi-ctrlfencei+fence.rw.rw.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 0}
+SB+pos-po-addrs.litmus: {"[x]": 2, "[z]": 2, "0:x11": 0, "1:x11": 0}
+MP+rfi-ctrl+ctrlfencei-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+fence.rw.rw+fence.w.w.litmus: {"[y]": 2, "1:x7": 0}
+Z6.3+fence.w.w+fence.rw.rw+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+S+rfi-data+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+S+rfi-addr+addr-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+R+fence.rw.w+fence.w.w.litmus: {"[y]": 2, "1:x7": 0}
+R+poprl+po+NEW.litmus: {"[y]": 2, "1:x7": 0}
+MP+fence.rw.w-[rf-fr]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+LB+ctrl+poxx.litmus: {"[x]": 1, "[y]": 1, "0:x5": 1, "1:x11": 0, "1:x7": 0, "1:x6": 1, "1:x10": 0}
+MP+[rf-fr]-fence.rw.rw+ctrlfencei.litmus: {"[x]": 2, "1:x5": 1, "2:x5": 1, "2:x7": 0}
+Z6.3+fence.rw.rw+fence.rw.w+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+MP+rfi-addr+addr-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+R+fence.rw.w+po-ctrlfencei.litmus: {"[y]": 2, "1:x9": 0}
+ISA2+fence.rw.w+ctrl+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+SB+po-addrs+po-ctrlfenceis.litmus: {"0:x10": 0, "1:x9": 0}
+2+2W+rfi-addrs.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+R+rfi-ctrlfencei+rfi-addr-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x12": 1}
+MP+po+popaq+NEW.litmus: {"1:x5": 1, "1:x7": 0}
+R+rfi-addr+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+R+fence.rw.rw+pos-addr.litmus: {"[y]": 2, "1:x9": 0}
+MP+fence.rw.rw+ctrl-wsi-rfi-ctrl.litmus: {"[z]": 2, "1:x5": 1, "1:x10": 2, "1:x11": 0}
+S+rfi-ctrlfencei+data-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+po+data.litmus: {"[x]": 2, "1:x5": 1}
+MP+rfi-addr+data-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+rfi-ctrl+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+fence.tsoxp+fence.tso.litmus: {"[x]": 1, "[y]": 2, "0:x8": 0, "0:x7": 0, "1:x7": 0}
+LB+ctrl+fri-rfi-ctrl.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+SB+po-ctrlfenceis.litmus: {"0:x9": 0, "1:x9": 0}
+MP+rfi-addr+addr-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x12": 1}
+MP+rfi-ctrlfencei+ctrl-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+2+2W+fence.rw.w+po.litmus: {"[x]": 2, "[y]": 2}
+MP+po+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0}
+R+fence.tsos.litmus: {"[y]": 2, "1:x7": 0}
+MP+rfi-addr+ctrlfencei-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+pos-rfi-ctrlfencei+fence.r.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+S+rfi-ctrl+ctrlfencei-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+LB+fence.rw.rw+poxx.litmus: {"[x]": 1, "[y]": 1, "0:x5": 1, "1:x11": 0, "1:x7": 0, "1:x6": 1, "1:x10": 0}
+LB+fri-rfi-addrs.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x8": 2, "1:x5": 1, "1:x8": 2}
+R+fence.rw.w+fence.i.litmus: {"[y]": 2, "1:x7": 0}
+SB+fence.rw.rw+pos-po-addr.litmus: {"[y]": 2, "0:x7": 0, "1:x11": 0}
+S+rfi-data+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB+rfi-ctrlfencei+rfi-ctrl-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x8": 0, "1:x7": 1, "1:x9": 1}
+MP+[ws-fence.rw.w-ws]+ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "2:x5": 2, "2:x7": 0}
+2+2W+rfi-ctrls.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+W+RWC+fence.w.w+ctrlfencei+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0, "2:x7": 0}
+MP+wsi-rfi-addr+addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x8": 0}
+SB+rfi-addr-rfis.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x12": 1, "1:x7": 2, "1:x12": 1}
+MP+fence.w.w+data-wsi-rfi-addr.litmus: {"[z]": 2, "1:x5": 1, "1:x10": 2, "1:x12": 0}
+S.litmus: {"[x]": 2, "1:x5": 1}
+S+rfi-addr+data-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+ISA-MP-DEP-SUCCESS-SUCCESS.litmus: {"1:x2": 1, "1:x5": 0}
+SB+rfi-addr+rfi-ctrl-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x9": 0, "1:x7": 1, "1:x9": 1}
+S+[rf-ctrlfencei-fr]+addr.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x5": 1}
+SB+rfi-addr-rfi+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x12": 1, "1:x7": 2, "1:x10": 1}
+ISA2+fence.w.w+fence.rw.w+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+MP+fence.rw.rw+addr-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x11": 1, "1:x12": 0}
+SB+fence.rw.rw+pos-po-addrs.litmus: {"[y]": 2, "0:x7": 0, "1:x11": 0}
+MP+fence.r.rw+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0}
+S+rfi-ctrlfencei+data-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB+rfi-addr-rfi+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x12": 1, "1:x7": 2, "1:x10": 1}
+R+fence.w.w+fence.tso.litmus: {"[y]": 2, "1:x7": 0}
+MP+fence.rw.w+ctrl-rfi-addr.litmus: {"1:x5": 1, "1:x9": 1, "1:x11": 0}
+IRRWIW+ctrlfencei+ctrl.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+MP+rfi-data+ctrl-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+MP+rfi-ctrl+ctrl-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+rfi-ctrlfencei+data-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+pos-rfi-data+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+MP+[ws-rf]-data+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "2:x5": 1, "2:x7": 0}
+WRR+2W+ctrlfencei+fence.rw.rw.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0}
+MP+rfi-addr+ctrl-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+rfi-addr+rfi-ctrlfencei.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x8": 0}
+MP+rfi-ctrlfencei+addr-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x13": 1}
+S+rfi-data+ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+MP+fence.w.w+data-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+SB+po+po-addr.litmus: {"0:x7": 0, "1:x10": 0}
+MP+rfi-data+addr-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x12": 1}
+R+fence.w.w+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+2+2W+poprl+porlp+NEW.litmus: {"[x]": 2, "[y]": 2}
+MP+rfi-data+addr-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1, "1:x13": 1}
+S+rfi-addr+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB+po-ctrlfenceis+pos-po-addrs.litmus: {"[y]": 2, "0:x9": 0, "1:x11": 0}
+SB+pos-pos-ctrlfenceis.litmus: {"[x]": 2, "[y]": 2, "0:x9": 0, "1:x9": 0}
+R+fence.w.w+po-ctrlfenceis.litmus: {"[y]": 2, "1:x9": 0}
+SB+fence.rw.rw+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 1, "1:x9": 1}
+R+pos-rfi-addr+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x8": 0}
+2+2W+fence.rw.rw+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+LB+ctrl+fri-rfi-addr.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+2+2W+fence.rw.w+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+MP+wsi-rfi-ctrl+addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x8": 0}
+MP+[ws-rf]-fence.rw.rw+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "2:x5": 1, "2:x7": 0}
+MP+rfi-addr+fence.r.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+LB+addr+data-wsi-rfi-ctrl.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+S+rfi-addr+data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+MP+rfi-ctrlfencei+ctrlfencei-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+LB+ctrl+data-wsi-rfi-data.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+R+wsi-rfi-ctrl+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 0}
+MP+fence.r.rw+addr.litmus: {"1:x5": 1, "1:x8": 0}
+R.litmus: {"[y]": 2, "1:x7": 0}
+MP+rfi-ctrlfencei+ctrl-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+fence.rw.rw+fri-rfi-addr.litmus: {"[x]": 2, "[y]": 2, "1:x5": 1, "1:x8": 2}
+SB+rfi-ctrlfencei+rfi-addr-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x8": 0, "1:x7": 1, "1:x11": 1}
+S+rfi-data+addr-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+S+fence.r.rw+data.litmus: {"[x]": 2, "1:x5": 1}
+SB+po-ctrlfenceis+po-ctrlfencei.litmus: {"0:x9": 0, "1:x9": 0}
+SB+fence.r.rws.litmus: {"0:x7": 0, "1:x7": 0}
+IRRWIW+ctrlfencei+fence.rw.w.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+SB+rfi-addr+rfi-addr-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x9": 0, "1:x7": 1, "1:x11": 1}
+MP+pos-rfi-ctrlfencei+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+S+fence.rw.rw+data-wsi-rfi-data.litmus: {"[x]": 2, "[z]": 2, "1:x5": 1, "1:x10": 2}
+W+RWC+fence.rw.rw+ctrlfencei+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0, "2:x7": 0}
+R+fence.rw.w+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+S+rfi-data+addr-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+S+po+fence.r.rw.litmus: {"[x]": 2, "1:x5": 1}
+2+2W+fence.r.rw+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2}
+SB+pos-pos-addrs.litmus: {"[x]": 2, "[y]": 2, "0:x10": 0, "1:x10": 0}
+MP+rfi-addr+data-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+ISA2+fence.rw.rw+pos+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+SB+fence.rw.rw+ctrlfence.r.r.litmus: {"[y]": 1, "0:x7": 0, "1:x8": 0, "1:x7": 0, "1:x12": 0}
+SB+fence.rw.rw+pos-po-ctrlfenceis.litmus: {"[y]": 2, "0:x7": 0, "1:x10": 0}
+SB+pos-po-addrss.litmus: {"[x]": 2, "[y]": 2, "0:x11": 0, "1:x11": 0}
+S+rfi-addr+fence.r.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+S+rfi-ctrl+data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+SB+pos-po+po-addr.litmus: {"[x]": 2, "0:x8": 0, "1:x10": 0}
+MP+fence.w.w+addr-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x11": 1, "1:x12": 0}
+Z6.3+fence.rw.rw+fence.rw.rw+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+W+RWC+fence.rw.w+ctrlfencei+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0, "2:x7": 0}
+W+RWC+fence.w.w+ctrlfencei+fence.rw.rws.litmus: {"[x]": 2, "1:x5": 1, "1:x7": 0, "2:x7": 1}
+MP+rfi-data+data-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+R+rfi-ctrl+rfi-ctrlfencei.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x8": 0}
+MP+fence.rw.rw+fri-rfi-ctrl.litmus: {"[y]": 2, "1:x5": 1, "1:x8": 2, "1:x9": 0}
+2+2W+poxxs.litmus: {"[x]": 2, "[y]": 2, "0:x12": 0, "0:x8": 0, "0:x7": 1, "0:x11": 0, "1:x12": 0, "1:x8": 0, "1:x7": 1, "1:x11": 0}
+MP+fence.rw.ws.litmus: {"1:x5": 1, "1:x7": 0}
+MP+rfi-addr+data-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+SB+pos-rfi-ctrlfenceis.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "0:x9": 0, "1:x8": 2, "1:x9": 0}
+S+rfi-ctrl+addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+SB+fence.rw.rw+rfi-data-rfi.litmus: {"[x]": 2, "0:x7": 0, "1:x7": 1, "1:x10": 1}
+S+rfi-addr+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+R+rfi-ctrl+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+R+fence.rw.rw+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+LB+fence.i+ctrlfencei.litmus: {"0:x5": 1, "1:x5": 1}
+MP+rfi-data+ctrl-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+MP+fence.w.w+data-[ws-ws]-rfi-addr.litmus: {"1:x5": 1, "1:x12": 0}
+MP+rfi-data+ctrlfencei-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+2+2W.litmus: {"[x]": 2, "[y]": 2}
+S+rfi-ctrl+addr-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+LB+poxps.litmus: {"[x]": 1, "[y]": 1, "0:x7": 0, "0:x6": 1, "1:x7": 0, "1:x6": 1}
+MP+fence.rw.rw+data-wsi-rfi-ctrl.litmus: {"[z]": 2, "1:x5": 1, "1:x10": 2, "1:x11": 0}
+Z6.3+fence.rw.w+fence.w.w+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+LB+po+poprl+NEW.litmus: {"0:x5": 1, "1:x5": 1}
+MP+fence.w.w+ctrlfencei-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+ISA2+fence.rw.w+data+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+2+2W+po+porlp+NEW.litmus: {"[x]": 2, "[y]": 2}
+S+rfi-ctrl+fence.r.rw.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+R+fence.rw.w+rfi-addr.litmus: {"[y]": 2, "1:x7": 2, "1:x9": 0}
+S+fence.w.ws.litmus: {"[x]": 2, "1:x5": 1}
+S+fence.rw.w+po.litmus: {"[x]": 2, "1:x5": 1}
+MP+pos-rfi-ctrl+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+2+2W+fence.rw.rw+rfi-addr.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+R+rfi-addrs.litmus: {"[y]": 2, "0:x7": 1, "1:x7": 2, "1:x9": 0}
+2+2W+fence.w.w+rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+MP+fence.rw.rw+ctrlfencei-[fr-rf].litmus: {"[x]": 2, "1:x5": 1, "1:x7": 0, "1:x9": 1}
+C-Will02+HEAD.litmus: {"0:x9": 0, "1:x7": 0}
+S+rfi-data+data-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+SB.litmus: {"0:x7": 0, "1:x7": 0}
+MP+rfi-ctrlfencei+ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+IRIW+fence.rw.rw+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+MP+fence.w.w+po.litmus: {"1:x5": 1, "1:x7": 0}
+MP+fence.rw.rw+ctrl-cleaninit.litmus: {"1:x5": 1, "1:x7": 0}
+S+[rf-ctrlfencei-fr]+fence.r.rw.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x5": 1}
+S+po+fence.rw.rw.litmus: {"[x]": 2, "1:x5": 1}
+R+fence.w.w+rfi-addr.litmus: {"[y]": 2, "1:x7": 2, "1:x9": 0}
+MP+fence.rw.rw+addr-wsi-rfi-addr.litmus: {"[z]": 2, "1:x5": 1, "1:x12": 2, "1:x14": 0}
+ISA2+fence.rw.w+fence.r.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+S+rfi-data+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+fence.rw.w+po-addrs.litmus: {"[y]": 2, "1:x10": 0}
+S+fence.rw.rw+data-wsi-rfi-addr.litmus: {"[x]": 2, "[z]": 2, "1:x5": 1, "1:x10": 2}
+SB+pos-po+pos-po-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x8": 0, "1:x10": 0}
+MP+[rf-fence.r.rw-fr]+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0, "2:x5": 1, "2:x7": 0}
+R+fence.w.ws.litmus: {"[y]": 2, "1:x7": 0}
+LB+fence.rw.rw+fri-rfi-data.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+S+rfi-ctrlfencei+fence.rw.w.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+S+po+fence.rw.w.litmus: {"[x]": 2, "1:x5": 1}
+R+pos-rfi-data+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x8": 0}
+MP+pos-rfi-data+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+pos-rfi-addr+ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+SB+pos-po-ctrlfenceiss.litmus: {"[x]": 2, "[y]": 2, "0:x10": 0, "1:x10": 0}
+S+rfi-ctrlfencei+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+S+rfi-addr+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+rfi-ctrlfencei+ctrlfencei-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+2+2W+porlp+porlrl+NEW.litmus: {"[x]": 2, "[y]": 2}
+LB+addr+poxx.litmus: {"[x]": 1, "[y]": 1, "0:x5": 1, "1:x11": 0, "1:x7": 0, "1:x6": 1, "1:x10": 0}
+S+rfi-data+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+ISA2+pos+addr+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1, "2:x7": 0}
+S+po+poprl+NEW.litmus: {"[x]": 2, "1:x5": 1}
+S+rfi-addr+ctrl-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+rfi-addr+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+rfi-data+addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+R+rfi-ctrl+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+MP+fence.w.w+[fr-rf]-ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "1:x7": 2, "1:x8": 0}
+MP+pos-rfi-data+fence.rw.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+MP+rfi-data+ctrlfencei-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+IRIW+fence.r.rw+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+R+pos-rfi-ctrl+rfi-addr.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 2, "1:x9": 0}
+SB+po+popaq+NEW.litmus: {"0:x7": 0, "1:x7": 0}
+R+pos-rfi-data+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 0}
+MP+[rf-ctrlfencei-ws]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+LB+fence.w.w+ctrl.litmus: {"0:x5": 1, "1:x5": 1}
+MP+fence.rw.w+po.litmus: {"1:x5": 1, "1:x7": 0}
+R+rfi-addr+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+MP+fence.rw.rw+ctrlfence.w.r.litmus: {"1:x5": 1, "1:x9": 0}
+R+fence.rw.w+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+R+fence.rw.rw+rfi-addr.litmus: {"[y]": 2, "1:x7": 2, "1:x9": 0}
+SB+po-addrs.litmus: {"0:x10": 0, "1:x10": 0}
+MP+po+ctrl.litmus: {"1:x5": 1, "1:x7": 0}
+2+2W+fence.rw.rw+rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+2+2W+fence.w.w+po.litmus: {"[x]": 2, "[y]": 2}
+SB+rfi-ctrl-rfi+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x10": 1, "1:x7": 2, "1:x10": 1}
+SB+rfi-addr+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x9": 0, "1:x7": 1, "1:x9": 1}
+MP+[ws-fence.w.w-ws]+ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "2:x5": 2, "2:x7": 0}
+SB+rfi-ctrlfencei+pos-rfi-addr.litmus: {"[y]": 2, "0:x7": 1, "0:x8": 0, "1:x8": 2, "1:x10": 0}
+MP+[rf-ctrlfencei-fr]+addr.litmus: {"1:x5": 1, "1:x7": 0, "2:x5": 1, "2:x8": 0}
+MP+fence.w.w+ctrlfencei-[fr-rf].litmus: {"[x]": 2, "1:x5": 1, "1:x7": 0, "1:x9": 1}
+MP+pos-rfi-data+addr-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+SB+pos-po-addr+pos-po-ctrlfenceis.litmus: {"[x]": 2, "[z]": 2, "0:x11": 0, "1:x10": 0}
+MP+fence.w.w+ctrl-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+pos-rfi-addr+fence.r.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+MP+[rf-fr]-fence.rw.w+ctrlfencei.litmus: {"[x]": 2, "1:x5": 1, "2:x5": 1, "2:x7": 0}
+S+rfi-ctrlfencei+addr-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+R+rfi-data+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+MP+rfi-data+fence.rw.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+LB+fence.rw.rw+fri-rfi-addr.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+ISA02.litmus: {"0:a0": 1, "0:a1": 0, "1:a2": 1, "1:a3": 0}
+LB+popxs.litmus: {"[x]": 1, "[y]": 1, "0:x10": 0, "0:x5": 1, "0:x9": 0, "1:x10": 0, "1:x5": 1, "1:x9": 0}
+MP+[ws-fence.rw.rw-fr]+ctrlfencei.litmus: {"[x]": 2, "1:x7": 0, "2:x5": 1, "2:x7": 0}
+S+po+poaqp+NEW.litmus: {"[x]": 2, "1:x5": 1}
+ISA2+fence.rw.w+pos+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+R+fence.rw.rw+rfi-ctrl-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+SB+po+porlp+NEW.litmus: {"0:x7": 0, "1:x7": 0}
+R+porlps+NEW.litmus: {"[y]": 2, "1:x7": 0}
+LB+ctrl+po.litmus: {"0:x5": 1, "1:x5": 1}
+SB+rfi-addrs.litmus: {"0:x7": 1, "0:x9": 0, "1:x7": 1, "1:x9": 0}
+R+poxxs.litmus: {"[x]": 1, "[y]": 2, "0:x11": 0, "0:x8": 0, "0:x7": 0, "0:x10": 0, "1:x11": 0, "1:x8": 0, "1:x7": 1, "1:x10": 0}
+R+fence.w.w+po-ctrlfencei.litmus: {"[y]": 2, "1:x9": 0}
+S+rfi-ctrl+ctrl-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+fence.rw.rw+data-wsi-rfi-ctrl.litmus: {"[x]": 2, "[z]": 2, "1:x5": 1, "1:x10": 2}
+MP+[rf-fence.rw.w-ws]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+R+fence.w.w+rfi-ctrlfencei.litmus: {"[y]": 2, "1:x7": 2, "1:x8": 0}
+S+[rf-ctrlfencei-fr]+fence.rw.rw.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x5": 1}
+ISA2+fence.w.w+ctrl+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+S+fence.r.rw+ctrl.litmus: {"[x]": 2, "1:x5": 1}
+R+fence.rw.w+rfi-addr-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x12": 1}
+MP+pos-rfi-data+ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+MP+pos-rfi-addr+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+rfi-ctrl+data-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+WRC+fence.r.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+LB+data+po.litmus: {"0:x5": 1, "1:x5": 1}
+MP+rfi-addr+ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+LB+fence.i+ctrl.litmus: {"0:x5": 1, "1:x5": 1}
+MP+rfi-ctrlfencei+data-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+SB+porlps+NEW.litmus: {"0:x7": 0, "1:x7": 0}
+MP+rfi-addr+ctrl-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+fence.rw.rw+addr-fri-rfi-ctrl.litmus: {"1:x5": 1, "1:x8": 0, "1:x12": 1, "1:x13": 0}
+S+porlp+po+NEW.litmus: {"[x]": 2, "1:x5": 1}
+MP+pos-rfi-ctrlfencei+addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x8": 0}
+MP+fence.w.w+fri-rfi-addr.litmus: {"1:x10": 1, "1:x11": 2, "1:x13": 0}
+IRRWIW+ctrlfencei+addr.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "3:x5": 1}
+MP+fence.w.w+ctrl-rfi-addr.litmus: {"1:x5": 1, "1:x9": 1, "1:x11": 0}
+S+fence.r.rw+addr.litmus: {"[x]": 2, "1:x5": 1}
+S+rfi-ctrlfencei+ctrl-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+rfi-data+fence.r.rw.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+S+fence.r.rws.litmus: {"[x]": 2, "1:x5": 1}
+SB+po-addr+pos-po-addr.litmus: {"[z]": 2, "0:x10": 0, "1:x11": 0}
+SB+pos-po+pos-po-addrs.litmus: {"[x]": 2, "[y]": 2, "0:x8": 0, "1:x11": 0}
+SB+po+po-addrs.litmus: {"0:x7": 0, "1:x10": 0}
+MP+fence.rw.w+addr-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x11": 1, "1:x12": 0}
+R+fence.rw.rw+po-ctrlfenceis.litmus: {"[y]": 2, "1:x9": 0}
+R+rfi-addr+rfi-data-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+S+rfi-ctrlfencei+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+[ws-rf]-ctrl+ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "2:x5": 1, "2:x7": 0}
+SB+fence.w.w+fence.rw.rw.litmus: {"0:x7": 0, "1:x7": 0}
+R+fence.rw.w+fence.r.rw.litmus: {"[y]": 2, "1:x7": 0}
+MP+rfi-addr+ctrlfencei-rfi-ctrlfenceis.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x10": 1}
+LB+data+poxp.litmus: {"[y]": 1, "0:x5": 1, "1:x7": 0, "1:x6": 1}
+S+rfi-addr+data-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+2+2W+fence.rw.rw+po.litmus: {"[x]": 2, "[y]": 2}
+LB+data+fri-rfi-data.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+S+fence.w.w+fence.i.litmus: {"[x]": 2, "1:x5": 1}
+Z6.3+fence.w.w+fence.rw.w+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+R+fence.rw.rw+pos-ctrlfencei.litmus: {"[y]": 2, "1:x8": 0}
+MP+fence.r.rw+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0}
+SB+po-ctrlfenceis+pos-po-ctrlfenceis.litmus: {"[y]": 2, "0:x9": 0, "1:x10": 0}
+WRC+addr+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+MP+pos-rfi-ctrlfencei+ctrl-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+fence.rw.rw+poxp.litmus: {"[x]": 2, "[y]": 1, "1:x7": 0, "1:x6": 1}
+SB+pos-ctrlfencei+pos-pos-ctrlfencei.litmus: {"[y]": 2, "0:x8": 0, "1:x9": 0}
+MP+fence.rw.rw+[fr-rf]-ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "1:x7": 2, "1:x8": 0}
+MP+rfi-addr+addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x8": 0}
+ISA2+fence.w.w+data+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+SB+po-addrs+pos-po-addr.litmus: {"[y]": 2, "0:x10": 0, "1:x11": 0}
+S+fence.i+ctrl.litmus: {"[x]": 2, "1:x5": 1}
+S+rfi-ctrl+ctrlfencei-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+pos-rfi-ctrlfencei+ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+SB+rfi-addr+pos-rfi-addr.litmus: {"[y]": 2, "0:x7": 1, "0:x9": 0, "1:x8": 2, "1:x10": 0}
+MP+pos-rfi-ctrl+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+MP+pos-rfi-ctrlfencei+addr-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x13": 0}
+SB+rfi-data-rfi+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x10": 1, "1:x7": 2, "1:x10": 1}
+R+rfi-ctrl+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+LB+addr+data-wsi-rfi-addr.litmus: {"[z]": 2, "0:x5": 1, "1:x5": 1, "1:x10": 2}
+LB+fence.w.w+ctrlfencei.litmus: {"0:x5": 1, "1:x5": 1}
+ISA2+pos+fence.rw.rw+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1, "2:x7": 0}
+MP+rfi-data+addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x8": 0}
+ISA2+fence.rw.rw+fence.rw.rw+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+LB+fence.rw.rw+fri-rfi-ctrl.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+S+fence.r.rw+ctrlfencei.litmus: {"[x]": 2, "1:x5": 1}
+SB+fence.rw.rw+pos-po-ctrlfencei.litmus: {"[y]": 2, "0:x7": 0, "1:x10": 0}
+S+fence.i+ctrlfencei.litmus: {"[x]": 2, "1:x5": 1}
+SB+po-addrs+pos-po-addrs.litmus: {"[y]": 2, "0:x10": 0, "1:x11": 0}
+MP+rfi-data+addr-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+R+fence.tsoxx+fence.tso.litmus: {"[x]": 1, "[y]": 2, "0:x11": 0, "0:x8": 0, "0:x7": 0, "0:x10": 0, "1:x7": 0}
+S+porlrl+po+NEW.litmus: {"[x]": 2, "1:x5": 1}
+R+fence.rw.w+pos-addr.litmus: {"[y]": 2, "1:x9": 0}
+S+rfi-ctrlfencei+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+fence.w.w+fence.rw.w.litmus: {"[y]": 2, "1:x7": 0}
+2+2W+fence.rw.w+rfi-addr.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+LB+fri-rfi-datas.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x8": 2, "1:x5": 1, "1:x8": 2}
+MP+fence.rw.rw+fri-rfi-addr-fri-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x5": 1, "1:x8": 2, "1:x10": 0, "1:x14": 1}
+R+fence.rw.rw+fence.rw.w.litmus: {"[y]": 2, "1:x7": 0}
+SB+pos-po+po-addrs.litmus: {"[x]": 2, "0:x8": 0, "1:x10": 0}
+R+fence.w.w+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2, "1:x10": 1}
+MP+rfi-data+ctrlfencei-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+S+rfi-ctrl+ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+SB+po+pos-po-ctrlfenceis.litmus: {"[y]": 2, "0:x7": 0, "1:x10": 0}
+MP+fence.rw.w+data-rfi-ctrlfencei.litmus: {"1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+rfi-addr+ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+MP+pos-rfi-addr+fence.rw.rw.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+MP+fence.w.w+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0}
+SB+po+pos-po.litmus: {"[y]": 2, "0:x7": 0, "1:x8": 0}
+2+2W+rfi-addr+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2}
+R+fence.rw.rw+po-ctrlfencei.litmus: {"[y]": 2, "1:x9": 0}
+MP+pos-rfi-ctrl+ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x7": 0}
+S+rfi-addr+ctrl-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+W+RWC+fence.rw.rw+ctrlfencei+fence.rw.rws.litmus: {"[x]": 2, "1:x5": 1, "1:x7": 0, "2:x7": 1}
+MP+rfi-ctrlfencei+data-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+ISA2+fence.rw.rw+fence.rw.w+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+S+rfi-data+addr-rfi-data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+SB+pos-pos-addr+pos-pos-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "0:x10": 0, "1:x9": 0}
+MP+pos-rfi-ctrl+addr-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x11": 1, "1:x12": 0}
+SB+pos-addr+pos-pos-ctrlfencei.litmus: {"[y]": 2, "0:x9": 0, "1:x9": 0}
+SB+fence.rw.rw+pos-pos-addr.litmus: {"[y]": 2, "0:x7": 0, "1:x10": 0}
+MP+pos-rfi-addr+addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x8": 0}
+S+poprl+po+NEW.litmus: {"[x]": 2, "1:x5": 1}
+MP+po+fence.r.rw.litmus: {"1:x5": 1, "1:x7": 0}
+LB+fri-rfi-addr+fri-rfi-data.litmus: {"[x]": 2, "[y]": 2, "0:x5": 1, "0:x8": 2, "1:x5": 1, "1:x8": 2}
+LB+fence.w.ws.litmus: {"0:x5": 1, "1:x5": 1}
+2+2W+fence.r.rw+fence.rw.w.litmus: {"[x]": 2, "[y]": 2}
+SB+po+po-ctrlfencei.litmus: {"0:x7": 0, "1:x9": 0}
+RWC+ctrlfencei+fence.rw.rw.litmus: {"1:x5": 1, "1:x7": 0, "2:x7": 0}
+2+2W+fence.w.w+rfi-ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+MP+[rf-data-ws]+ctrlfencei.litmus: {"[y]": 2, "1:x5": 1, "2:x5": 2, "2:x7": 0}
+MP+rfi-ctrl+data-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+SB+rfi-ctrlfencei+rfi-data-rfi.litmus: {"[x]": 2, "0:x7": 2, "0:x8": 0, "1:x7": 1, "1:x10": 1}
+R+porlp+po+NEW.litmus: {"[y]": 2, "1:x7": 0}
+SB+po-ctrlfencei+pos-po-addrs.litmus: {"[z]": 2, "0:x9": 0, "1:x11": 0}
+ISA2+fence.w.w+ctrlfencei+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+SB+pos-pos.litmus: {"[x]": 2, "[y]": 2, "0:x8": 0, "1:x8": 0}
+SB+pos-po-addrs+pos-po-addr.litmus: {"[x]": 2, "[y]": 2, "0:x11": 0, "1:x11": 0}
+S+rfi-ctrl+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+Z6.3+fence.rw.w+fence.rw.rw+ctrlfencei.litmus: {"[y]": 2, "2:x5": 1, "2:x7": 0}
+SB+[ws-rf]-ctrlfencei+fence.rw.rw.litmus: {"[x]": 2, "0:x7": 2, "0:x8": 0, "2:x7": 0}
+LB+fence.w.w+data.litmus: {"0:x5": 1, "1:x5": 1}
+R+pos-rfi-ctrlfencei+fence.rw.rw.litmus: {"[x]": 2, "[y]": 2, "0:x8": 2, "1:x7": 0}
+S+[rf-ctrlfencei-fr]+ctrl.litmus: {"[x]": 2, "1:x5": 2, "1:x7": 0, "2:x5": 1}
+MP+fence.i+addr.litmus: {"1:x5": 1, "1:x8": 0}
+SB+pos-po-addrs+pos-po-ctrlfenceis.litmus: {"[x]": 2, "[y]": 2, "0:x11": 0, "1:x10": 0}
+2+2W+fence.r.rw+fence.w.w.litmus: {"[x]": 2, "[y]": 2}
+2+2W+fence.r.rws.litmus: {"[x]": 2, "[y]": 2}
+MP+rfi-addr+ctrlfencei-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+ISA2+pos+data+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1, "2:x7": 0}
+IRIW+ctrlfenceis.litmus: {"1:x5": 1, "1:x7": 0, "3:x5": 1, "3:x7": 0}
+SB+po-ctrlfencei+pos-po-ctrlfenceis.litmus: {"[z]": 2, "0:x9": 0, "1:x10": 0}
+LB+fence.i+fence.rw.w.litmus: {"0:x5": 1, "1:x5": 1}
+SB+po+pos-po-ctrlfencei.litmus: {"[y]": 2, "0:x7": 0, "1:x10": 0}
+S+fence.w.w+po.litmus: {"[x]": 2, "1:x5": 1}
+S+rfi-ctrlfencei+addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+SB+fence.rw.rw+po-ctrlfencei.litmus: {"0:x7": 0, "1:x9": 0}
+SB+po-ctrlfencei+pos-po-addr.litmus: {"[z]": 2, "0:x9": 0, "1:x11": 0}
+SB+rfi-ctrlfencei-rfis.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "0:x10": 1, "1:x7": 2, "1:x10": 1}
+MP+pos-rfi-data+ctrlfencei-rfi-addr.litmus: {"[x]": 2, "0:x8": 2, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+MP+rfi-ctrl+ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x7": 0}
+ISA2+fence.rw.rw+ctrlfencei+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+S+rfi-ctrlfencei+data.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1}
+SB+fence.rw.rw+po-ctrlfenceis.litmus: {"0:x7": 0, "1:x9": 0}
+R+po+popaq+NEW.litmus: {"[y]": 2, "1:x7": 0}
+S+rfi-ctrl+ctrl-rfi-ctrl.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+S+rfi-data+data-rfi-ctrlfencei.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+MP+fence.rw.w+ctrl.litmus: {"1:x5": 1, "1:x7": 0}
+MP+fence.rw.rw+fri-rfi-addr.litmus: {"[y]": 2, "1:x5": 1, "1:x8": 2, "1:x10": 0}
+MP+rfi-ctrlfencei+ctrl-rfi-addrs.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1, "1:x11": 1}
+2+2W+fence.rw.rw+rfi-data.litmus: {"[x]": 2, "[y]": 2, "1:x7": 2}
+2+2Swap.litmus: {"[x]": 2, "[y]": 2, "0:x10": 1, "0:x11": 0, "1:x10": 1, "1:x11": 0}
+MP+rfi-ctrl+ctrl-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+LB+fence.i+addr.litmus: {"0:x5": 1, "1:x5": 1}
+2+2W+[rf-ctrlfencei-fr]+fence.w.w.litmus: {"[x]": 2, "[y]": 2, "1:x5": 2, "1:x7": 0}
+MP+rfi-data+data-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+S+po+ctrlfencei.litmus: {"[x]": 2, "1:x5": 1}
+R+fence.rw.w+rfi-ctrlfencei.litmus: {"[y]": 2, "1:x7": 2, "1:x8": 0}
+S+rfi-ctrl+addr-rfi-addr.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x11": 1}
+ISA2+fence.rw.w+fence.rw.w+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+SB+fence.rw.w+fence.rw.rw.litmus: {"0:x7": 0, "1:x7": 0}
+WRC+ctrlfenceis.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+LB+data+popx.litmus: {"[x]": 1, "0:x5": 1, "1:x10": 0, "1:x5": 1, "1:x9": 0}
+MP+[ws-fence.rw.rw-ws]+ctrlfencei.litmus: {"[x]": 2, "[y]": 2, "2:x5": 2, "2:x7": 0}
+LB+ctrl+popx.litmus: {"[x]": 1, "0:x5": 1, "1:x10": 0, "1:x5": 1, "1:x9": 0}
+S+fence.rw.rw+fri-rfi-ctrl.litmus: {"[x]": 2, "[y]": 2, "1:x5": 1, "1:x8": 2}
+MP+rfi-addr+ctrlfencei-rfi-ctrlfencei.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x10": 0}
+SB+po-addrs+po-ctrlfencei.litmus: {"0:x10": 0, "1:x9": 0}
+MP+rfi-ctrlfencei+data-rfi.litmus: {"[x]": 2, "0:x7": 2, "1:x5": 1, "1:x9": 1}
+R+[rf-ctrlfencei-fr]+fence.rw.rw.litmus: {"[y]": 2, "1:x5": 1, "1:x7": 0, "2:x7": 0}
+MP+porlrl+po+NEW.litmus: {"1:x5": 1, "1:x7": 0}
+ISA2+pos+ctrlfencei+ctrlfencei.litmus: {"[x]": 2, "1:x5": 2, "2:x5": 1, "2:x7": 0}
+2+2W+fence.i+fence.rw.w.litmus: {"[x]": 2, "[y]": 2}
+R+rfi-ctrlfencei+rfi-ctrlfencei-rfi.litmus: {"[x]": 2, "[y]": 2, "0:x7": 2, "1:x7": 2, "1:x10": 1}
+WRC+fence.rw.w+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+MP+rfi-data+data-rfi-addr.litmus: {"0:x7": 1, "1:x5": 1, "1:x9": 1, "1:x11": 0}
+WRC+ctrl+ctrlfencei.litmus: {"1:x5": 1, "2:x5": 1, "2:x7": 0}
+LB+fence.i+data.litmus: {"0:x5": 1, "1:x5": 1}
+SB+po-addr+pos-po-addrs.litmus: {"[z]": 2, "0:x10": 0, "1:x11": 0}
+LB+ctrl+fri-rfi-data.litmus: {"[y]": 2, "0:x5": 1, "1:x5": 1, "1:x8": 2}
+MP+[rf-fence.rw.rw-fr]+ctrlfencei.litmus: {"1:x5": 1, "1:x7": 0, "2:x5": 1, "2:x7": 0}
